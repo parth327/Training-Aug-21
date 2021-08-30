@@ -35,6 +35,3 @@ THEN UPDATE SET d.ManagerID = e.ManagerID
 WHEN NOT MATCHED BY Departments 
 
 THEN INSERT (DepartmentID, DepartmentName,ManagerID) VALUES (e.DepartmentID,e.FirstName,e.ManagerID);
-
-
-
