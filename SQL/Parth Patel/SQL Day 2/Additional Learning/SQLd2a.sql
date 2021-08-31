@@ -30,6 +30,11 @@ SELECT * FROM ROWCTE
 --Recursive CTEs
 
 Declare @RowNo int =1;with ROWCTE as(SELECT @RowNo as ROWNO UNION ALL SELECT  ROWNO+1 FROM  ROWCTE WHERE RowNo < 10)  
-SELECT * FROM ROWCTE 
+SELECT * FROM RWCTE 
 
-
+SELECT STR(
+SELECT STUFF('SQL Tutorial', 1, 3, 'HTML');
+SELECT SUBSTRING('SQL Tutorial', 1, 3) AS ExtractString;
+SELECT TRANSLATE('Monday', 'Monday', 'Sunday'); 
+SELECT TRIM('     SQL Tutorial!     ') AS TrimmedString;
+ELECT RIGHT('SQL Tutorial', 3) AS ExtractString;
