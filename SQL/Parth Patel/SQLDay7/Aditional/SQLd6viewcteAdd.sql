@@ -56,7 +56,7 @@ GROUP BY EmployeeID;
 CREATE TABLE dbo.SUPPLY1 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 1 and 150),  
 supplier CHAR(50)  
-);  
+);
 CREATE TABLE dbo.SUPPLY2 (  
 supplyID INT PRIMARY KEY CHECK (supplyID BETWEEN 151 and 300),  
 supplier CHAR(50)  

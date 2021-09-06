@@ -75,7 +75,7 @@ SELECT CAST (@x AS NVARCHAR(3));
 
 USE db4;  
 GO  
-SELECT SUBSTRING(Name, 1, 30) AS FirstName,Salary  
+SELECT SUBSTRING(Name, 1, 30) AS FirstName,Salary
 FROM Employees  
 WHERE CAST(Salary AS int) > 8000  
 GO  
