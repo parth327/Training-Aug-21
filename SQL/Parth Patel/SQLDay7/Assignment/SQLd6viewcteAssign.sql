@@ -66,22 +66,27 @@ SELECT AVG(Salary) AS 'AvgSal' FROM CTE3;
 
 --CTE with Aggrigate Functions
 
+--With SUM
 WITH CTE4(EmployeeID,Salary)
 AS (SELECT Salary,SUM(Salary) AS TotalSalary FROM Employees GROUP BY EmployeeID,Salary)
 SELECT SUM(Salary) AS 'TSal' FROM CTE4
 
+--With COUNT 
 WITH CTE4(EmployeeID,Salary)
 AS (SELECT Salary,COUNT(Salary) AS TotalSalary FROM Employees GROUP BY EmployeeID,Salary)
 SELECT COUNT(Salary) AS 'NoOfSal' FROM CTE4
 
+--With Avg
 WITH CTE4(EmployeeID,Salary)
 AS (SELECT Salary,AVG(Salary) AS TotalSalary FROM Employees GROUP BY EmployeeID,Salary)
 SELECT AVG(Salary) AS 'AvgSal' FROM CTE4
 
+--with MIN
 WITH CTE4(EmployeeID,Salary)
 AS (SELECT Salary,MIN(Salary) AS TotalSalary FROM Employees GROUP BY EmployeeID,Salary)
 SELECT MIN(Salary) AS 'MinSal' FROM CTE4
 
+--With MAX
 WITH CTE4(EmployeeID,Salary)
 AS (SELECT Salary,MAX(Salary) AS TotalSalary FROM Employees GROUP BY EmployeeID,Salary)
 SELECT MAX(Salary) AS 'MaxSal' FROM CTE4

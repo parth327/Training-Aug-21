@@ -1,46 +1,84 @@
 --Day 3 Additional
 
---DATEFROMPARTS()
+--String Function
 
-SELECT DATEFROMPARTS ( 2010, 12, 31 ) AS Result;
+--Using ASCII and CHAR to print ASCII values from a string
 
---DATETIME2FROMPARTS
+SELECT CHAR(65) AS [65], CHAR(66) AS [66],CHAR(97) AS [97], CHAR(98) AS [98],CHAR(49) AS [49], CHAR(50) AS [50];
 
---An example without fractions of a second
+--Searching from a position other than the first position
 
-SELECT DATETIME2FROMPARTS ( 2010, 12, 31, 23, 59, 59, 0, 0 ) AS Result;
+SELECT CHARINDEX('is', 'This is a string', 4);
 
---Example with fractions of a second
+--Results when the string is not found
 
-SELECT DATETIME2FROMPARTS ( 2011, 8, 15, 14, 23, 44, 5, 1 );  
+SELECT TOP(1) CHARINDEX('at', 'This is a string') FROM dbo.DimCustomer;
 
---DATETIMEFROMPARTS
+--Using CONCAT with NULL values
 
-SELECT DATETIMEFROMPARTS ( 2010, 12, 31, 23, 59, 59, 0 ) AS Result;
+CREATE TABLE EmpName (EmpId INT NOT NULL,FirstName NVARCHAR(20) NULL,LastName NVARCHAR(20) NOT NULL);  
+INSERT INTO EmpName VALUES( 101, NULL, 'Patel' );  
 
---DATETIMEOFFSETFROMPARTS 
+SELECT CONCAT(Empid,FirstName,LastName) AS Result  
+FROM EmpName;  
 
---An example without fractions of a second
+--DIFFERENCE
+--This function returns an integer value measuring the difference between
+-- the SOUNDEX() values of two different character expressions.
 
-SELECT DATETIMEOFFSETFROMPARTS ( 2010, 12, 31, 14, 23, 23, 0, 12, 0, 7 ) AS Result;
+SELECT SOUNDEX('Ice'), SOUNDEX('Eyes'), DIFFERENCE('Ice','Eyes');  
+  
+SELECT SOUNDEX('Blotchet-Halls'), SOUNDEX('Greene'), DIFFERENCE('Blotchet-Halls', 'Greene');  
 
--- Example with fractions of a second
+--Using LEFT with a column
 
-SELECT DATETIMEOFFSETFROMPARTS ( 2011, 8, 15, 14, 30, 00, 5, 12, 30, 1 );  
+SELECT LEFT(FirstName, 5) FROM Employees  
+ORDER BY EmployeeID;  
 
---SMALLDATETIMEFROMPARTS
+--Using LEFT with a character string
 
-SELECT SMALLDATETIMEFROMPARTS ( 2010, 12, 31, 23, 59 ) AS Result;
+SELECT LEFT('abcdefg',2);  
 
---TIMEFROMPARTS
+--The following example selects the number of characters and the data in FirstName 
+--For employee whose EmployeeId is 101. 
 
---Simple example without fractions of a second
+SELECT LEN(FirstName) AS Length, FirstName, LastName FROM Employees  
+WHERE EmployeeId = 101;  
+  
+--The following example replaces the string cde in abcdefghicde with xxx.
 
-SELECT TIMEFROMPARTS ( 23, 59, 59, 0, 0 ) AS Result;
+SELECT REPLACE('abcdefghicde','cde','xxx');  
 
---Example with fractions of a second
+--The following example returns all contact first names with the characters reversed
 
-SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );  
+SELECT FirstName, REVERSE(FirstName) AS Reverse FROM Employees  
+WHERE EmployeeID = 105 ORDER BY FirstName;  
+
+SELECT REVERSE(1234) AS Reversed ;   
+
+--Using RIGHT with a column
+
+SELECT RIGHT(FirstName, 5) AS 'First Name' FROM Employees  
+WHERE EmployeeID < 105 ORDER BY FirstName;  
+
+--The following example trims the last names and concatenates a comma, two spaces, 
+--and the first names of people listed in the Employees table.
+  
+SELECT RTRIM(LastName) + ',' + SPACE(2) +  LTRIM(FirstName)  
+FROM Employees  
+ORDER BY LastName,FirstName;  
+
+--Using SUBSTRING with a character string
+
+SELECT name, SUBSTRING(FirstName, 1, 1) AS Initial ,
+SUBSTRING(FirstName, 3, 2) AS ThirdAndFourthCharacters
+FROM Employees WHERE EmployeeId = 105;
+
+--Removes the space character from both sides of string
+
+SELECT TRIM( '     test    ') AS Result;
+
+
 
 --DATEDIFF
 
@@ -48,78 +86,10 @@ SELECT TIMEFROMPARTS ( 14, 23, 44, 5, 1 );
 
 CREATE TABLE dbo.Duration (startDate datetime2, endDate datetime2);
 INSERT INTO dbo.Duration(startDate, endDate)VALUES ('2007-05-06 12:10:09', '2007-05-07 12:10:09');
+
 SELECT DATEDIFF(day, startDate, endDate) AS 'Duration'  
     FROM dbo.Duration;  
 
---Specifying user-defined variables for startdate and enddate
-
-DECLARE @startdate DATETIME2 = '2007-05-05 12:10:09.3312722';  
-DECLARE @enddate   DATETIME2 = '2007-05-04 12:10:09.3312722';   
-SELECT DATEDIFF(day, @startdate, @enddate);
-
---Specifying scalar system functions for startdate and enddate
-
-SELECT DATEDIFF(millisecond, GETDATE(), SYSDATETIME());
-
---Specifying scalar subqueries and scalar functions for startdate and enddate
-
-USE db4;
-GO 
-SELECT DATEDIFF(day,(SELECT MIN(Salary) FROM Employees),(SELECT MAX(Salary) FROM Employees));
-
---Specifying numeric expressions and scalar system functions for enddate
-
-USE db4;
-GO 
-SELECT DATEDIFF(day, '2007-05-07 09:53:01.0376635', GETDATE() + 1)AS NumberOfDays FROM Employees;  
-GO 
-USE db4;
-GO 
-SELECT DATEDIFF(day,'2007-05-07 09:53:01.0376635',DATEADD(day, 1, SYSDATETIME())) AS NumberOfDays FROM Employees;
-GO
-
---DATEDIFF_BIG
-
---Specifying columns for startdate and enddate
-
-CREATE TABLE dbo.Duration(startDate datetime2, endDate datetime2);  
-INSERT INTO dbo.Duration(startDate,endDate)VALUES('2007-05-06 12:10:09', '2007-05-07 12:10:09');  
-SELECT DATEDIFF_BIG(day, startDate, endDate) AS 'Duration'FROM dbo.Duration;  
-
---DATEADD
-
---datepart argument
-
-SELECT DATEADD(month, 1, '20060830');
-SELECT DATEADD(month, 1, '20060831');
-
---number argument
-
-SELECT DATEADD(year,2147483648, '20060731');  
-SELECT DATEADD(year,-2147483649, '20060731');
-
---date argument
-
-SELECT DATEADD(year,2147483647, '20060731');  
-SELECT DATEADD(year,-2147483647, '20060731');
-
---EOMONTH
-
-DECLARE @date DATETIME = '12/1/2011';  
-SELECT EOMONTH ( @date ) AS Result;  
-GO
-
---SWITCHOFFSET
-
-DECLARE @dt datetimeoffset = switchoffset (CONVERT(datetimeoffset, GETDATE()), '-04:00');   
-SELECT * FROM t    
-WHERE c1 > @dt OPTION (RECOMPILE);
-
---TODATETIMEOFFSET
-
-DECLARE @todaysDateTime DATETIME2;  
-SET @todaysDateTime = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');
 
 
 

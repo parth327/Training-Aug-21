@@ -30,146 +30,20 @@ DECLARE @json NVARCHAR(MAX)
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
 
 DECLARE @json NVARCHAR(MAX)
-SELECT *
-FROM OPENJSON(@json);
-
---OPENJSON output with an explicit structure
-
-DECLARE @json NVARCHAR(MAX)
-SET @json =   
-  N'[  
-       {  
-         "Order": {  
-           "Number":"SO43659",  
-           "Date":"2011-05-31T00:00:00"  
-         },  
-         "AccountNumber":"AW29825",  
-         "Item": {  
-           "Price":2024.9940,  
-           "Quantity":1  
-         }  
-       },  
-       {  
-         "Order": {  
-           "Number":"SO43661",  
-           "Date":"2011-06-01T00:00:00"  
-         },  
-         "AccountNumber":"AW73565",  
-         "Item": {  
-           "Price":2024.9940,  
-           "Quantity":3  
-         }  
-      }  
- ]'  
-   
-SELECT * FROM OPENJSON ( @json )  
-WITH (   
-              Number   varchar(200) '$.Order.Number' ,  
-              Date     datetime     '$.Order.Date',  
-              Customer varchar(200) '$.AccountNumber',  
-              Quantity int          '$.Item.Quantity'  
-)
+SELECT *FROM OPENJSON(@json);
 
 --Convert SQL Server data to JSON or export JSON
 
 SELECT EmployeeID, FirstName AS "info.name", LastName AS "info.surname" ,HireDate AS "Join"
-FROM Employees
-FOR JSON PATH;
+FROM Employees FOR JSON PATH;
 
 --Import JSON data into SQL Server tables
 
 DECLARE @jsonVariable NVARCHAR(MAX);
 
 SET @jsonVariable = N'[
-  {
-    "Order": {  
-      "Number":"SO43659",  
-      "Date":"2011-05-31T00:00:00"  
-    },  
-    "AccountNumber":"AW29825",  
-    "Item": {  
-      "Price":2024.9940,  
-      "Quantity":1  
-    }  
-  },  
-  {  
-    "Order": {  
-      "Number":"SO43661",  
-      "Date":"2011-06-01T00:00:00"  
-    },  
-    "AccountNumber":"AW73565",  
-    "Item": {  
-      "Price":2024.9940,  
-      "Quantity":3  
-    }  
-  }
-]';
+  {"Order": {"Number":"SO43659","Date":"2011-05-31T00:00:00"},"AccountNumber":"AW29825","Item":
+   {"Price":2024.9940,"Quantity":1}},  
+  {"Order": {"Number":"SO43661","Date":"2011-06-01T00:00:00"},"AccountNumber":"AW73565","Item": 
+  {"Price":2024.9940,"Quantity":3}}]';
 
---Import JSON data into SQL Server tables
-
-DECLARE @jsonVariable NVARCHAR(MAX);
-
-SET @jsonVariable = N'[
-  {
-    "Order": {  
-      "Number":"SO43659",  
-      "Date":"2011-05-31T00:00:00"  
-    },  
-    "AccountNumber":"AW29825",  
-    "Item": {  
-      "Price":2024.9940,  
-      "Quantity":1  
-    }  
-  },  
-  {  
-    "Order": {  
-      "Number":"SO43661",  
-      "Date":"2011-06-01T00:00:00"  
-    },  
-    "AccountNumber":"AW73565",  
-    "Item": {  
-      "Price":2024.9940,  
-      "Quantity":3  
-    }  
-  }
-]';
-
---Import JSON data into SQL Server tables
-
-DECLARE @jsonVariable NVARCHAR(MAX);
-
-SET @jsonVariable = N'[
-  {
-    "Order": {  
-      "Number":"SO43659",  
-      "Date":"2011-05-31T00:00:00"  
-    },  
-    "AccountNumber":"AW29825",  
-    "Item": {  
-      "Price":2024.9940,  
-      "Quantity":1  
-    }  
-  },  
-  {  
-    "Order": {  
-      "Number":"SO43661",  
-      "Date":"2011-06-01T00:00:00"  
-    },  
-    "AccountNumber":"AW73565",  
-    "Item": {  
-      "Price":2024.9940,  
-      "Quantity":3  
-    }  
-  }
-]';
-
-SELECT SalesOrderJsonData.*
-FROM OPENJSON (@jsonVariable, N'$')
-  WITH (
-    Number VARCHAR(200) N'$.Order.Number',
-    Date DATETIME N'$.Order.Date',
-    Customer VARCHAR(200) N'$.AccountNumber',
-    Quantity INT N'$.Item.Quantity'
-  ) AS SalesOrderJsonData;
-
-  

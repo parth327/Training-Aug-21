@@ -102,57 +102,6 @@ CLOSE contact_cursor;
 DEALLOCATE contact_cursor;  
 GO
 
---To store values in Variables 
-
-DECLARE @LastName VARCHAR(50), @FirstName VARCHAR(50);  
-  
-DECLARE contact_cursor CURSOR FOR  
-SELECT LastName, FirstName FROM Employees  
-WHERE LastName LIKE 'B%'  
-ORDER BY LastName, FirstName;  
-  
-OPEN contact_cursor;  
-  
-FETCH NEXT FROM contact_cursor  
-INTO @LastName, @FirstName;  
-  
-WHILE @@FETCH_STATUS = 0  
-BEGIN  
-  
-   PRINT 'Contact Name: ' + @FirstName + ' ' +  @LastName  
-  
-   FETCH NEXT FROM contact_cursor  
-   INTO @LastName, @FirstName;  
-END  
-  
-CLOSE contact_cursor;  
-DEALLOCATE contact_cursor;  
-GO
-
---Declaring a SCROLL cursor and using the other FETCH options
- 
-SELECT LastName, FirstName FROM Employees
-ORDER BY LastName, FirstName;  
-    
-DECLARE contact_cursor SCROLL CURSOR FOR  
-SELECT LastName, FirstName FROM Employees  
-ORDER BY LastName, FirstName;  
-  
-OPEN contact_cursor;  
-    
-FETCH LAST FROM contact_cursor;  
-  
-FETCH PRIOR FROM contact_cursor;  
-  
-FETCH ABSOLUTE 2 FROM contact_cursor;  
-  
-FETCH RELATIVE 3 FROM contact_cursor;  
-  
-FETCH RELATIVE -2 FROM contact_cursor;  
-  
-CLOSE contact_cursor;  
-DEALLOCATE contact_cursor;  
-GO
 
 --OPEN
 
