@@ -1,7 +1,7 @@
 
 --ADDITONAL ASSIGNMENT FOR MORE PRACTICE
 
- -- 1. Write a query to find the addresses (location_id, street_address, city, state_province, country_name) of all the departments.
+-- 1. Write a query to find the addresses (location_id, street_address, city, state_province, country_name) of all the departments.
 
 SELECT L.LocationID,L.StreetAddress,L.City,L.StateProvince,c.CountryName FROM Locations L
 JOIN Countries c ON L.CountryID=c.CountryID;
