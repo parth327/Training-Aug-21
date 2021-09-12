@@ -17,7 +17,7 @@ ON e.EmployeeID=i.EmployeeID  WHERE IncentiveAmount>3000);
 
 CREATE VIEW Emp3
 AS(SELECT e.FirstName,e.LastName,e.JobId,d.DepartmentId,d.DepartmentName FROM Employees e JOIN Departments d ON e.DepartmentID=d.DepartmentID
-JOIN Locations l ON l.LocationID=d.DepartmentID)
+JOIN Locations l ON l.LocationID=d.LocationID WHERE l.LocationID);
 
 -- 4. Create a View to get the department name and number of employees in the department.
 
@@ -42,7 +42,7 @@ WHERE DATEDIFF(YEAR,J.EndDate,J.StartDate) >15);
 
 --CTE Queries
 
---Convert Day4 and Day5 Exercises with CTE and Derived Table
+--Convert Day4 and Day5 Exercises with CTE
 
 --CTE with ROW_NUMBER 
 
