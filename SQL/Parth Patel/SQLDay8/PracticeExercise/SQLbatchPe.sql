@@ -30,8 +30,8 @@ GO
 
 SELECT EmployeeID, Salary,
 CASE
-    WHEN Salary > 8000 THEN 'The quantity is greater than 30'
-    WHEN Salary = 8000 THEN 'The quantity is 30'
+    WHEN Salary > 8000 THEN 'The quantity is greater than 8000'
+    WHEN Salary = 8000 THEN 'The quantity is 8000'
     ELSE 'The quantity is under 8000'
 END AS Sal
 FROM Employees; 

@@ -28,8 +28,6 @@ SET @json = N'[
 DECLARE @json NVARCHAR(MAX)
 
 SET @json='{"name":"John","surname":"Doe","age":45,"skills":["SQL","C#","MVC"]}';
-
-DECLARE @json NVARCHAR(MAX)
 SELECT *FROM OPENJSON(@json);
 
 --Convert SQL Server data to JSON or export JSON
