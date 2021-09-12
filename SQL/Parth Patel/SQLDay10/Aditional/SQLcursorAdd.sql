@@ -26,22 +26,6 @@ CLOSE emp_Cursor;
 DEALLOCATE emp_Cursor;
 GO
 
---Example 2
-
-declare @db4 nvarchar(100);
-declare @lgname  nvarchar(100);
-declare crs cursor for
-select original_login_name, DB_NAME(database_id) as db_nm
-from sys.dm_exec_sessions where is_user_process=1;
-open crs
-fetch next FROM crs into @lgname, @db4 
-while @@FETCH_STATUS=0
-begin
-print 'Login:'+cast(@lgname as nvarchar(100))+' Database Name:'+@db4
-fetch next from crs into @lgname, @db4
-end
-close crs
-deallocate crs;
 
 --CLOSE
 
@@ -59,7 +43,7 @@ GO
 
 --Deallocate
 
-DECLARE abc CURSOR GLOBAL SCROLL FOR  
+DECLARE abc CURSOR 
     SELECT * FROM Employees;  
 OPEN abc;  
 GO  
@@ -74,7 +58,7 @@ DEALLOCATE abc;
 FETCH NEXT FROM @MyCrsrRef2;  
 GO  
 DECLARE @MyCursor CURSOR;  
-SET @MyCursor = CURSOR LOCAL SCROLL FOR  
+SET @MyCursor = CURSOR FOR  
 SELECT * FROM Employees;  
 DEALLOCATE @MyCursor;  
 GO  
