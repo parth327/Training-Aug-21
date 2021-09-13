@@ -91,7 +91,7 @@
 
 --Comparing Clustered vs Non-clustered Indexes
 
---your boss wants to speed things up on the company’s database server. Therefore, he is thinking
+--your boss wants to speed things up on the companyâ€™s database server. Therefore, he is thinking
 --of having you create a couple of indexes. He asks you to explain the advantages and disadvantages 
 --of creating a clustered index versus a non-clustered index. How should you respond?
 
@@ -116,7 +116,7 @@
 --Creating a clustered index
 
 --You are a database administrator for the AdventureWorks Corporation. You recently created some databases, 
---and you’ve just realized how large the databases will become in the future. 
+--and youâ€™ve just realized how large the databases will become in the future. 
 --Therefore, you need to create a new clustered index to help with overall performance.
 --Using the SSMS interface, what steps would you use to create a new clustered index on the name column for the AdventureWorks database?
 
@@ -206,6 +206,8 @@ Insert Into Account values
 Select * from Cust_Info
 Select * from Account
 
+ALTER TABLE ACCOUNTS
+ADD CONSTRAINT chk_Balance CHECK ( Balance > 0 )
 
 -- Detroit Bank need to implement the transaction whenever the amount is transferred from one account to the another account.
 
