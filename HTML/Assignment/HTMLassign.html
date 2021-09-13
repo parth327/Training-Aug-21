@@ -1,0 +1,105 @@
+<!--HTML Assignment-->
+
+<!--Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)-->
+    
+	<!--Validation required-->
+        <!--Age should be a number-->
+        <!--Each field should contain value-->
+        <!--Email ID should be in proper format-->
+        <!--Date of joining should be in date format-->
+	<!--Location should be in the drop down list-->
+	<!--Use radio buttons for Gender-->
+
+<html>
+<head>
+	<title> Form Design</title>
+</head>
+<body>
+	<table border="1">
+	<form>
+
+	<tr>
+		<th colspan="2"> Employee Details </th>
+	</tr>
+	<tr>
+		<td><label for="EmpN">Employee Name</label></td>
+		<td><input type="text" name="First Name"/></td>
+	</tr>
+	<tr>
+		<td><label for="ag">Age</label></td>
+		<td><input type="number" name="Age" required /></td>
+	</tr>	
+	<tr>
+		<td><label for="g">Gender</label></td>
+		<td>
+			<input type="radio" name="Gmale" value="Male" />
+			<label for="ma">Male</label>
+			<input type="radio" name="Gmale" value="Female" />
+			<label for="fe">Female</label>
+		</td>
+	<tr>
+		<td><label for="des">Designation  </label></td>	
+		<td>
+			<select name="Designation">
+				<option value="jsd">Junior Developer</option>
+				<option value="ssd">Senior Developer</option>
+				<option value="m">Manager</option>
+				<option value="hr">HR</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="sal">Salary  </label>
+		</td>
+		<td>
+			<input type="number" min="10000" max="50000" step="10000" required="required">
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<label for="loc">Location </label>
+		</td>
+		<td>
+			<select name="Location">
+				<option value="ahm">Ahmedabad</option>
+				<option value="mum">Mumbai</option>
+				<option value="che">Chennai</option>
+				<option value="klk">Kolkatta</option>
+			</select>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<label for="email">Email ID  </label>
+		</td>
+		<td>
+			<input type="email" name="Email" />
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<label for="dateofjoin">Date Of Joining </label>
+		</td>
+		<td>
+			<input type="date" name="doj">
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="Contact">Contact Number  </label>
+		</td>
+		<td>
+			<input type="tel" name="MobileNum" />
+		</td>
+	</tr>	
+	<tr>
+		<td colspan="2">
+			<button type="submit value="Submit"> SUBMIT </button>
+		</td>
+	</tr>
+		
+	</form>
+		</table>
+</body>
+</html>
