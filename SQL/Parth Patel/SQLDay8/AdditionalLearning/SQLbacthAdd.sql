@@ -50,13 +50,4 @@ BEGIN
     SET @Counter  = @Counter  + 1
 END
 
---Reading table records through the WHILE loop
-
-CREATE TABLE SampleTable
-(Id INT, CountryName NVARCHAR(100), ReadStatus TINYINT)
-GO
-INSERT INTO SampleTable ( Id, CountryName, ReadStatus)
-Values (1, 'Germany', 0),(2, 'France', 0),(3, 'Italy', 0),(4, 'Netherlands', 0),(5, 'Poland', 0);
- 
- SELECT * FROM SampleTable
 

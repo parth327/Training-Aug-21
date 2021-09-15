@@ -1,15 +1,12 @@
 <!--HTML Assignment-->
-
 <!--Design a form for storing employee details. (Employee name, age, Gender, designation, salary, location, Email ID, Date of Joining and contact number)-->
-    
-	<!--Validation required-->
+    <!--Validation required-->
         <!--Age should be a number-->
         <!--Each field should contain value-->
         <!--Email ID should be in proper format-->
         <!--Date of joining should be in date format-->
 	<!--Location should be in the drop down list-->
 	<!--Use radio buttons for Gender-->
-
 <html>
 <head>
 	<title> Form Design</title>
@@ -17,13 +14,12 @@
 <body>
 	<table border="1">
 	<form>
-
 	<tr>
 		<th colspan="2"> Employee Details </th>
 	</tr>
 	<tr>
 		<td><label for="EmpN">Employee Name</label></td>
-		<td><input type="text" name="First Name"/></td>
+		<td><input type="text" name="First Name" required/></td>
 	</tr>
 	<tr>
 		<td><label for="ag">Age</label></td>
@@ -53,7 +49,7 @@
 			<label for="sal">Salary  </label>
 		</td>
 		<td>
-			<input type="number" min="10000" max="50000" step="10000" required="required">
+			<input type="number" min="10000" max="50000" step="10000" required>
 		</td>
 	</tr>	
 	<tr>
@@ -74,7 +70,7 @@
 			<label for="email">Email ID  </label>
 		</td>
 		<td>
-			<input type="email" name="Email" />
+			<input type="email" name="Email" required/>
 		</td>	
 	</tr>
 	<tr>
@@ -82,7 +78,7 @@
 			<label for="dateofjoin">Date Of Joining </label>
 		</td>
 		<td>
-			<input type="date" name="doj">
+			<input type="date" name="doj" required>
 		</td>
 	</tr>
 	<tr>
@@ -90,7 +86,7 @@
 			<label for="Contact">Contact Number  </label>
 		</td>
 		<td>
-			<input type="tel" name="MobileNum" />
+			<input type="tel" name="MobileNum" required/>
 		</td>
 	</tr>	
 	<tr>
@@ -98,7 +94,6 @@
 			<button type="submit value="Submit"> SUBMIT </button>
 		</td>
 	</tr>
-		
 	</form>
 		</table>
 </body>

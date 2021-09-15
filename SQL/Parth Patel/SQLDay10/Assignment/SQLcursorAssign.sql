@@ -24,7 +24,7 @@ BEGIN
 		SET Salary = Salary+50000
 		WHERE EmployeeID=@TempId
 --Salary between 400000 and 550000 ----- 70000 hike
-	IF @TempSalary>4000000 AND @TempSalary<550000 
+	IF @TempSalary>400000 AND @TempSalary<550000 
    		UPDATE Employee
 		SET Salary = Salary+70000
 		WHERE EmployeeID=@TempId
