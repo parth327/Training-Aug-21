@@ -64,4 +64,5 @@ CREATE TABLE Allocation1(ProjectID INT FOREIGN KEY REFERENCES Projects1(ProjectI
 INSERT INTO Allocation1
 Values(1,1,'A'),(1,2,'B'),(2,1,'C'),(3,1,'D');
 
-SELECT e.ID,e.NAME FROM Employees1 e JOIN Allocation1 a ON e.ID!=a.ID WHERE e.ID NOT IN(SELECT a.ID FROM Allocation1 a)
+
+SELECT e.id,e.Name FROM Employees1 e LEFT OUTER JOIN Allocation1 a ON a.Id = e.Id WHERE a.Name IS NULL
