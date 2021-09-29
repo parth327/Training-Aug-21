@@ -1,0 +1,60 @@
+﻿
+header {
+    background-color: lavender;
+	
+    width: 1350px;
+    height: 80px;
+    font-size: 30px;
+}
+
+    header .logo {
+        display: inline-block;
+        padding: 15px 80px;
+    }
+
+    header nav {
+        float: right;
+        text-align: right;
+        padding: 15px 100px;
+    }
+
+nav a {
+    padding: 10px 30px;
+    text-decoration: none;
+    color: lavender;
+}
+
+.leftbar {
+    background-color: lightgrey;
+	padding-left:10px;
+    height: 545px;
+    width: 300px;
+    float: left;
+    text-align: left;
+    font-size: 23px;
+	
+}
+.leftbar a{padding:5px;color:black;text-decoration:none;}
+
+.sidebar {
+    background-color: ;
+	
+    height: 460px;
+    width: 1350px;
+    text-align: center;
+    font-size: 30px;
+}
+
+footer {
+    background-color:lightgrey ;
+	margin:;
+	padding:;
+    width: 1350px;
+    height: 85px;
+    text-align: center;
+    font-size: 23px;
+	}
+.copyright{
+	padding:25px;
+	
+}
