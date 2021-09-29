@@ -1,0 +1,31 @@
+﻿<!--Change Font size with Media Queries-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        .Pra4 {
+            background-color: lightgrey;
+            padding: 20px;
+        }
+
+        @media screen and (min-width: 600px) {
+        .Pra4 {
+                font-size: 80px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+        .Pra4 {
+                font-size: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <p class="Pra4">Resize the browser window. When the width of this document is 600 pixels or less, 
+    the background-color is "lightblue", otherwise it is "lightgreen".</p>
+
+</body>
+</html>
