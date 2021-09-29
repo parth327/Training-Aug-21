@@ -31,17 +31,11 @@ Check the entered Days and its corresponding Month. -->
     </form>
     <script>
 		var str = prompt("enter date in form mm-dd-yyyy");
-		// [month, day, year] = str.split("-");
-		// // console.log(month);
-		// // console.log(day);
-		// // console.log(year);
-		// //since month is 1-12 format
-		// var date = new Date(year, month - 1, day);
-		// console.log(date);
+		
 		var month, day, year;
 		var validDate = false;
 		if (/\d/.test(str)) {
-		//month is between 1-12
+		
 		validDate = true;
 		}
 		else {
@@ -54,9 +48,9 @@ Check the entered Days and its corresponding Month. -->
 		alert("month range out of bond");
 		validDate = false;
 		}
-		//day check
+		
 		if (parseInt(str.slice(3, 5)) <= 31 && parseInt(str.slice(3, 5)) >= 1) {
-		// console.log(str.slice(3, 5));
+		
 		day = parseInt(str.slice(3, 5));
 		}
 		else {
@@ -64,9 +58,7 @@ Check the entered Days and its corresponding Month. -->
 		validDate = false;
 		}
 		year = str.substr(6, 4);
-		// console.log(year);
-		// check date is correct
-		//for all odd month
+		
 		if (day == 31) {
 		if (month <= 7 && month & 1) {
         validDate = true;
@@ -78,17 +70,17 @@ Check the entered Days and its corresponding Month. -->
         validDate = false;
 		}
 		}
-		//special check for february
+		
 		var isleapyear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
-		// console.log(isleapyear);
+		
 		if (isleapyear && month == 2 && day > 29) {
 		validDate = false;
 		}
-		//check for non leap year
+		
 		if (!(isleapyear) && month == 2 && day > 28) {
 		validDate = false;
 		}
-		// console.log(validDate)
+		
 		if (validDate) {
 		alert("the date you entered is valid");
 		var date = new Date(year, month, day);
