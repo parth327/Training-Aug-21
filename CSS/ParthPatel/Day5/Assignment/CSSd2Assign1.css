@@ -1,0 +1,44 @@
+﻿
+header {
+    background-color: red;
+    width: 1315px;
+    height: 80px;
+    font-size:30px;
+}
+header .logo {
+        display: inline-block;
+        padding: 15px 50px;
+}
+header nav {
+        float: right;
+        text-align: right;
+        padding: 15px 100px;
+}
+nav a {
+    padding: 25px 50px;
+    text-decoration: none;
+    color: lavender;
+}
+.leftbar {
+    background-color: yellow;
+    height: 460px;
+    width: 200px;
+    float: left;
+    text-align: center;
+    font-size:30px;
+   
+}
+.sidebar {
+    background-color: brown;
+    height: 460px;
+    width: 1315px;
+    text-align: center;
+    font-size:30px;
+}
+footer {
+    background-color: grey;
+    width:1315px ;
+    height:80px ;
+    text-align: center;
+    font-size:30px;
+}
