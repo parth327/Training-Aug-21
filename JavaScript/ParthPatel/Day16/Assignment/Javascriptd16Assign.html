@@ -1,0 +1,99 @@
+<!-- Assignment
+
+ Date entered by the user should be checked for whether it is a Valid Date or not.
+
+ Entered date should be in “”MM-DD-YYYY”” format. Display the Date Format along with the Text Box.
+
+ You are required to perform following checks :
+
+– Entered characters should be digits only.
+
+– Month should be within the range 1 to 12.
+
+ Days should be within the range 1 to 31.
+
+Check the entered Days and its corresponding Month. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body class="bg-primary">
+	<div id="date" class="p-4 display-4 text-center"></div>
+    </form>
+    <script>
+		var str = prompt("enter date in form mm-dd-yyyy");
+		// [month, day, year] = str.split("-");
+		// // console.log(month);
+		// // console.log(day);
+		// // console.log(year);
+		// //since month is 1-12 format
+		// var date = new Date(year, month - 1, day);
+		// console.log(date);
+		var month, day, year;
+		var validDate = false;
+		if (/\d/.test(str)) {
+		//month is between 1-12
+		validDate = true;
+		}
+		else {
+		validDate = false;
+		}
+		if (parseInt(str.slice(0, 2)) <= 12 && parseInt(str.slice(0, 2)) >= 1) {
+		month = parseInt(str.slice(0, 2));
+		}
+		else {
+		alert("month range out of bond");
+		validDate = false;
+		}
+		//day check
+		if (parseInt(str.slice(3, 5)) <= 31 && parseInt(str.slice(3, 5)) >= 1) {
+		// console.log(str.slice(3, 5));
+		day = parseInt(str.slice(3, 5));
+		}
+		else {
+		alert("day range out of bond");
+		validDate = false;
+		}
+		year = str.substr(6, 4);
+		// console.log(year);
+		// check date is correct
+		//for all odd month
+		if (day == 31) {
+		if (month <= 7 && month & 1) {
+        validDate = true;
+		}
+		else if (month >= 8 && !(month & 1)) {
+        validDate = true;
+		}
+		else {
+        validDate = false;
+		}
+		}
+		//special check for february
+		var isleapyear = ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
+		// console.log(isleapyear);
+		if (isleapyear && month == 2 && day > 29) {
+		validDate = false;
+		}
+		//check for non leap year
+		if (!(isleapyear) && month == 2 && day > 28) {
+		validDate = false;
+		}
+		// console.log(validDate)
+		if (validDate) {
+		alert("the date you entered is valid");
+		var date = new Date(year, month, day);
+		document.getElementById("date").innerHTML = date.toDateString();
+		}
+    </script>
+</body>
+</html>
