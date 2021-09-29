@@ -1,0 +1,240 @@
+<!-- Create a Navbar with sub menu for the things learned in the section.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width.intial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+    </head>
+<body>
+	<h2 class="display-2 text-center mb-5">Navbar & NAVS</h2>
+	<div class="btn-group ml-5">
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">2 : Utilities</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item " href="../PracticeExercise/Typography.html" style="width:300px">2.2 Basic Typography</a>
+    <a class="dropdown-item" href="../PracticeExercise/TextalignmentDisplay.html">2.3 Text Alignment & Display</a>
+    <a class="dropdown-item" href="../PracticeExercise/FloatPositions.html">2.4 Floats & Positions</a>
+    <a class="dropdown-item" href="../PracticeExercise/ColorBackground.html">2.5 Colors & Background</a>
+	<a class="dropdown-item" href="../PracticeExercise/Spacing.html">2.6 Spacing</a>
+    <a class="dropdown-item" href="../PracticeExercise/Sizing.html">2.7 Sizing</a>
+    <a class="dropdown-item" href="../PracticeExercise/Breakpoints.html">2.8 Breakpoints</a>
+    </div>
+	</div>
+	<div class="btn-group ml-3">
+	<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">3: CSS Components</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item" href="../PracticeExercise/Button.html" style="width:300px">3.2 Buttons & Buttons Groups</a>
+    <a class="dropdown-item" href="../PracticeExercise/Navbar.html">3.3 Navbars </a>
+    <a class="dropdown-item" href="../PracticeExercise/Listgroup.html">3.4 ListGroups</a>
+    <a class="dropdown-item" href="../PracticeExercise/FormsInput.html">3.5 Forms & Input</a>
+	<a class="dropdown-item" href="../PracticeExercise/Inputgroups.html">3.6 Input Groups</a>
+    <a class="dropdown-item" href="../PracticeExercise/AlertProgress.html">3.7 Alerts and Progress Bars</a>
+    <a class="dropdown-item" href="../PracticeExercise/TablePagination.html">3.8 Tables & Pagination</a>
+	<a class="dropdown-item" href="../PracticeExercise/Cards.html">3.9 Cards</a>
+	<a class="dropdown-item" href="../PracticeExercise/Mediaobjects.html">3.10 Media Objects</a>
+	<a class="dropdown-item" href="../PracticeExercise/Breadcrumb.html">3.11 Breadcrumbs</a>
+	<a class="dropdown-item" href="../PracticeExercise/Carousel.html">3.12 Carousel</a>
+	<a class="dropdown-item" href="../PracticeExercise/Badge.html">3.13 Badge</a>
+	</div>
+	</div>
+	<div class="btn-group ml-3">
+	<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">4 : Grid & Flexbox</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item" href="../PracticeExercise/BSGridSystem.html" style="width:300px">4.2 Grid System</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSGridAlignment.html">4.3 Grid Alignment</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSFlexbox.html">4.4 Flexbox</a>
+    <a class="dropdown-item" href="../PracticeExercise/AutomarginWrap.html">4.5 Auto Margins & wrap</a>
+	</div>
+	</div>
+	<div class="btn-group ml-3">
+	<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">5 : JavaScript Widgets</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item" href="../PracticeExercise/BSCarouselJs.html" style="width:300px">5.2 Carousel Slider</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSCollapseJs.html">5.3 Collapse Accordion</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSTooltipJs.html">5.4 Tooltips</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSPopoversJs.html">5.5 Popovers</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSModalsJs.html">5.6 Modals</a>
+	</div>
+	</div></br></br>
+	<div class-"Container">
+			<!--Navbars & Nav-->
+        <!--Simple Navbar-->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+		<!-- Image and text -->
+		<nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="#">
+		<img src="back.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap</a>
+		</nav></br>
+		<!-- Color Schemes -->
+		<nav class="navbar navbar-dark bg-dark">
+		<a class="navbar-brand" href="#">
+		<img src="back.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap</a>
+		</nav>
+		<nav class="navbar navbar-dark bg-primary">
+		<a class="navbar-brand" href="#">
+		<img src="back.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap</a>
+		</nav>
+		<nav class="navbar navbar-light" style="background-color: #e3f2fd;">
+		<a class="navbar-brand" href="#">
+		<img src="back.jpg" width="30" height="30" class="d-inline-block align-top" alt=""> Bootstrap</a>
+		</nav></br>
+        <!--Navbar with Responsive Toggle-->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse-navbar-collpase id=#navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navbar Form-->
+        <nav class="navbar navbar-expand-sm navbar-light bg-light mb-3">
+            <div class="container">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse-navbar-collpase id=#navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">DropDown</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Link 1</a>
+                                <a href="#" class="dropdown-item">Link 2</a>
+                                <a href="#" class="dropdown-item">Link 3</a>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <form class="form-inline my-2 my-lg-0">
+                        <input type="text" class="form-control mr-sm-2" placeholder="search" />
+                        <button class="btn btn-outline-success my-2 my-sm-0">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!--NAVS-->
+		<nav class="nav">
+		<a class="nav-link active" href="#">Active</a>
+		<a class="nav-link" href="#">Link</a>
+		<a class="nav-link" href="#">Link</a>
+		<a class="nav-link disabled" href="#">Disabled</a>
+		</nav>
+        <!-- Horizontal Alignment -->
+		<ul class="nav justify-content-center">
+		<li class="nav-item">
+		<a class="nav-link active" href="#">Active</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link disabled" href="#">Disabled</a>
+		</li>
+		</ul>
+		<!-- Verticle -->
+		<nav class="nav flex-column">
+		<a class="nav-link active" href="#">Active</a>
+		<a class="nav-link" href="#">Link</a>
+		<a class="nav-link" href="#">Link</a>
+		<a class="nav-link disabled" href="#">Disabled</a>
+		</nav>
+		<!-- Tabs -->
+		<ul class="nav nav-tabs">
+		<li class="nav-item">
+		<a class="nav-link active" href="#">Active</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link disabled" href="#">Disabled</a>
+		</li>
+		</ul></br>
+		<!-- Pills -->
+		<ul class="nav nav-pills">
+		<li class="nav-item">
+		<a class="nav-link active" href="#">Active</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link" href="#">Link</a>
+		</li>
+		<li class="nav-item">
+		<a class="nav-link disabled" href="#">Disabled</a>
+		</li>
+		</ul></br>
+		<!-- Fill and Justify -->
+		<nav class="nav nav-pills nav-fill">
+		<a class="nav-item nav-link active" href="#">Active</a>
+		<a class="nav-item nav-link" href="#">Link</a>
+		<a class="nav-item nav-link" href="#">Link</a>
+		<a class="nav-item nav-link disabled" href="#">Disabled</a>
+		</nav></br>
+		<!-- Flex Utilities -->
+		<nav class="nav nav-pills flex-column flex-sm-row">
+		<a class="flex-sm-fill text-sm-center nav-link active" href="#">Active</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+		<a class="flex-sm-fill text-sm-center nav-link" href="#">Link</a>
+		<a class="flex-sm-fill text-sm-center nav-link disabled" href="#">Disabled</a>
+		</nav>
+	</div>
+</body>
+</html>      	

@@ -1,0 +1,181 @@
+<!-- Create a Navbar with sub menu for the things learned in the section.  -->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width.intial-scale=1" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Bootstrap</title>
+    </head>
+<body>
+	<h2 class="display-2 text-center mb-5">Forms & Input</h2>
+	<div class="btn-group ml-5">
+	<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">2 : Utilities</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item " href="../PracticeExercise/Typography.html" style="width:300px">2.2 Basic Typography</a>
+    <a class="dropdown-item" href="../PracticeExercise/TextalignmentDisplay.html">2.3 Text Alignment & Display</a>
+    <a class="dropdown-item" href="../PracticeExercise/FloatPositions.html">2.4 Floats & Positions</a>
+    <a class="dropdown-item" href="../PracticeExercise/ColorBackground.html">2.5 Colors & Background</a>
+	<a class="dropdown-item" href="../PracticeExercise/Spacing.html">2.6 Spacing</a>
+    <a class="dropdown-item" href="../PracticeExercise/Sizing.html">2.7 Sizing</a>
+    <a class="dropdown-item" href="../PracticeExercise/Breakpoints.html">2.8 Breakpoints</a>
+    </div>
+	</div>
+	<div class="btn-group ml-3">
+	<button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">3: CSS Components</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item" href="../PracticeExercise/Button.html" style="width:300px">3.2 Buttons & Buttons Groups</a>
+    <a class="dropdown-item" href="../PracticeExercise/Navbar.html">3.3 Navbars </a>
+    <a class="dropdown-item" href="../PracticeExercise/Listgroup.html">3.4 ListGroups</a>
+    <a class="dropdown-item" href="../PracticeExercise/FormsInput.html">3.5 Forms & Input</a>
+	<a class="dropdown-item" href="../PracticeExercise/Inputgroups.html">3.6 Input Groups</a>
+    <a class="dropdown-item" href="../PracticeExercise/AlertProgress.html">3.7 Alerts and Progress Bars</a>
+    <a class="dropdown-item" href="../PracticeExercise/TablePagination.html">3.8 Tables & Pagination</a>
+	<a class="dropdown-item" href="../PracticeExercise/Cards.html">3.9 Cards</a>
+	<a class="dropdown-item" href="../PracticeExercise/Mediaobjects.html">3.10 Media Objects</a>
+	<a class="dropdown-item" href="../PracticeExercise/Breadcrumb.html">3.11 Breadcrumbs</a>
+	<a class="dropdown-item" href="../PracticeExercise/Carousel.html">3.12 Carousel</a>
+	<a class="dropdown-item" href="../PracticeExercise/Badge.html">3.13 Badge</a>
+	</div>
+	</div>
+	<div class="btn-group ml-3">
+	<button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">4 : Grid & Flexbox</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item" href="../PracticeExercise/BSGridSystem.html" style="width:300px">4.2 Grid System</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSGridAlignment.html">4.3 Grid Alignment</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSFlexbox.html">4.4 Flexbox</a>
+    <a class="dropdown-item" href="../PracticeExercise/AutomarginWrap.html">4.5 Auto Margins & wrap</a>
+	</div>
+	</div>
+	<div class="btn-group ml-3">
+	<button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" 
+	aria-expanded="false" style="width:300px">5 : JavaScript Widgets</button>
+	<div class="dropdown-menu text-left">
+    <a class="dropdown-item" href="../PracticeExercise/BSCarouselJs.html" style="width:300px">5.2 Carousel Slider</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSCollapseJs.html">5.3 Collapse Accordion</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSTooltipJs.html">5.4 Tooltips</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSPopoversJs.html">5.5 Popovers</a>
+    <a class="dropdown-item" href="../PracticeExercise/BSModalsJs.html">5.6 Modals</a>
+	</div>
+	</div></br></br>
+	<div class-"Container">
+		 <!--Forms & Input-->	
+        <!--stacked form-->
+        <form action="/action_page.php">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!--Inline form with utilities-->
+        <form class="form-inline" action="/action_page.php">
+            <label for="email2" class="mb-2 mr-sm-2">Email:</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="email2" placeholder="Enter email" name="email">
+            <label for="pwd2" class="mb-2 mr-sm-2">Password:</label>
+            <input type="text" class="form-control mb-2 mr-sm-2" id="pwd2" placeholder="Enter password" name="pswd">
+            <div class="form-check mb-2 mr-sm-2">
+                <label class="form-check-label">
+                    <input type="checkbox" class="form-check-input" name="remember"> Remember me
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary mb-2">Submit</button>
+        </form>
+        <!--Form Validation-->
+        <form action="/action_page.php" class="was-validated">
+            <div class="form-group">
+                <label for="uname">Username:</label>
+                <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" type="checkbox" name="remember" required> I agree on blabla.
+                    <div class="valid-feedback">Valid.</div>
+                    <div class="invalid-feedback">Check this checkbox to continue.</div>
+                </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <!--Textarea-->
+        <div class="form-group">
+            <label for="comment">Comment:</label>
+            <textarea class="form-control" rows="5" id="comment"></textarea>
+        </div>
+        <!--Checkbox-->
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="">Option 1
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="">Option 2
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="checkbox" class="form-check-input" value="" disabled>Option 3
+            </label>
+        </div>
+        <!--RadioButtons--><br />
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Option 1
+            </label>
+        </div>
+        <div class="form-check">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio">Option 2
+            </label>
+        </div>
+        <div class="form-check disabled">
+            <label class="form-check-label">
+                <input type="radio" class="form-check-input" name="optradio" disabled>Option 3
+            </label>
+        </div>
+        <!--select list-->
+        <div class="form-group">
+            <label for="sel1">Select list:</label>
+            <select class="form-control" id="sel1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+        </div>
+        <!--form control sizing-->
+        <input type="text" class="form-control form-control-sm">
+        <input type="text" class="form-control form-control">
+        <input type="text" class="form-control form-control-lg">
+        <!--form control with plain text-->
+        <input type="text" class="form-control-plaintext">
+        <!--Form control file and range-->
+        <input type="range" class="form-control-range">
+        <input type="file" class="form-control-file border">
+
+	</div>
+</body>
+</html>      	
