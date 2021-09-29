@@ -1,0 +1,86 @@
+<!-- Create an application for performing basic math operations like Addition, Subtraction,   Multiplication and 
+    Division. -->
+<!-- Consider following elements: -->
+     <!-- Label : “Please enter first number : ” with Text Box -->
+     <!-- Label : “Please enter second number : ” with Text Box -->
+     <!-- Label : “Please select operation you want to perform : ” with set of Radio Buttons like “Addition”, 
+        “Subtraction”, “Multiplication” and “Division” presented in vertical manner. -->
+     <!-- Two buttons,  “Calculate” and “Reset” -->
+     <!-- Label: “Result is: ” with final result – Place all the checks to make sure that user enters only numeric 
+        values for text boxes. Clicking on “Calculate” button will perform the requested operation and the result 
+        will be displayed below “Calculate” and “Reset” buttons in the form of text, e.g. : “Result is : 10”. 
+        – Clicking on “Reset” button will reset all the form information including radio button selection and 
+        result text. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Calculator</title>
+  </head>
+  <body class="bg-dark">
+      <div class="container mx-auto border border-dark yellow bg-success" style="width:500px;height:500px;margin-top: 70px;">
+      <h1 class="display-1 text-center">Calculator</h1>
+      <label for="num1">Enter first Number</label>
+            <input class="bg-light" type="text" name="num1" id="num1">
+      <label for="number">Enter second Number</label>
+            <input type="text" name="num2" id="num2"><br>
+      <input type="radio"id="add"name="operation"value="add"/>
+            <label for="add"> Add </label><br>
+      <input type="radio"id="sub"name="operation"value="sub"/>
+            <label for="sub"> Subtract </label><br>
+      <input type="radio"id="mul"name="operation"value="mul"/>
+            <label for="mul"> Multiply </label><br>
+      <input type="radio"id="div"name="operation"value="div"/>
+            <label for="Div"> Divide </label><br>
+      <button class="btn btn-primary ml-5" style="width:100px" type="button" onclick="myCal()">Calculate</button>
+      <button class="btn btn-primary" type="button" onclick="reset()">Reset</button><br>
+            <label> Result : <span id="result"></span> </label>
+       <script>
+            const num1 = document.getElementById("num1");
+            const num2 = document.getElementById("num2");
+            function myCal() {
+            var n1 = parseInt(num1.value);
+            var n2 = parseInt(num2.value);
+            if (isNaN(n1) || isNaN(n2)) 
+            {
+                alert("enter valid numbers");
+            } 
+            else if (document.getElementById("add").checked) 
+            {
+                document.getElementById("result").innerHTML = n1 + n2;
+            } 
+            else if (document.getElementById("sub").checked) 
+            {
+                document.getElementById("result").innerHTML = n1 - n2;
+            } 
+            else if (document.getElementById("mul").checked) 
+            {
+                document.getElementById("result").innerHTML = n1 * n2;
+            } 
+            else if (document.getElementById("div").checked) 
+            {
+                document.getElementById("result").innerHTML = n1 / n2;
+            } 
+            else 
+            {
+                alert("please choose valid operation");
+            }
+        }
+            function reset() {
+            num1.value = null;
+            num2.value = null;
+            for (i of document.querySelectorAll("div input[name='operation']")) {
+            i.checked = null;
+        }
+    }
+    </script>
+    </div>
+</body>
+</html>
