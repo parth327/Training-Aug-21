@@ -1,0 +1,233 @@
+<!-- Practice Exercise -->
+<!DOCTYPE html>
+<html>
+    <body>
+        <button onclick="myFunction()">Click</button>
+        <p id="demo"></p>
+        <p id="d">Hello p</p>
+        <p id="dm">Please visit w3</p>      
+        <p id="del1"></p>
+        <p id="del2"></p>
+
+        <script>   
+//  Strings
+    // let text = "Zalak Joshi"; 
+    // document.getElementById("demo").innerHTML = text;
+        // String Length
+    // let text = "HELLOTHISISJAVASCRIPT";
+    // document.getElementById("demo").innerHTML = text.length;    
+        // Escape Character
+    // let text = "You are the so-called \"Asian\" from the north.";
+    // document.getElementById("demo").innerHTML = text; 
+        // // Breaking Long Code Lines
+    // document.getElementById("demo").innerHTML =
+    // "Hello Parth!";   
+        // // Strings Can be Obejects
+        // let x = "Rajat";       
+        // let y = new String("Rajat");  
+        // document.getElementById("demo").innerHTML =
+        // typeof x + "<br>" + typeof y;
+        // String Methods
+        //slice() Method
+    // let str = "Apple, Banana, Kiwi";
+    // document.getElementById("demo").innerHTML = str.slice(15,19); 
+        //Substring Method
+    // let str = "Apple, Banana, Kiwi";
+    // document.getElementById("demo").innerHTML = str.substring(7,13);   
+        // //substr() Method
+        // let str = "Apple, Banana, Kiwi";
+        // document.getElementById("demo").innerHTML = str.substr(0,5);
+        //Replacing String Content
+    // function myFunction() {
+    // let text = document.getElementById("dm").innerHTML;
+    // document.getElementById("dm").innerHTML =
+    // text.replace("w3","W3Schools");
+    // }
+       //Converting to UpperCase()
+    // function myFunction() {
+    // let text = document.getElementById("d").innerHTML;
+    // document.getElementById("d").innerHTML =
+    // text.toUpperCase();
+    // }
+        //Concat() Method
+    // let text1 = "My";
+    // let text2 = "Website!";
+    // let text3 = text1.concat(" ",text2);
+    // document.getElementById("demo").innerHTML = text3; 
+    //     //trim() Method     
+    // function myFunction() {
+    // let text = "     My Website!     ";
+    // alert(text.trim());
+    //}
+        //String Padding
+    // let text = "5";
+    // document.getElementById("demo").innerHTML = text.padStart(3,0);
+        //charAt()
+    // var text = "MY WEBSITE";
+    // document.getElementById("demo").innerHTML = text.charAt(0);
+    //     //charCodeAt() Method
+    // let text = "HELLO WORLD";
+    // document.getElementById("demo").innerHTML = text.charCodeAt(0);
+    //     Property access
+    // var str = "My Website";
+    // document.getElementById("demo").innerHTML = str[0];
+        // //Converting to string an array
+    let text = "a,b,c,d,e,f";
+    const myArray = text.split(",");
+    document.getElementById("demo").innerHTML = myArray[0];
+        // Numbers
+    // let x = 5.64;
+    // let y = 3;
+    // document.getElementById("demo").innerHTML = x + "<br>" + y;
+        //Precision
+    // let x = 999999999999999;
+    // let y = 9999999999999999;
+    // document.getElementById("demo").innerHTML = x + "<br>" + y;
+        // Adding Numbers and Strings
+    // let x = 10;
+    // let y = 20;
+    // let z = "30";
+    // let result = x + y + z;
+    // document.getElementById("demo").innerHTML = result;
+        // Numeric strings
+    // let x = "100";
+    // let y = "10";
+    // let z = x / y;   
+    // document.getElementById("demo").innerHTML = z;
+        //NaN
+    // document.getElementById("demo").innerHTML = 100 / "Apple";
+        //Infinity
+    // document.getElementById("demo").innerHTML = typeof Infinity;
+        //Hexadecimal
+    // let x = 0xFF;
+    // document.getElementById("demo").innerHTML = "0xFF = " + x;
+        //Numbers can be objects
+    // let x = 123;
+    // let y = new Number(123);
+    // document.getElementById("demo").innerHTML = typeof x + "<br>" + typeof y;
+        //toString() Method
+    // let x = 123;
+    // document.getElementById("demo").innerHTML =
+    // x.toString() + "<br>" +
+    // (123).toString() + "<br>" +
+    // (100 + 23).toString();
+        //The Exponential Method
+    // let x = 9.656;
+    // document.getElementById("demo").innerHTML =
+    // x.toExponential() + "<br>" + 
+    // x.toExponential(2) + "<br>" + 
+    // x.toExponential(4) + "<br>" + 
+    // x.toExponential(6);
+         // toFixed()
+// let x = 9.656;
+// document.getElementById("demo").innerHTML =
+//   x.toFixed(0) + "<br>" +
+//   x.toFixed(2) + "<br>" +
+//   x.toFixed(4) + "<br>" +
+//   x.toFixed(6);
+    //toPrecision() MEthod
+//     let x = 9.656;
+// document.getElementById("demo").innerHTML = 
+//   x.toPrecision() + "<br>" +
+//   x.toPrecision(2) + "<br>" +
+//   x.toPrecision(4) + "<br>" +
+//   x.toPrecision(6);
+    // valueOf()
+//     let x = 123;
+// document.getElementById("demo").innerHTML = 
+//   x.valueOf() + "<br>" +
+//   (123).valueOf() + "<br>" +
+//   (100 + 23).valueOf();
+    // // Array
+// const cars = ["Saab", "Volvo", "BMW"];
+// document.getElementById("demo").innerHTML = cars;
+//string Methods
+// let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+// document.getElementById("demo").innerHTML = text.length;
+    //COnverting Arrays to strings
+//     const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits.toString();
+    // Pooping
+//     const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo1").innerHTML = fruits;
+// fruits.pop();
+// document.getElementById("demo2").innerHTML = fruits;
+    // Pushing
+//     const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo1").innerHTML = fruits;
+// function myFunction() {
+//   document.getElementById("demo1").innerHTML = fruits.push("Kiwi");
+//   document.getElementById("demo2").innerHTML = fruits;
+// }
+    //Shifting Elements
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits;
+// function myFunction() {
+// fruits.unshift("Lemon");
+// document.getElementById("demo").innerHTML = fruits;
+// }
+    //Changing Elements
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits;
+// function myFunction() {
+// fruits[fruits.length] = "Kiwi";
+// document.getElementById("demo").innerHTML = fruits;
+// }
+    //Deleting Elements
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("del1").innerHTML ="The first fruit is: " + fruits[0];
+// delete fruits[0];
+// document.getElementById("del2").innerHTML ="The first fruit is: " + fruits[0];
+    //Splicing an Array
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("del1").innerHTML = "Original Array:<br>" + fruits;
+// function myFunction() {
+// fruits.splice(2, 0, "Lemon", "Kiwi");
+//   document.getElementById("del2").innerHTML = "New Array:<br>" + fruits;
+// }
+    //Slicing an Array
+// const fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+// const citrus = fruits.slice(1);
+// document.getElementById("demo").innerHTML = fruits + "<br><br>" + citrus;
+    //Automatic toString()
+// const fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits.toString();
+    // Merging Arrays
+// const myGirls = ["Cecilie", "Lone"];
+// const myBoys = ["Emil", "Tobias", "Linus"];
+// const myChildren = myGirls.concat(myBoys);
+// document.getElementById("demo").innerHTML = myChildren;
+//     //    new Date()
+// const d = new Date();
+// document.getElementById("demo").innerHTML = d;
+    //new Date(year,month)
+//     const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+// document.getElementById("demo").innerHTML = d;
+
+//Date Get Methods
+    //getTime()
+//     const d = new Date();
+// document.getElementById("demo").innerHTML = d.getTime();
+    //getFullYear()
+//     const d = new Date();
+// document.getElementById("demo").innerHTML = d.getFullYear();
+    //getMonth()
+//     const d = new Date();
+// document.getElementById("demo").innerHTML = d.getMonth(); 
+    //set full years method
+//     const d = new Date();
+// d.setFullYear(2020, 11, 3);
+// document.getElementById("demo").innerHTML = d;
+    // upting the content of elements
+// const element = document.getElementById("intro");
+// document.getElementById("demo").innerHTML = 
+// "The text from the intro paragraph is: " + element.innerHTML;
+    //Tag name
+//     const x = document.getElementById("main");
+// const y = x.getElementsByTagName("p");
+// document.getElementById("demo").innerHTML = 
+// 'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+      
+        </script>
+    </body>
+</html>

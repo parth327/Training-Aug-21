@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+                //Validation
+                function validateForm() {
+            let x = document.forms["myForm"]["fname"].value;
+            if (x == "") {
+            alert("Name must be filled out");
+            return false;
+            }
+            }
+        
+        </script>
+    </head>
+    <body>
+            <!-- <p>Finding HTML Elements by Tag Name.</p>
+            <p id="intro">Finding HTML Elements by Id</p> -->
+            <p id="demo"></p>
+            <!-- <input id="numb">
+            <button type="button" onclick="myFunction()">Submit</button> -->
+        <!-- <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+            Name: <input type="text" name="fname">
+            <input type="submit" value="Submit">
+        </form> -->
+         <!-- Automatic HTML Form Validation -->
+            <!-- <form action="" method="post">
+            <input type="text" name="fname" required>
+            <input type="submit" value="Submit">
+            </form> -->
+            <input type="button" value="Load new document" onclick="newDoc()">
+            <input type="button" value="Back" onclick="goBack()">            
+            <input type="button" value="Forward" onclick="goForward()">
+        <script>
+                //Finding HTML elements by ID
+            // const element = document.getElementById("intro");
+            // document.getElementById("demo").innerHTML = 
+            // "The text from the intro paragraph is: " + element.innerHTML;
+            // //Finding HTML elements by Tag Name
+            // const element = document.getElementsByTagName("p");
+            // document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+            // //Validate Numeric input
+            // function myFunction() {
+            // let x = document.getElementById("numb").value;
+            //  let text;
+            // if (isNaN(x) || x < 1 || x > 10) {
+            // text = "Input not valid";
+            // }
+            //  else 
+            //  {
+            // text = "Input OK";
+            // }
+            // document.getElementById("demo").innerHTML = text;
+            // }
+            //Window
+            // document.getElementById("demo").innerHTML =
+            // "Browser inner window width: " + window.innerWidth + "px<br>" +
+            // "Browser inner window height: " + window.innerHeight + "px";
+            // window.open();
+            //window.close();
+            // window.moveTo();
+            // window.resizeTo();
+            //Location
+            // document.getElementById("demo").innerHTML = 
+            // "The full URL of this page is:<br>" + window.location.href;
+            //Hostname
+            // document.getElementById("demo").innerHTML = 
+            // "Page hostname is :" + window.location.hostname;
+            //Location Pathname
+            // document.getElementById("demo").innerHTML =
+            // "Page path is: " + window.location.pathname;
+            //Location Protocol
+            // document.getElementById("demo").innerHTML =
+            // "The page protocol is: " + window.location.protocol;
+            //Location Port
+            // document.getElementById("demo").innerHTML = 
+            // "The URL port number of the current page is: " + window.location.port;      
+            //Location Assign
+            // function newDoc() {
+            // window.location.assign("https://www.radixweb.com")
+            // }
+            // function goBack() {
+            // window.history.back()
+            // }
+            // function goForward() {
+            //     window.history.forward()
+            // }
+            //Browser Cookies
+            // document.getElementById("demo").innerHTML =
+            // "navigator.cookieEnabled is " + navigator.cookieEnabled;
+            //Browser Application Name
+            // document.getElementById("demo").innerHTML = 
+            // "navigator.appName is " + navigator.appName;
+            //Code Name
+            // document.getElementById("demo").innerHTML = 
+            // "navigator.appCodeName is " + navigator.appCodeName;
+            //Browser Engine
+            // document.getElementById("demo").innerHTML =
+            // "navigator.product is " + navigator.product;
+            //Browser Version
+            // document.getElementById("demo").innerHTML = navigator.appVersion;
+            //Browser Agent
+            // document.getElementById("demo").innerHTML =
+            // navigator.userAgent;
+            //Browser Platform
+            // document.getElementById("demo").innerHTML = 
+            // "navigator.platform is " + navigator.platform;
+            //Browser Language
+            // document.getElementById("demo").innerHTML = 
+            // "navigator.language is " + navigator.language;
+            //Is the Browser Online?
+            // document.getElementById("demo").innerHTML =
+            // "navigator.onLine is " + navigator.onLine;
+            // Is Java Enabled
+            document.getElementById("demo").innerHTML =
+            "javaEnabled is " + navigator.javaEnabled();
+        </script>
+</body>
+</html>

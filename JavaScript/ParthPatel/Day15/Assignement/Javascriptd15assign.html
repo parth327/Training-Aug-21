@@ -27,18 +27,25 @@
   <body class="bg-dark">
       <div class="container mx-auto border border-dark yellow bg-success" style="width:500px;height:500px;margin-top: 70px;">
       <h1 class="display-1 text-center">Calculator</h1>
+      <!-- Textbox-1 -->
       <label for="num1">Enter first Number</label>
             <input class="bg-light" type="text" name="num1" id="num1">
+      <!-- Textbox-2 -->
       <label for="number">Enter second Number</label>
             <input type="text" name="num2" id="num2"><br>
+      <!-- Addition -->
       <input type="radio"id="add"name="operation"value="add"/>
             <label for="add"> Add </label><br>
+      <!-- Subtraction -->
       <input type="radio"id="sub"name="operation"value="sub"/>
             <label for="sub"> Subtract </label><br>
+      <!-- Multiplication -->
       <input type="radio"id="mul"name="operation"value="mul"/>
             <label for="mul"> Multiply </label><br>
+      <!-- Division -->
       <input type="radio"id="div"name="operation"value="div"/>
             <label for="Div"> Divide </label><br>
+      <!-- Calculate and Reset Buttons -->
       <button class="btn btn-primary ml-5" style="width:100px" type="button" onclick="myCal()">Calculate</button>
       <button class="btn btn-primary" type="button" onclick="reset()">Reset</button><br>
             <label> Result : <span id="result"></span> </label>

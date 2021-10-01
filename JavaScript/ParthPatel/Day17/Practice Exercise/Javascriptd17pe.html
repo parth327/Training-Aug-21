@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html>
+    
+    <body>
+        <p id="demo"></p>
+        <!-- <p id="hide">Hide</p> -->
+        <!-- <p id="color">red</p> -->
+        <!-- <input type="text" id="myText" value="Hello"> -->
+        <!-- <img id="image" src="aboutimage.jpg"> -->
+        <input type="button" value="Radixweb" onclick="newDoc()">
+        <input type="button" value="Previous" onclick="goBack()">
+        <button onclick="myFunction()">Change</button>
+        <script>
+//Practice 1
+            //document.getElementById("demo").innerHTML="Hello";
+//Practice 2
+            // document.getElementsByTagName("p")[0].innerHTML="Hello";
+//Practice 3
+            //document.getElementById("image").src="back.jpg";
+//Practice 4
+            //document.getElementById("myText").value = "Have a nice day!";
+//Practice 5
+            //document.getElementById("color").style.color = "red";
+//Practice 6
+            //document.getElementById("hide").style.display="none";
+//Practice 7. Use Window.location object to navigate on another page
+            // function newDoc() {
+            // window.location.assign("https://www.Radixweb.com")
+            // }
+//Practice 8. Use Window.history object to move to previous url in the history list
+            // function goBack() {
+            // window.history.back()
+            // }
+//Practice 9. Try to change windows height and width using Windows object
+            function myFunction() {
+            var w = window.innerWidth ;
+            var h = window.innerHeight;
+            document.getElementById("demo").innerHTML = "Width: " + (w+100) + "<br>Height: " + (h+100);
+            }       
+        </script>
+</body>
+</html>

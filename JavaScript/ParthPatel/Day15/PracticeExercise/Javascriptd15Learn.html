@@ -1,0 +1,218 @@
+<!-- Javascript -->
+
+<html>
+<body>
+    <!-- <button onclick="document.getElementById('demo').innerHTML=Date()">The time is?</button> -->
+    <div class="main">
+        <p>Tag name</p>
+
+    </div>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="intro"></p>
+<p id="demo2"></p>
+<script>
+    // Variables
+// var x = 5;
+// var y = 6;
+// var z = x + y;
+// document.getElementById("demo").innerHTML =
+// "The value of z is: " + z;
+    // Much like algebra
+// var price1 = 5;
+// var price2 = 6;
+// var total = price1 + price2;
+// document.getElementById("demo").innerHTML =
+// "The total is: " + total;
+    // Javascript Data Types
+// var pi = 3.14;
+// var person = "John Doe";
+// var answer = 'Yes I am!';
+// document.getElementById("demo").innerHTML =
+// pi + "<br>" + person + "<br>" + answer;
+    // Declaring Javascript Variables
+// var carName = "Volvo";
+// document.getElementById("demo").innerHTML = carName;
+    // One Statement ,Many Variables
+// var person = "John Doe", carName = "Volvo", price = 200;
+// document.getElementById("demo").innerHTML = carName;
+// var person = "John Doe",
+// carName = "Volvo",
+// price = 200;
+// document.getElementById("demo").innerHTML = carName;
+    //Value-undefined
+// var carName;
+// document.getElementById("demo").innerHTML = carName;
+    //Redeclaring Javascript Variables
+// var carName = "Volvo";
+// var carName;
+// document.getElementById("demo").innerHTML = carName;
+    //Javascript Arithmatic
+// var x = 5 + 2 + 3;
+// document.getElementById("demo").innerHTML = x;
+// var x = "John" + " " + "Doe";
+// document.getElementById("demo").innerHTML = x;
+    //Dollar sign
+// var $ = 2;
+// var $myMoney = 5;
+// document.getElementById("demo").innerHTML = $ + $myMoney;
+// // Underscore
+// var _x = 2;
+// var _100 = 5;
+// document.getElementById("demo").innerHTML = _x + _100;
+    //Data Types
+// let x = 16 + "Volvo";
+// document.getElementById("demo").innerHTML = x;
+// Javascript Types are Dynamic
+// let x;         
+// x = 5;         
+// x = "John";    
+// document.getElementById("demo").innerHTML = x;
+    // Strings
+// let carName1 = "Volvo XC60";
+// let carName2 = 'Volvo XC60';
+// document.getElementById("demo").innerHTML =
+// carName1 + "<br>" + 
+// carName2; 
+    // Boolean
+// let x = 5;
+// let y = 5;
+// let z = 6;
+// document.getElementById("demo").innerHTML =
+// (x == y) + "<br>" + (x == z);
+// Arrays
+// const cars = ["Saab","Volvo","BMW"];
+// document.getElementById("demo").innerHTML = cars[0];
+    // Objects
+// const person = {
+//   firstName : "John",
+//   lastName  : "Doe",
+//   age     : 50,
+//   eyeColor  : "blue"
+// };
+// document.getElementById("demo").innerHTML =
+// person.firstName + " is " + person.age + " years old.";
+    // Typeof Operator
+// document.getElementById("demo").innerHTML = 
+// typeof "" + "<br>" +
+// typeof "John" + "<br>" + 
+// typeof "John Doe";
+    // Undefined
+// let car;
+// document.getElementById("demo").innerHTML =
+// car + "<br>" + typeof car;
+    //Empty Values
+// let car = "";
+// document.getElementById("demo").innerHTML =
+// "The value is: " +
+// car + "<br>" +
+// "The type is: " + typeof car;
+    // Functions
+//     function myFunction(p1, p2) {
+//   return p1 * p2;
+// }
+// document.getElementById("demo").innerHTML = myFunction(4, 3);
+    //Function Return
+// var x = myFunction(4, 3);
+// document.getElementById("demo").innerHTML = x;
+// function myFunction(a, b) {
+//   return a * b;
+// }
+    // Local Variables
+// myFunction();
+// function myFunction() {
+//   let carName = "Volvo";
+//   document.getElementById("demo1").innerHTML =
+//   typeof carName + " " + carName;
+// }
+// document.getElementById("demo2").innerHTML =
+// typeof carName;
+    // Conditional Construct
+    // If statement
+//     if (new Date().getHours() < 18) {
+//   document.getElementById("demo").innerHTML = "Good day!";
+// }
+    // Else Statement
+// const hour = new Date().getHours(); 
+// let greeting;
+
+// if (hour < 18) {
+//   greeting = "Good day";
+// } else {
+//   greeting = "Good evening";
+// }
+// document.getElementById("demo").innerHTML = greeting;
+    // Else If
+// const time = new Date().getHours();
+// let greeting;
+// if (time < 10) {
+//   greeting = "Good morning";
+// } 
+// else if (time < 20) {
+//   greeting = "Good day";
+// }
+//  else {
+//   greeting = "Good evening";
+// }
+// document.getElementById("demo").innerHTML = greeting;
+    // Switch
+// let day;
+// switch (new Date().getDay()) {
+//   case 0:
+//     day = "Sunday";
+//     break;
+//   case 1:
+//     day = "Monday";
+//     break;
+//   case 2:
+//     day = "Tuesday";
+//     break;
+//   case 3:
+//     day = "Wednesday";
+//     break;
+//   case 4:
+//     day = "Thursday";
+//     break;
+//   case 5:
+//     day = "Friday";
+//     break;
+//   case  6:
+//     day = "Saturday";
+// }
+// document.getElementById("demo").innerHTML = "Today is " + day;
+    // Loop
+// const cars = ["BMW", "Volvo", "Saab", "Ford", "Fiat", "Audi"];
+// let text = "";
+// for (let i = 0; i < cars.length; i++) {
+//   text += cars[i] + "<br>";
+// }
+// document.getElementById("demo").innerHTML = text;
+    // While
+// let text = "";
+// let i = 0;
+// while (i < 10) {
+//   text += "<br>The number is " + i;
+//   i++;
+// }
+// document.getElementById("demo").innerHTML = text;
+    // Do..while
+// let text = ""
+// let i = 0;
+// do {
+//   text += "<br>The number is " + i;
+//   i++;
+// }
+// while (i < 10);  
+// document.getElementById("demo").innerHTML = text;
+    // Debugging
+a = 5;
+b = 6;
+c = a + b;
+console.log(c);
+    // Debugger keyword
+    let x = 15 * 5;
+debugger;
+document.getElementById("demo").innerHTML = x;
+</script>
+</body>
+</html>
