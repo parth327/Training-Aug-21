@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <p id="demo"></p>
+    </head>
+    <body> 
+        <script>
+        //Callbacks
+        //Function Sequence
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // function myFirst() {
+            // myDisplayer("Hello");
+            // }   
+            // function mySecond() {
+            // myDisplayer("Goodbye");
+            // }
+            // myFirst();
+            // mySecond();//Execute mySecond()
+        //Sequence Control
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // function myCalculator(num1, num2) {
+            // let sum = num1 + num2;
+            // return sum;
+            // }
+            // let result = myCalculator(3, 5);
+            // myDisplayer(result);
+        //Callbacks
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // function myCalculator(num1, num2, myCallback) {
+            // let sum = num1 + num2;
+            // myCallback(sum);
+            // }
+            // myCalculator(5, 5, myDisplayer);
+        //Promise
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // let myPromise = new Promise(function(myResolve, myReject) {
+            // let x = 0;
+            // // some code (try to change x to 5)
+            // if (x == 0) {
+            // myResolve("OK");
+            // } 
+            // else 
+            // {
+            // myReject("Error");
+            // }
+            // });
+            // myPromise.then(
+            // function(value) {myDisplayer(value);},
+            // function(error) {myDisplayer(error);}
+            // );
+        //Waiting for a Timeout
+            // const myPromise = new Promise(function(myResolve, myReject) {
+            // setTimeout(function(){ myResolve("Hello World !!"); }, 3000);
+            // });
+            // myPromise.then(function(value) {
+            // document.getElementById("demo").innerHTML = value;
+            // });
+        //Waiting for a file
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // let myPromise = new Promise(function(myResolve, myReject) {
+            // let req = new XMLHttpRequest();
+            // req.open('GET', "Javascriptd17Assign.html");
+            // req.onload = function() {
+            // if (req.status == 200) {
+            // myResolve(req.response);
+            // }
+            // else 
+            // {
+            // myReject("File not Found");
+            // }
+            // };
+            // req.send();
+            // });
+            // myPromise.then(
+            // function(value) {myDisplayer(value);},
+            // function(error) {myDisplayer(error);}
+            // );
+        //Async
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // async function myFunction() {return "Hello";}
+            // myFunction().then(
+            // function(value) {myDisplayer(value);},
+            // function(error) {myDisplayer(error);});
+        //Await
+        //Waiting for a Timeout
+            // async function myDisplay() {
+            // let myPromise = new Promise(function(myResolve, myReject) {
+            // setTimeout(function() { myResolve("My website !!"); }, 3000);
+            // });
+            // document.getElementById("demo").innerHTML = await myPromise;
+            // }
+            // myDisplay();
+        //Waiting for a file
+            // async function getFile() {
+            // let myPromise = new Promise(function(myResolve, myReject) {
+            // let req = new XMLHttpRequest();
+            // req.open('GET', "Javascriptd18Learn.html");
+            // req.onload = function() {
+            // if (req.status == 200) {
+            // myResolve(req.response);
+            // } else {
+            // myResolve("File not Found");
+            // }
+            // };
+            // req.send();
+            // });
+            // document.getElementById("demo").innerHTML = await myPromise;
+            // }
+        //var
+            // var carName = "Web";
+            // document.getElementById("demo").innerHTML = carName;
+        //let
+        //redeclaring a variable uaing let
+            // let  x = 10;
+            // {  
+            // let x = 2;
+            // }
+            // document.getElementById("demo").innerHTML = x;
+        //Hoising
+            try {
+            Name = "Samir";
+            let Name = "Sanjay";
+            }
+            catch(err) {
+            document.getElementById("demo").innerHTML = err;
+            }
+        </script>
+    </body>
+</html>

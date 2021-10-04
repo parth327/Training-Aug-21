@@ -1,0 +1,70 @@
+<!-- Practice Exercise -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <p id="demo"></p>
+    </head>
+    <body> 
+        <script>
+// 1. Define a function called callback which receives an argument and prints the square of that number.
+            // function myDisplayer(some) {
+            // document.getElementById("demo").innerHTML = some;
+            // }
+            // function myCalculator(n,myCallback) {
+            // let result = n*n;
+            // myCallback(result);
+            // }
+            // myCalculator(5,myDisplayer);
+// 2. Explain difference between var and let keyword using example. 
+        //let cannot redeclared
+            //let x = "Parth";
+            //let x = "Patel";
+        //var can redeclared
+            //var x = "Parth";
+            // var x = "Patel";
+        //let have block scope
+            // {
+            //     let x = 2;
+            // }
+        //var haven't block scope
+            // {
+            //     var x = 2;
+            // }
+        //Redeclaring a variable using the var keyword can impose problems.
+            // var  x = 10;
+            // {  
+            // var x = 2;
+            // }   
+            // document.getElementById("demo").innerHTML = x;
+        //Redeclaring a variable using the let keyword can solve this problem.
+            // let x = 10;
+            // {
+            //     let x = 2;
+            // }
+// 3. Make a function that takes in a single parameter and returns a new promise. 
+//using setTimeout, after 500 milliseconds, the promise will either resolove or reject. 
+//if the input is a string, the promise resolves with that reverse string . 
+// if the input is anything but a string it rejects with that same input call the function wrong Input
+                
+// function myFun(value) {
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//             if (typeof (value) == typeof ("world")) {
+//                 resolve(value.split("").reverse().join(""));
+//             }
+//             else {
+//                 reject("wrong input");
+//             }
+//         }, 500);
+
+//     });
+
+// }
+
+// myFun("dlrow").then(value => { console.log(value) }, error => console.log(error));;
+
