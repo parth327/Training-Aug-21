@@ -1,0 +1,182 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <p id="demo"></p>
+        <!-- <button type="button" onclick="myFunction()">Count!</button> -->
+    </head>
+    <body>
+        <script>
+            //Function Declaration
+                // var x = myFunction(4, 3);
+                // document.getElementById("demo").innerHTML = x;
+                // function myFunction(a, b) {
+                // return a * b;
+                // }
+            //Function Expression
+                // const x = function (a, b) {return a * b};
+                // document.getElementById("demo").innerHTML = x;
+                //The Function() constructor
+                // const myFunction = new Function("a", "b", "return a * b");
+                // document.getElementById("demo").innerHTML = myFunction(4, 3);
+                //Function Hoisting
+                // myFunction(5);
+                // function myFunction(y) {
+                // return y * y;
+                // }
+            //Self Invoking function
+                // (function () {
+                // document.getElementById("demo").innerHTML = "Hello! Are you There?";
+                // })();
+            //Function can be used as values
+                // function myFunction(a, b) {
+                // return a * b;
+                // }
+                // let x = myFunction(4, 3);
+                // document.getElementById("demo").innerHTML = x;
+                // Functions are objects
+                // function myFunction(a, b) {
+                // return arguments.length;
+                // }
+                // document.getElementById("demo").innerHTML = myFunction(4, 3);
+            // Arrow Functions
+                // const x = (x, y) => x * y;
+                // document.getElementById("demo").innerHTML = x(4, 5);
+            //Default Parameters
+                // function myFunction(x, y) {
+                // if (y === undefined) {
+                // y = 2;
+                // }
+                // return x * y;
+                // }
+                // document.getElementById("demo").innerHTML = myFunction(4);
+            //The Arguments Object
+                // function sumAll() {
+                // let sum = 0;
+                // for(let i = 0; i < arguments.length; i++) {
+                // sum += arguments[i];
+                // }
+                // return sum;
+                // }
+                // document.getElementById("demo").innerHTML = sumAll(1, 123, 500, 115, 44, 88);
+            //Invoking a Function as a Function
+                // function myFunction(a, b) {
+                // return a * b;
+                // }
+                // document.getElementById("demo").innerHTML = myFunction(10, 2);
+            // //Global
+                // let x = myFunction();
+                // function myFunction() {
+                // return this;
+                // }
+                // document.getElementById("demo").innerHTML = x;
+            //Invoking a function as a method
+                // const myObject = {
+                // firstName:"Parth",
+                // lastName: "Patel",
+                // fullName: function() {
+                // return this.firstName + " " + this.lastName;
+                // }
+                // }
+                // document.getElementById("demo").innerHTML = myObject.fullName();
+            //Invoking a Function with a Function Constructor
+                // function myFunction(arg1, arg2) {
+                // this.firstName = arg1;
+                // this.lastName  = arg2;
+                // }
+                // const myObj = new myFunction("Parth","Patel")
+                // document.getElementById("demo").innerHTML = myObj.lastName;
+            //All functions are method
+                // const myObject = {
+                // firstName:"Parth",
+                // lastName: "Patel",
+                // fullName: function() {
+                // return this.firstName + " " + this.lastName;
+                // }
+                // }
+                // document.getElementById("demo").innerHTML = myObject.fullName();
+            //The JavaScript call() Method
+                // const person = {
+                // fullName: function() {
+                // return this.firstName + " " + this.lastName;
+                // }
+                // }
+                // const person1 = {
+                // firstName:"Rutvik",
+                // lastName: "Prajapati"
+                // }
+                // const person2 = {
+                // firstName:"Kuldip",
+                // lastName: "Zala"
+                // }
+                // document.getElementById("demo").innerHTML = person.fullName.call(person2);
+            //Call() method with arguements
+                // const person = {
+                // fullName: function(city, country) {
+                // return this.firstName + " " + this.lastName + "," + city + "," + country;
+                // }
+                // }
+                // const person1 = {firstName:"Rutvik",lastName: "Prajapati"}
+                // const person2 = {firstName:"Kuldip",lastName: "Zala"}
+                // document.getElementById("demo").innerHTML = person.fullName.call(person2, "Ahmedabad", "Naroda");
+            //Function Apply
+                // const person = {
+                // fullName: function() {
+                // return this.firstName + " " + this.lastName;
+                // }
+                // }
+                // const person1 = {firstName:"Parth",lastName: "Patel"}
+                // document.getElementById("demo").innerHTML = person.fullName.apply(person1);
+            //Apply method with arguments
+                // const person = {
+                // fullName: function(city, country) {
+                // return this.firstName + " " + this.lastName + "," + city + "," + country;
+                // }
+                // }
+                // const person1 = {firstName:"Kuldip",lastName: "Zala"}
+                // const person2 = {firstName:"Rutvik",lastName: "Prajapati"}
+                // document.getElementById("demo").innerHTML = person.fullName.call(person1, "Bayad", "Boriya Chhapra"); 
+            //Simulate a Max Method on Arrays
+                //document.getElementById("demo").innerHTML = Math.max(1,2,3);  
+            //Function Closure
+            //Global Variable
+                // myFunction();
+                // function myFunction() {
+                // let a = 6;
+                // document.getElementById("demo").innerHTML = a * a;
+                // }
+            //A Counter Dilemma
+                // let counter = 0;
+                // function add() {
+                // counter += 1;
+                // }
+                // add();
+                // add();
+                // add();
+                // add();
+                // document.getElementById("demo").innerHTML = "The counter is: " + counter;
+            //Nested Functions
+                // document.getElementById("demo").innerHTML = add();
+                // function add() {
+                // let counter = 0;
+                // function plus() {counter += 1;}
+                // plus();  
+                // return counter; 
+                // }
+            //Javascript Closure
+                // const add = (function () {
+                // let counter = 0;
+                // return function () {counter += 1; return counter;}
+                // })();
+                // function myFunction(){
+                // document.getElementById("demo").innerHTML = add();
+                // }
+            
+        </script>
+    </body>
+</html>

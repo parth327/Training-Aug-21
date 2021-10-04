@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> </title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <p id="demo"></p>
+        <p id="d"></p>
+        <!-- <button type="button" onclick="myFunction()">Count!</button>
+        <p id="demo1">0</p> -->
+    </head>
+    <body>
+        <script>
+        //    Practice Exercise
+        // 1. Using Function Expression, find the area of circle
+            // const x = function (r) {return 3.14*r*r};
+            // document.getElementById("demo").innerHTML = x(3);
+        // 2. Using Function Constructor, find the area of rectangle
+            // const myFunction = new Function("l", "b", "return l * b");
+            // document.getElementById("demo").innerHTML = myFunction(5, 8);
+        // 3. Explain usage of Function Hoisting using example
+            //Hoisting is a JavaScript technique which moves variables and function declarations to the top of their scope before code execution begins. 
+            //Within a scope no matter where functions or variables are declared, they're moved to the top of their scope.
+            //Note that hoisting only moves the declaration while assignments are left in place.
+                document.getElementById("d").innerHTML = functionBelow("Hello");
+                function functionBelow(greet) {
+                return `${greet} world`;
+                }
+                document.getElementById("demo").innerHTML = functionBelow("Hi");
+        // 4. Using Function call create employee object with field Name, Address and Designation and pass it to function.
+            // var person = {
+            // Employee: function() {
+            //  return this.Field + "," + this.Address + "," + this.Designation;
+            // }
+            // }
+            // var person1 = {
+            // Field:"DotNet",
+            // Address: "Radixweb",
+            // Designation:"Senior Developer"
+            // }
+            // document.getElementById("demo").innerHTML = person.Employee.call(person1); 
+        // 5. Using Function Apply pass employee object to a function defined in the function.
+            // var Employee = {
+            //     Fullname: function(){
+            //         return this.Firstname + " " + this.Lastname;
+            //     }
+            //     }
+            // var person1 = {
+            //     Firstname:"Parth",
+            //     Lastname:"Patel"
+            // }
+            // document.getElementById("demo").innerHTML = Employee.Fullname.apply(person1);
+        // 6. Explain Function closure with practical
+            // Global variables can be made local (private) with closures.
+            //A function can access all variables defined inside the function, like this:
+                // myFunction();
+                // function myFunction() {
+                // let a = 2;
+                // document.getElementById("demo").innerHTML = a * a;
+                // }
+            //But a function can also access variables defined outside the function, like this:
+                //let a = 6;
+                //myFunction();
+                //function myFunction() {
+                //document.getElementById("demo").innerHTML = a * a;
+                //}   
+            //Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.
+                // myFunction();
+                // document.getElementById("demo").innerHTML = a * a;
+                // function myFunction() {
+                // a = 5;
+                // }
+            //Javascript Closures
+                // const add = (function () {
+                // let counter = 0;
+                // return function () {counter += 1; return counter;}
+                // })();
+                // function myFunction(){
+                // document.getElementById("demo1").innerHTML = add();
+                // }      
+        </script>
+    </body>
+</html>
