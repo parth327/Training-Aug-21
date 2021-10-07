@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    // The Element Selector
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("p").hide();
+        //     });
+        // });
+    //The #id Selector
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("#test").hide();
+        //     });
+        // })
+    //The .class Selector
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $(".test").hide();
+        //     });
+        // });
+    //click()
+        // $(document).ready(function()
+        // {
+        //     $("p").click(function()
+        //     {
+        //         $(this).hide();
+        //     });
+        // });
+    //dblclick()
+        // $(document).ready(function()
+        // {
+        //     $("p").dblclick(function()
+        //     {
+        //         $(this).hide();
+        //     });
+        // });
+    //mouseenter()
+        // $(document).ready(function()
+        // {
+        //     $("#p1").mouseenter(function()
+        //     {
+        //         alert("You entered p1!");
+        //     });
+        // });
+    //mouseleave()
+        // $(document).ready(function()
+        // {
+        //     $("#p1").mouseleave(function()
+        //     {
+        //         alert("Bye! You now leave p1!");
+        //     });
+        // });
+    //mousedown()
+        // $(document).ready(function()
+        // {
+        //     $("#p1").mousedown(function()
+        //     {
+        //         alert("mousedown over p1!");
+        //     })
+        // })
+    //mouseup()
+        // $(document).ready(function()
+        // {
+        //     $("#p2").mouseup(function()
+        //     {
+        //         alert("Mouse up over p1!");
+        //     });
+        // });
+    //hover()
+        // $(document).ready(function()
+        // {
+        //     $("#p3").hover(function()
+        //     {
+        //         alert("You entered p1!");
+        //     },
+        // function()
+        //     {
+        //         alert("Bye! You now leave p1!");
+        //     }); 
+        // });
+    //focus()
+        // $(document).ready(function()
+        // {
+        //     $("input").focus(function()
+        //     {
+        //         $(this).css("background-color", "yellow");
+        //     });
+        //     $("input").blur(function()
+        //     {
+        //         $(this).css("background-color", "green");
+        //     });
+        // });
+    //blur()
+        // $(document).ready(function()
+        // {
+        //     $("input").focus(function()
+        //     {
+        //         $(this).css("background-color", "yellow");
+        //     });
+        //     $("input").blur(function()
+        //     {
+        //         $(this).css("background-color", "green");
+        //     }); 
+        // });
+    //on()
+        // $(document).ready(function()
+        // {
+        //     $("p").on(
+        //     {
+        //         mouseenter: function()
+        //         {
+        //             $(this).css("background-color", "lightgray");
+        //         },  
+        //         mouseleave: function()
+        //         {
+        //             $(this).css("background-color", "lightblue");
+        //         }, 
+        //         click: function()
+        //         {
+        //             $(this).css("background-color", "yellow");
+        //         }  
+        //     });
+        // });
+    //Hide() and Show()
+        // $(document).ready(function()
+        // {
+        //     $("#hide").click(function()
+        //     {
+        //         $("p").hide();
+        //     });
+        //     $("#show").click(function()
+        //     {
+        //         $("p").show();
+        //     });
+        // });
+    //toggle()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("p").toggle();
+        //     });
+        // });
+    //fadeIn()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("#div1").fadeIn();
+        //         $("#div2").fadeIn("slow");
+        //         $("#div3").fadeIn(5000);
+        //     });
+        // });
+    //fadeOut()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("#div1").fadeOut();
+        //         $("#div2").fadeOut("slow");
+        //         $("#div3").fadeOut(3000);
+        //     });
+        // });
+    //Jquery DOM Manipulation
+    //text()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function(){
+        //         $("p").text("Hello");
+        //     });
+        // });
+    //html()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("p").html("Hello <b>world!</b>");
+        //     });
+        // });
+    //val()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("input:text").val("Parth Patel");
+        //     });
+        // });
+    //attr()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("img").attr("width", "200");
+        //     });
+        // });
+    //jQuery Add Elements
+    //Append()
+        // $(document).ready(function()
+        // {
+        //     $("#btn1").click(function()
+        //     {
+        //         $("p").append(" <b>Appended text</b>.");
+        //     });
+        //     $("#btn2").click(function()
+        //     {
+        //         $("ol").append("<li>Appended item</li>");
+        //     });
+        // });
+    //Prepend()
+        // $(document).ready(function()
+        // {
+        //     $("#btn1").click(function()
+        //     {
+        //         $("p").prepend("<b>Prepended text</b>. ");
+        //     });
+        //     $("#btn2").click(function()
+        //     {
+        //         $("ol").prepend("<li>Prepended item</li>");
+        //     });
+        // });
+    //after()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("p").after("<p>Hello world!</p>");
+        //     });
+        // });
+    //before()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("p").before("<p>Hello world!</p>");
+        //     });
+        // });
+    //remove()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("p").remove();
+        //     });
+        // });
+    //empty()
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("div").empty();
+        //     }); 
+        // });
+    //css()
+        //Set a css property
+        // $(document).ready(function(){
+        // $("button").click(function(){
+        // $("p").css("background-color", "yellow");
+        // });
+        // });
+    //Misc each()
+        $(document).ready(function()
+        {
+            $("button").click(function()
+            {
+                $("li").each(function()
+                {
+                    alert($(this).text())
+                });
+            });
+        });
+</script>
+</head>
+<body>
+<!-- <h2>This is a heading</h2>
+<p>This is a paragraph.</p>
+<p id="test">This is paragraph with id.</p>
+<p class="test">This is paragraph with class.</p>
+<p id="p1">This Paragraph for mouseenter and mousedown</p>
+<p id="p2">Mouseup</p>
+<p id="p3">Hover</p>
+Name: <input type="text" name="fullname"><br>
+Email: <input type="text" name="email"><br>
+<button>Click me</button><br>
+<button id="hide">Hide</button><br>
+<button id="show">Show</button><br> -->
+<!-- <button>Click to fade in boxes</button><br><br>
+<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
+<div id="div2" style="width:80px;height:80px;display:none;background-color:green;"></div><br>
+<div id="div3" style="width:80px;height:80px;display:none;background-color:blue;"></div>
+<button>Click to fade out boxes</button><br><br> -->
+<!-- <p>p1 change to Hello</p>
+<p>p2 change to Hello</p>
+<button>Set Text conent for all p elements</button>
+<p>Name: <input type="text" name="user"></p>
+<button>Set the value of the input field</button><br>
+<img src="parth.jpg" alt="Back" width="284" height="213"><br>
+<button>Set the width attribute of the image</button> -->
+<!-- <p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<ol>
+    <li>List item 1</li>
+    <li>List item 2</li>
+    <li>List item 3</li>
+  </ol>
+  <button id="btn1">Append text</button>
+  <button id="btn2">Append list item</button> -->
+<!-- <p>This is a paragraph.</p>
+<p>This is another paragraph.</p>
+<ol>
+  <li>List item 1</li>
+  <li>List item 2</li>
+  <li>List item 3</li>
+</ol>
+<button id="btn1">Prepend text</button>
+<button id="btn2">Prepend list item</button> -->
+<!-- <button>p element</button>
+<p>This is a paragraph.</p>
+<p>This is another paragraph.</p> -->
+<!-- <div style="height:100px;background-color:Red">
+    This is some text
+    <p>This is a paragraph inside the div.</p>
+  </div>
+  <p>This is a paragraph outside the div.</p>
+  <button>Remove content of the div element</button> -->
+  <!-- <p style="background-color:#ff0000">This is a paragraph.</p>
+  <p style="background-color:#00ff00">This is a paragraph.</p>
+  <p style="background-color:#0000ff">This is a paragraph.</p>  
+  <p>This is a paragraph.</p>
+  <button>Set background-color of p</button> -->
+  <button>Alert the value of each list item</button>
+  <ul>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Soda</li>
+  </ul>
+</body>
+</html>
+
+​
+

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Please Select</h1>
+        </header>
+        <form>
+            <select name="countries" id="countries">
+                <option value="" selected disabled hidden>Please select</option>
+            </select>
+            <br>
+            <br>
+            <br>
+            <label for="coutnries">Your Selected Country:
+                <span id="c-0"></span>
+                <span id="c-1"></span>
+                <span id="c-2"></span>
+                <span id="c-3"></span>
+                <span id="c-4"></span>
+            </label>
+        </form>
+    <script>
+        // Assignment
+        // Put a droplist with 5 country name from list object using jquery
+        // (Eg. India, United Kingdom..). Default value should “Please select”.
+        // Below droplist all country name which are in the dropdown that should display with Label :
+        // “Your Selected Country : “.
+        // By default all country name should display.
+        // Only that country name should appear which are you select from dropdown.
+        // All other label should be disappear.
+        // When i select ‘Please select’, all countries name should get displayed.
+        var cList = ["India", "United Kingdom", "United States", "Canada", "Japan"];
+        $(document).ready(function () {
+            cList.forEach((country, index) => 
+            {
+                $("#countries").append($("<option></option>").text(country).val(index));
+                $(`#c-${index}`).append(country);
+            })
+            $("select").change(function () 
+            {
+                // $("select option:selected")
+                $("label span").each(function (index) 
+                {
+                    // console.log($("select option:selected").text())
+                    if ($("select option:selected").val() == index) 
+                    {
+                        $(`#c-${index}`).show();
+                    }
+                    else 
+                    {
+                        $(`#c-${index}`).hide();
+                    }
+                })
+            })
+        
+        })
+        </script>
+</body>
+</html>
+
+​
+

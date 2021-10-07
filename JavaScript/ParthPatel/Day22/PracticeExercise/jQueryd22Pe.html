@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<!-- Practice Exercise 1 -->
+    <!-- <p>Dummy Paragraph Blue bg</p> -->
+<!-- Practice Exercise 2 -->
+    <!-- <p id="hide">Lorem ipsum dolor sit, amet <span id="helptext"><b>consectetur</b></span> 
+    adipisicing elit. A,est.</p> -->
+<!-- Practice Exercise 3 -->
+<form>
+<label>“Please select your technology :”</label>
+<input type="radio" id="PHP" name="tech" value="PHP">
+<label for="PHP">PHP</label>
+<input type="radio" id="ASP.NET" name="tech" value="ASP.NET">
+<label for="ASP.NET">ASP>NET</label>
+<input type="radio" id="ASP" name="tech" value="ASP">
+<label for="ASP">ASP</label>
+<input type="radio" id="JSP" name="tech" value="JSP">
+<label for="JSP">JSP</label>
+<input type="radio" id="PERL" name="tech" value="PERL">
+<label for="PERL">PERL</label>
+<input type="radio" id="Cold Fusion" name="tech" value="Cold Fusion">
+<label for="Cold Fusion">Cold Fusion</label>
+<input type="radio" id="Other" name="tech" value="Other">
+<label for="Other">Other</label><br>
+<label id="d-label">You have selected :<span></span></label>
+</form>
+<script>
+    //    Practice Exercise
+    // 1. Create one paragraph, add some dummy text and apply blue background color using jquery
+        // $(document).ready(function()
+        //     {
+        //         $("p").css("background-color", "blue");
+        //     });
+    // 2. There is one Hide/show the text inside the #helpText span element when the user’s mouse passes over the text “
+        // $("#helptext").hide();
+        // $("#hide").hover(function () 
+        // {
+        // $("#helptext").toggle();
+        // })
+    // 3. Label : “Please select your technology :”
+    // Consider following set of radio buttons :-
+    // “PHP”, “ASP.NET”, “ASP”, “JSP”, “PERL”, “Cold Fusion”, “Other”. 
+    // Layout these buttons in a Horizontal manner.
+    // Clicking on a particular radio button should display the related technology name besides label : “You have  selected : “.
+    // Use multiple “span” HTML element for displaying the related message.
+    // Note that radio button should be selectable by clicking on the corresponding label.       
+        $(":radio").click(function () 
+        {
+            // console.log($(this).val());
+            $("#d-label span").text($(this).val());
+        })
+    </script>
+</body>
+</html>
+
+​
+
