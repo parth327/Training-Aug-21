@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <p id="demo">
+    <body onload="fetchData()">
+    <!-- Display Product information in Grid format with AddToCart option. once a user click on AddtoCart button should be stored in local storage. Click on cart summary will display that data into console. -->
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <td>ProductID</td>
+                    <td>ProductName</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>buttons</td>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    <!-- cart summary -->
+    <button class="btn btn-secondary" id="btn-summary">Cart Summary</button>
+    <div class="border p-3 mt-2">
+        <p>Total : <span id="total"></span></p>
+    </div>
+    </div>
+    <!-- Asignment -->
+    <script>
+    const tbody = document.getElementById("tbody");
+    // console.log(window.localStorage);
+    myLocalStorage = window.localStorage;
+    console.log(myLocalStorage);
+    function fetchData() {
+    fetch("http://127.0.0.1:5500/Assignment/product.json")
+        .then(res => res.json())
+        .then(data => {
+            tbody.innerHTML = data.map(item => addData(item)).join("");
+            const btn = document.querySelectorAll("td button");
+            btn.forEach((element, index) => {
+                element.addEventListener("click", () => {
+                    // console.log(e.target, index + 1);
+                    var localData = JSON.stringify(data[index]);
+                    console.log(localData)
+                    var localDatakey = index;
+                    myLocalStorage.setItem(`${localDatakey}`, `${localData}`);
+                })
+            });
+        })
+    .catch(error => console.log(error.status));
+    }
+    function addData({ ProductID, ProductName, Price, Quantity }) {
+    return `<tr>
+    <td>${ProductID}</td>
+    <td>${ProductName}</td>
+    <td>${Price}</td>
+    <td>${Quantity}</td>
+    <td><button class="btn btn-primary">Add to Cart</td>
+    </tr>`
+    }
+    const summaryBtn = document.getElementById("btn-summary");
+    const totalTextNode = document.getElementById("total");
+    summaryBtn.addEventListener("click", () => {
+    let total = 0;
+    for (let i = 0; i < myLocalStorage.length; ++i) {
+        let localdata = myLocalStorage.getItem(`${myLocalStorage.key(i)}`);
+        localdata = JSON.parse(localdata);
+        console.log(localdata);
+    // addition print total below summary btn;
+        total += parseInt(localdata.Price);
+    }
+    totalTextNode.innerHTML = total;
+    })
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+    crossorigin="anonymous"></script>
+</body>
+</html>
