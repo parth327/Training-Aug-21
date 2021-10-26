@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+    /* jQuery parent() Method */
+        /* .ancestors *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        } */
+    /* children() and find() method */
+        /* .descendants *
+        {
+            display: block;
+            border: 2px solid lightgrey;
+            color: lightgrey;
+            padding: 5px;
+            margin: 15px;
+        } */
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Traversing -->
+    <!-- jQuery Ancestors -->
+    <!-- jQuery parent() Method -->
+    <!-- <div class="ancestors">
+        <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+            <li>li (direct parent)
+                <span>span</span>
+            </li>
+        </ul>
+    </div>
+    <div style="width:500px;">div (grandparent)
+        <p>p (direct parent)
+            <span>span</span>
+        </p>
+    </div>
+    </div>-->
+    <!-- parents() and parentsUntil() method -->
+    <!-- <div class="ancestors">body(great-great-grandparent)
+    <div style="width:500px;">div (great-grandparent)
+        <ul>ul (grandparent)
+          <li>li (direct parent)
+            <span>span</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- children() method -->
+    <!-- <div class="descendants" style="width:500px;">div (current element)
+        <p>p (child)
+        <span>span (grandchild)</span>
+        </p>
+        <p>p (child)
+        <span>span (grandchild)</span>
+        </p>
+    </div>-->
+    <!-- first() and last() method -->
+    <!-- <div style="border: 1px solid black;">
+        <p>A paragraph in a div.</p>
+        <p>Another paragraph in a div.</p>
+    </div>
+    <br>
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div>
+    <br>
+    <div style="border: 1px solid black;">
+        <p>A paragraph in another div.</p>
+        <p>Another paragraph in another div.</p>
+    </div> -->
+    <!-- eq() method -->
+    <!-- <p>My name is Parth (index 0).</p>
+    <p>Parth Patel (index 1).</p>
+    <p>I live in Ahmedabad (index 2).</p>
+    <p>My best friend is Rutvik Prajapti (index 3).</p> -->
+    <!-- filter() and not() method -->
+    <!-- <p>My name is Parth.</p>
+    <p class="intro">I live in Ahmedabad.</p>
+    <p class="intro">I love Ahmedabad.</p>
+    <p>My best friend is Rutvik.</p> -->
+    <!-- jQuery Ajax -->
+    <!-- Load method -->
+    <!-- <div id="div1"><h2>Let jQuery AJAX Change This Text</h2></div>
+    <button>Get External Content</button> -->
+    <!-- $.get() Method -->
+    <!-- <button>Send an HTTP GET request to a page and get the result back</button> -->
+    <!-- getjson() method -->
+    <!-- <button>Get JSON data</button>
+    <div></div> -->
+    <!-- post() method -->
+    <!-- <button>Send an HTTP POST request to a page and get the result back</button> -->
+    <script>
+    //  jQuery parent() Method
+        //  $(document).ready(function()
+        //  {
+        //  $("span").parent().css({"color": "blue", "border": "2px solid green"});
+        //  });
+    // parents() method
+        // $(document).ready(function()
+        // {
+        //     $("span").parents().css({"color": "red", "border": "2px solid red"});
+        // });
+    // parentsUntil() method
+        // $(document).ready(function()
+        // {
+        //     $("span").parentsUntil("div").css({"color": "red", "border": "2px solid red"});
+        // });
+    // children() method
+        // $(document).ready(function()
+        // {
+        //     $("div").children().css({"color": "red", "border": "2px solid red"});
+        // });
+    //find() method
+        // $(document).ready(function()
+        // {
+        //     $("div").find("span").css({"color": "red", "border": "2px solid red"});
+        // });
+    // first() method
+        // $(document).ready(function()
+        // {
+        //     $("div").first().css("background-color", "yellow");
+        // });
+    // last() method
+        // $(document).ready(function()
+        // {
+        //     $("div").last().css("background-color", "yellow");
+        // });
+    //eq() method
+        // $(document).ready(function()
+        // {
+        //     $("p").eq(1).css("background-color", "yellow");
+        // });
+    //filter() method
+        // $(document).ready(function()
+        // {
+        //     $("p").filter(".intro").css("background-color", "yellow");
+        // });
+    // not() method
+        // $(document).ready(function()
+        // {
+        //     $("p").not(".intro").css("background-color", "yellow");
+        // });
+    // Load Method
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $("#div1").load("Listgroup.txt");
+        //     });
+        // });
+    //$.get() Method
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $.get("https://gorest.co.in/public-api/users", function(data, status)
+        //         {
+        //             alert("Data: " + data + "\nStatus: " + status);
+        //         });
+        //     });
+        // });
+    // getJSON() Method
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $.getJSON("https://gorest.co.in/public-api/users", function(result)
+        //         {
+        //             $.each(result, function(i, field)
+        //             {
+        //                 $("div").append(field + " ");
+        //             });
+        //         });
+        //     });
+        // });
+    // post() Method
+        // $(document).ready(function()
+        // {
+        //     $("button").click(function()
+        //     {
+        //         $.post("https://gorest.co.in/public-api/users",{name: "Parth Patel",city: "Ahmedabad"},function(data,status)
+        //         {
+        //             alert("Data: " + data + "\nStatus: " + status);
+        //         });
+        //     });
+        // });
+    
+    </script>
+</body>
+</html>

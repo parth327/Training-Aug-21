@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="shalStyle.css">
+    <link rel="icon" href="https://www.shalby.org/wp-content/themes/Shalby/img/favicon.ico">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"> 
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700,800|Raleway:400i" rel="stylesheet">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="shalbyJs.js"></script>
+    <title>Shalby Clone</title>
+</head>
+<body>
+  <div class="container">
+      <!------------------------------------------------- First Navbar------------------------------------------------------------------------------ -->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" href="#">
+                <img width="138" height="52" src="https://www.shalby.org/wp-content/uploads/2017/10/cropped-Shalby-Logo_138x52px.png" class="custom-logo" alt="" itemprop="logo" />			
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">  
+              <li class="nav-item dropdown text-center list-unstyled mr-5">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Emergency Number  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">SG Shalby (+91 79 4020 3333)</a>
+                    <a class="dropdown-item" href="#">Vijay Shalby (+91 95740 14567)</a>
+                    <a class="dropdown-item" href="#">Krishna Shalby (+91 99047 22345)</a>
+                    <a class="dropdown-item" href="#">Naroda Shalby (+91 99134 60101)</a>
+                    <a class="dropdown-item" href="#">Vapi Shalby (+91 70460 63333)</a>
+                    <a class="dropdown-item" href="#">Surat Shalby (+91 95126 60096)</a>
+                    <a class="dropdown-item" href="#">Mohali Shalby (+91 17249 07100)</a>
+                    <a class="dropdown-item" href="#">Jabalpur Shalby (+91 95758 01020)</a>
+                    <a class="dropdown-item" href="#">Indore Shalby (+91 91744 00100)</a>
+                    <a class="dropdown-item" href="#">Jaipur Shalby (+91 74138 85999)</a>
+                  </div>
+              </li>
+              
+              <form class="form-inline my-2 my-lg-0 mr-5">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-primary my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <a href="Appointment.html">  
+              <button class="btn btn-outline-danger mr-5" style="width:120px;">
+                Book Appointment
+              </button> </a>
+                <button class="btn btn-outline-danger" style="width:120px;">Book a Video Consultation</button>
+            </div>
+          </nav>   
+    </div>
+  </div>
+    <!-------------------------------------- Second Navbar ------------------------------------------------------>
+    <div class="container-fluid"  style="position:sticky;top:0;z-index: 100;background-color: #1e5eac;" >
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item dropdown mr-3"  onmouseover="dropOpen(this)" onmouseout="dropClose(this)" >
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                About Us
+              </a>
+              <div class="dropdown-menu" style="height:300px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-white" href="#"> About Shalby</a>
+                <a class="dropdown-item text-white" href="#"> Mission & Vision</a>
+                <a class="dropdown-item text-white" href="#"> Chairman's Message</a>
+                <a class="dropdown-item text-white" href="#"> Accreditations</a>
+                <a class="dropdown-item text-white" href="#"> Awards</a>
+                <a class="dropdown-item text-white" href="#"> Clinical Research</a>
+                <a class="dropdown-item text-white" href="#"> SOCE Franchise</a>
+                <a class="dropdown-item text-white" href="#"> Shalby Institute of Rehabilitation Sciences(SIRS)</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown mr-3">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Specialities
+              </a>
+              <div class="dropdown-menu" style="overflow-y:scroll;height:300px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-white" href="#">Arthroscopy – Sports Injury</a>
+                <a class="dropdown-item text-white" href="#">Cosmetic and Aesthetic</a>
+                <a class="dropdown-item text-white" href="#">Cardiology</a>
+                <a class="dropdown-item text-white" href="#">Dental Cosmetic and Implantology</a>
+                <a class="dropdown-item text-white" href="#">Cardiothoracic and Vascular Surgery</a>
+                <a class="dropdown-item text-white" href="#">Emergency Medicine</a>
+                <a class="dropdown-item text-white" href="#">Endocrinology – Diabetology</a>
+                <a class="dropdown-item text-white" href="#">Endoscopy and Laparoscopy</a>
+                <a class="dropdown-item text-white" href="#">ENT Surgery</a>
+                <a class="dropdown-item text-white" href="#">Gastroentero Surgery</a>
+                <a class="dropdown-item text-white" href="#">Gastroenterology</a>
+                <a class="dropdown-item text-white" href="#">General Medicine</a>
+                <a class="dropdown-item text-white" href="#">General Surgery</a>
+                <a class="dropdown-item text-white" href="#">Hair Transplant</a>
+                <a class="dropdown-item text-white" href="#">Liver Transplant in India</a>
+                <a class="dropdown-item text-white" href="#">Infectious Diseases</a>
+                <a class="dropdown-item text-white" href="#">Infertility and IVF</a>
+                <a class="dropdown-item text-white" href="#">Hip Joint Replacement</a>
+                <a class="dropdown-item text-white" href="#">Intensive and Critical Care</a>
+                <a class="dropdown-item text-white" href="#">Maxillofacial Surgery</a>
+                <a class="dropdown-item text-white" href="#">Neurosurgery</a>
+                <a class="dropdown-item text-white" href="#">Nephrology – Dialysis Kidney Transplant</a>
+                <a class="dropdown-item text-white" href="#">Knee Joint Replacement</a>
+                <a class="dropdown-item text-white" href="#">Neuro Science Department</a>
+                <a class="dropdown-item text-white" href="#">Oncology</a>
+                <a class="dropdown-item text-white" href="#">Ophthalmology and Glaucoma</a>
+                <a class="dropdown-item text-white" href="#">Obesity Surgery</a>
+                <a class="dropdown-item text-white" href="#">Obstetrics and Gynaecology</a>
+                <a class="dropdown-item text-white" href="#">Oncosurgery</a>
+                <a class="dropdown-item text-white" href="#">Orthopaedic and Trauma</a>
+                <a class="dropdown-item text-white" href="#">Pathology And Microbiology</a>
+                <a class="dropdown-item text-white" href="#">Paediatrics and Neonatology</a>
+                <a class="dropdown-item text-white" href="#">Paediatric Orthopaedics</a>
+                <a class="dropdown-item text-white" href="#">Plastic Surgery</a>
+                <a class="dropdown-item text-white" href="#">Pulmonology and Chest</a>
+                <a class="dropdown-item text-white" href="#">Radiology and Imaging</a>
+                <a class="dropdown-item text-white" href="#">Rheumatology</a>
+                <a class="dropdown-item text-white" href="#">Spine Surgery</a>
+                <a class="dropdown-item text-white" href="#">Trauma</a>
+                <a class="dropdown-item text-white" href="#">Urosurgery</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown mr-3">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                International Patients
+              </a>
+              <div class="dropdown-menu" style="overflow-y:scroll;height:300px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-white" href="#">International Shalby</a>
+                <a class="dropdown-item text-white" href="#">Insurance Tieups</a>
+                <a class="dropdown-item text-white" href="#">Exclusive Services</a>
+                <a class="dropdown-item text-white" href="#">Second Opinion</a>
+                <a class="dropdown-item text-white" href="#">Compare Rates</a>
+                <a class="dropdown-item text-white" href="#">Virtual Tour</a>
+                <a class="dropdown-item text-white" href="#">FAQ</a>
+                <a class="dropdown-item text-white" href="#">Facilities and  Services</a>
+                <a class="dropdown-item text-white" href="#">International Patient Guide</a>
+                <a class="dropdown-item text-white" href="#">Plan Your Trip</a>
+                <a class="dropdown-item text-white" href="#">Travel Tips</a>
+                <a class="dropdown-item text-white" href="#">tourism-spots-gujarat</a>
+              </div>
+            </li>
+            <li class="nav-item mr-3">
+              <a class="nav-link text-white" href="#">Shalby Times</a>
+            </li>
+            <li class="nav-item dropdown mr-5">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Patient Care
+              </a>
+              <div class="dropdown-menu" style="height:300px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-white" href="#"> Feedback</a>
+                <a class="dropdown-item text-white" href="#"> Shalby Home Care</a>
+                <a class="dropdown-item text-white" href="#"> Health Check Plans</a>
+                <a class="dropdown-item text-white" href="#"> Corporate Tieups</a>
+                <a class="dropdown-item text-white" href="#"> TPA Tieups</a>
+                <a class="dropdown-item text-white" href="#"> Organ Donation</a>
+                <a class="dropdown-item text-white" href="#"> Health Calculator</a>
+                <a class="dropdown-item text-white" href="#"> Knee Implants Ceiling Prices</a>
+                <a class="dropdown-item text-white" href="#"> Heart Stent Prices</a>
+              </div>
+            </li>
+            <li class="nav-item mr-5">
+              <a class="nav-link text-white" href="#">Investors</a>
+            </li>
+            <li class="nav-item dropdown mr-5">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Contact
+              </a>
+              <div class="dropdown-menu" style="overflow-y:scroll;height:300px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-white" href="#"> Surat Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> SG Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Vijay Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Krishna Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Naroda Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Vapi Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Mohali Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Jabalpur Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Indore Shalby Hospital</a>
+                <a class="dropdown-item text-white" href="#"> Jaipur Shalby Hospital</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown mr-5" style="margin-right: 100px;">
+              <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Academy
+              </a>
+              <div class="dropdown-menu" style="overflow-x:scroll;width:250px;height:170px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item text-white" href="#"> Management Programs</a>
+                <a class="dropdown-item text-white" href="#"> eCourse in Advanced Hosipital Management</a>
+                <a class="dropdown-item text-white" href="#"> Paramedical Programs</a>
+                <a class="dropdown-item text-white" href="#"> Intership</a>
+              </div>
+            </li>
+              <li class="nav-item dropdown btn-group dropleft mr-3" style="margin-right: 100px;;">
+                <a class="nav-link dropdown-toggle text-white" style="background-color: #1e5eac" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Languages
+                </a>
+                <div class="dropdown-menu" style="overflow-y:scroll;height:300px;background-color: #1e5eac;" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item text-white" href="#"> Afrikkans</a>
+                  <a class="dropdown-item text-white" href="#"> Albanian</a>
+                  <a class="dropdown-item text-white" href="#"> Amharic</a>
+                  <a class="dropdown-item text-white" href="#"> Arabic</a>
+                  <a class="dropdown-item text-white" href="#"> Brazilian</a>
+                  <a class="dropdown-item text-white" href="#"> Chinese</a>
+                  <a class="dropdown-item text-white" href="#"> Dutch</a>
+                  <a class="dropdown-item text-white" href="#"> English(UK)</a>
+                  <a class="dropdown-item text-white" href="#"> English(US)</a>
+                  <a class="dropdown-item text-white" href="#"> French</a>
+                  <a class="dropdown-item text-white" href="#"> Gujarati</a>
+                  <a class="dropdown-item text-white" href="#"> Hindi</a>
+                  <a class="dropdown-item text-white" href="#"> Italic</a>
+                  <a class="dropdown-item text-white" href="#"> Japanese</a>
+                  <a class="dropdown-item text-white" href="#"> Korean</a>
+                  <a class="dropdown-item text-white" href="#"> Latin</a>
+                  <a class="dropdown-item text-white" href="#"> Malayalam</a>
+                  <a class="dropdown-item text-white" href="#"> Marathi<a>
+                  <a class="dropdown-item text-white" href="#"> Nepali</a>
+                  <a class="dropdown-item text-white" href="#"> Punjabi</a>
+                  <a class="dropdown-item text-white" href="#"> Romanian</a>
+                  <a class="dropdown-item text-white" href="#"> Russian</a>
+                  <a class="dropdown-item text-white" href="#"> Arabic</a>
+                  <a class="dropdown-item text-white" href="#"> Spanish</a>
+                  <a class="dropdown-item text-white" href="#"> Tamil</a>
+                  <a class="dropdown-item text-white" href="#"> Telugu</a>
+                  <a class="dropdown-item text-white" href="#"> Thai</a>
+                  <a class="dropdown-item text-white" href="#"> Turkish</a>
+                  <a class="dropdown-item text-white" href="#"> Utdu</a>
+                  <a class="dropdown-item text-white" href="#"> Xhosa</a>
+                  <a class="dropdown-item text-white" href="#"> Zulu</a>
+                </div>
+              </li>
+          </ul>
+        </div>
+      </nav>
+  </div> 
+  <!------------------------------------------- Section 3 ---------------------------------------------------------->
+  <div class="container-fluid">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2021/09/Digital-OR_Revised.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2021/09/SIRS-Web-Banner-1.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2021/04/vaccination-1.jpg" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2020/12/Shalby-Care-card-Banner-Website-1024x394-px-1.jpg" alt="Third slide">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2020/04/Web-banner-5.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  <!------------------------------------------------------- Section 4 ----------------------------------------------->
+  <div class="container-fluid w-100">
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #1e5eac;">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav1Dropdown" aria-controls="navbarNav1Dropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav1Dropdown">
+        <ul class="navbar-nav">
+        <li class="nav-item dropdown mx-5">
+        <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Hospital
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        <a class="dropdown-item" href="#">SG Shalby, Ahmedabad</a>
+        <a class="dropdown-item" href="#">Krishna Shalby, Ghuma</a>
+        <a class="dropdown-item" href="#">Naroda Shalby</a>
+        <a class="dropdown-item" href="#">Vijay Shalby, Ahmedabad</a>
+        <a class="dropdown-item" href="#">Surat Shalby</a>
+        <a class="dropdown-item" href="#">Vapi Shalby</a>
+        <a class="dropdown-item" href="#">Indore Shalby</a>
+        <a class="dropdown-item" href="#">Jabalpur Shalby</a>
+        <a class="dropdown-item" href="#">Jaipur Shalby</a>
+        <a class="dropdown-item" href="#">Mohali Shalby</a>
+      </div>
+    </div>
+    </li>
+    <li class="nav-item dropdown mx-5">
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Specialities
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Aneasthesia</a>
+        <a class="dropdown-item" href="#">Arthroplasty/TKR &amp; Hip Replacement</a>
+        <a class="dropdown-item" href="#">ENT Surgery</a>
+        <a class="dropdown-item" href="#">Emergency Medicine</a>
+        <a class="dropdown-item" href="#">General Medicine</a>
+        <a class="dropdown-item" href="#">General-Surgery</a>
+        <a class="dropdown-item" href="#">Hip Joint Replacement</a>
+        <a class="dropdown-item" href="#">Infectious Diseases</a>
+        <a class="dropdown-item" href="#">Intensive and Critical Care</a>
+        <a class="dropdown-item" href="#">Knee Joint Replacement</a>
+      </div>
+    </div>
+    </li>
+    <li class="nav-item dropdown mx-5">
+    <div class="dropdown">
+      <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select Doctors
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="#">Dr. Chintan Patel</a>
+        <a class="dropdown-item" href="#">Dr. Pritesh Patel</a>
+        <a class="dropdown-item" href="#">Dr. Manali Shah</a>
+        <a class="dropdown-item" href="#">Dr. Payal Parikh</a>
+        <a class="dropdown-item" href="#">Dr. Rajiv Shukla</a>
+        <a class="dropdown-item" href="#">Dr. Raj Thakkar</a>
+        <a class="dropdown-item" href="#">Dr. Mohini Panchal</a>
+        <a class="dropdown-item" href="#">Dr. Chetan Pandya</a>
+        <a class="dropdown-item" href="#">Dr. Nirmal Patel</a>
+        <a class="dropdown-item" href="#">Dr. Kitri Bhatt</a>
+      </div>
+    </div>
+    </li>
+    <li class="nav-item mx-5">
+      <a class="" href="Appointment.html">  
+        <button class="btn btn-danger" style="background-color: #ff8326;" type="submit" id="dropdownMenuButton1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Make An Appointment
+        </button></a>
+    </li>  
+    </ul>
+    </div>
+    </nav>
+  </div>
+  <!-------------------------------------------------- section 5 -------------------------------------------------->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm">
+        <h2 class="">Specialities</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/general-surgery.png" alt="First slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/neurology.png" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/orthopaedics-trauma.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/paediatric-orthopaedics.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/pediatric-neonatology.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/plastic-surgery.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/pulmonology-chest.png" alt="Third slide">
+            </div>
+            <div class="carousel-item">
+              <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2017/10/spine-surgery.png" alt="Third slide">
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+      <div class="col-sm">
+      <h2>Quick Links</h2>
+      <div class="row text-center pt-5">
+        <div class="col text-center">
+          
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/awards_icon.png" alt="Awards" height="45px" width="45px">
+          <br><br>
+          <a>Awards</a>
+        </div>
+        <div class="col text-center">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/opd_icon.png" alt="Shalby Hopitals OPD Centers" height="45px" width="45px">
+          <br><br>
+          <a>OPD Centers</a>
+        </div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/news_icon.png" alt="Shalby Hopitals News and Media" height="45px" width="45px">
+          <br><br>
+          <a>News and Media</a>
+        </div>
+        <div class="w-100 pt-5"></div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/blog_icon.png" alt="Shalby Hopitals Blog" height="45px" width="45px">
+          <br><br>
+          <a>Blog</a>
+        </div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/patient_speaks_icon.png" alt="Shalby Hopitals patient speaks" height="45px" width="45px">
+          <br><br>
+          <a>Patiet Speaks</a>
+        </div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/photo_icon.png" alt="Photo Gallery" height="45px" width="45px">
+          <br><br>
+          <a>Photo Gallary</a>
+        </div>
+        <div class="w-100 pt-5"></div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/video_icon.png" alt="Video Gallery" height="45px" width="45px">
+          <br><br>
+          <a>Video Gallary</a>
+        </div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/home_care_icon.png" alt="Shalby Hopitals patient speaks" height="45px" width="45px">
+          <br><br>
+          <a>Shalby Home Care</a>
+        </div>
+        <div class="col">
+          <img src="https://www.shalby.org/wp-content/themes/Shalby/img/carecard.png" alt="Shalby Care Card" height="45px" width="45px">
+          <br><br>
+          <a>Shalby Care Card</a>
+        </div>
+      </div>
+      </div>
+      <div class="col-sm">
+      <h2>Testimonials</h2>
+      <div class="row">
+        <div class="col">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2019/08/a8l0UGSiP84.jpg" alt="First slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2019/08/68SWhAgC2HA.jpg" alt="Second slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2019/08/oDh8VNzCW2s.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2019/08/DUqIrc0o5WI.jpg" alt="Third slide">
+          </div>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="https://www.shalby.org/wp-content/uploads/2019/08/zZuMCbYv8uw.jpg" alt="Third slide">
+          </div>
+        </div>
+      </div>
+      </div>
+      </div>
+      <div class="w-100"></div>
+      <div class="col my-1">
+        <button class="btn btn-info float-right">View All</button>
+      </div>
+      </div>
+    </div>
+    <!------------------------------------------------- Section 6 ------------------------------------------------------------------------->
+    <!-- <div class="container-fluid" style="background-color:#e4ebf5;">
+    <h2 class="pt-3">Blog/Tips of the Day</h2>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="col-sm">
+          <div class="card" style="width: 12rem;">
+            <img src="https://www.shalby.org/wp-content/uploads/2015/02/you-should-know-about-Swine-flu-or-H1N1-150x150.jpg" srcset="https://www.shalby.org/wp-content/uploads/2015/02/you-should-know-about-Swine-flu-or-H1N1-150x150.jpg 150w, https://www.shalby.org/wp-content/uploads/2015/02/you-should-know-about-Swine-flu-or-H1N1-100x100.jpg 100w, https://www.shalby.org/wp-content/uploads/2015/02/you-should-know-about-Swine-flu-or-H1N1-80x80.jpg 80w" sizes="(max-width: 150px) 100vw, 150px" class="card-img-top" alt="...">
+            <div class="card-body" style="background-color: #e4ebf5;border:none;">
+              <p class="card-text">
+                Everything you should know about Swine flu or H1N1
+                Q1. What is Swine Flu or H1N1 and what is influenza virus? Answer: H1N1 flu is also known as swine flu because in the past,...
+                </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm">
+          <div class="card" style="width: 12rem;">
+            <img src="https://www.shalby.org/wp-content/uploads/2015/09/Rajiv-Gandhi-National-Quality-Award-150x150.jpg" class="attachment-thumbnail size-thumbnail wp-post-image" alt="Rajiv Gandhi National Quality Award" srcset="https://www.shalby.org/wp-content/uploads/2015/09/Rajiv-Gandhi-National-Quality-Award-150x150.jpg 150w, https://www.shalby.org/wp-content/uploads/2015/09/Rajiv-Gandhi-National-Quality-Award-100x100.jpg 100w, https://www.shalby.org/wp-content/uploads/2015/09/Rajiv-Gandhi-National-Quality-Award-80x80.jpg 80w" sizes="(max-width: 150px) 100vw, 150px">
+            <div class="card-body" style="background-color: #e4ebf5;border:none;overflow:hidden">
+              <p class="card-text">
+                Remembering the Greatest Quality Award of India that Shalby received.	
+                It seems but last year that Dr Vikram Shah received the Rajiv Gandhi National Quality Award for Health Care Excellence. I came across this news...     
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!------------------------------------------------- Section 7 ------------------------------------------------------------------------->
+    
+    <div class="w-100 bg-light">
+    <nav class="navbar navbar-primary text-white" style="background-color: #1e5eac;">
+      <span class="navbar-brand mb-0 h1 mx-5">1150000 Patients Served</span> 
+      <span class="navbar-brand mb-0 h1 mx-5">11 Hospitals</span> 
+      <span class="navbar-brand mb-0 h1 mx-5">560 Doctors</span> 
+      <span class="navbar-brand mb-0 h1 mx-5">2400 Trained Staff</span>
+    </nav>
+    <!------------------------------------------------- Section 8 ------------------------------------------------------------------------->
+    <div class="card bg-dark text-white" style="border:none;">
+      <img class="card-img" style="opacity:0.5;" src="https://erp.hllconnect.in/Home/img/slides/1.jpg" alt="Card image" height="250px">
+      <div class="card-img-overlay">
+        <h5 class="card-title text-center pt-2">Shalby Gallary</h5>
+        <p class="card-text text-sm-center">We value each and every human life placed in our hands and constantly work towards meeting the expectations of our Customers and Stakeholders by raising the standards of our service deliveries , every time.</p>
+        <div class="text-center mb-4">        
+          <button id="btnViewall" class="btn btn-danger btn-sm-mb-2 float-none">View All</button>
+        </div>
+
+        </div>
+      </div>
+    </div>
+    <!------------------------------------------------- Section 9 ------------------------------------------------------------------------->
+    <div class="container-fluid ">
+      <footer class="p-3" style="background-color: #e4ebf5;">
+        <img src="https://www.shalby.org/wp-content/uploads/2017/10/cropped-Shalby-Logo_138x52px.png" class="custom-logo" alt="" itemprop="logo" width="138" height="52">
+        <div class="float-right mr-5 mt-5">
+        <span class="">Follow Us : </span>
+        <a target="_blank" href="https://www.facebook.com/shalbyhospital/">
+        <i class="fab fa-facebook ml-1" style="color:orange"></i></a>
+        <a target="_blank" href="https://in.linkedin.com/company/shalby-hospitals">
+        <i class="fab fa-linkedin ml-1" style="color:orange"></i></a>
+        <a target="_blank" href="https://www.youtube.com/user/shalbyhospitals"></a>
+        <i class="fab fa-youtube ml-1" style="color:orange"></i></a>
+        <a target="_blank" href="https://twitter.com/shalbyhospitals">
+        <i class="fab fa-twitter ml-1" style="color:orange"></i></a>
+        <a target="_blank" href="https://www.instagram.com/shalbyhospitals/">
+        <i class="fab fa-instagram ml-1" style="color:orange"></i></a>
+        <a href="" onclick="clickToChat()" id="" class="" style="text-decoration:none;color:black;">Click to Chat</a>
+        </div>
+        <div class="">
+          <label class="mr-5 my-3 font-weight-bold">Subscribe To Newsletter</label>
+          <button  onclick="Newsletter()" class="btn btn-danger" type="submit">Subscribe</button>
+        </div>
+        <div id="shortmsg"></div>
+          <div class="text-center">
+          <span class="">Quick Links</span>
+          </div>
+          <div class="mt-3 text-center">
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">About Us</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Contact</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Career</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Blog</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Privacy Policy</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Investors</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Feedback</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Knee Implants Ceiling Prices</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Disclaimer</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Policy & Codes</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Draft Annual Return FY 2020-21</a>
+            <a class="mr-2" href="" style="text-decoration: none;color:black;font-size: 14px;">Notice of 17th AGM</a>
+          </div>
+      </footer>
+      </div>
+    
+    <!------------------------------------------ section 10 -------------------------------------------------->
+    <div class="">
+      <div id="slider" onmouseover="bigSlider(this)" onmouseout="normalSlider(this)" class="container-fluid m-2" style="background:transparent;width:16%;background-color:lightgray;right:-181px;z-index: 1000;position:fixed;top:30%;">
+        <ul class="list-unstyled ">
+        <li>
+        <p class="">
+        <a class="" style="text-decoration:none;color:darkorange;background-color: transparent;" href="Appointment.html"><span class="fas fa-calendar-check mr-2"></span> Get An Appointment</a>
+        </p>
+        </li>
+        <li>
+        <p>
+        <a href="" style="text-decoration:none;color:darkorange"><span class="fas fa-archway mr-2"></span> OPD Centers</a>
+        </p>
+        </li>
+        <li>
+        <p>
+        <a href="" style="text-decoration:none;color:darkorange"><span class="far fa-comments mr-2"></span> Chat With Us</a>
+        </p>
+        </li>
+        <li>
+        <p>
+        <a href="" style="text-decoration:none;color:darkorange"><span class="fas fa-briefcase-medical mr-2"></span>  Health Check-ups</a>
+        </p>
+        </li>
+        <li>
+        <p>
+        <a href="" style="text-decoration:none;color:darkorange"><span class="fas fa-gavel mr-2"></span> Second Opinion</a>
+        </p>
+        </li>
+        <li>
+        <p>
+        <a href="" style="text-decoration:none;color:darkorange"><span class="fas fa-comment-alt mr-2"></span> Feedback</a>
+        </p>
+        </li>
+        </ul>
+        </div>
+    </div>
+      <!-------------------------------------------- Chat Circle ----------------------------------------------------->
+    <div>
+      <div class="chatHead">
+        Hello,how can I help you? 
+      </div>
+      <div>
+          <img  class="chatCircle"  onclick="openForm()" src="https://thb-website.s3.ap-south-1.amazonaws.com/plugins/chatbot/shalbyhospitals/v1.0/user-profile-round.png" alt="" class="mr-2">
+        <div class="chat-popup" id="myForm">
+          <form class="form-container" style="background-color:#1e5eac;color: white;">
+          <h1 style="font-size: 12px;">Hello
+            Namaste, I am Shally, your health assistant from Shalby Hospital, to answer your queries</h1>
+            <label for="email1">Email</label>
+            <input type="email" id="email1" placeholder="Type Email Address"></input>
+            <label for="msg"><b>Type Your Query</b></label>
+            <textarea placeholder="Type your Query here..." name="msg" required></textarea>        
+            <button type="submit" onclick="openSubmit()" class="btn submit">Send</button>
+            <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
