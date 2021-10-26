@@ -88,6 +88,8 @@ function normalSlider(x) {
     document.getElementById("myForm").style.display = "block";
   }
 
+//Subscribe
+
   function Newsletter(){
     myWindow = window.open("formMail.html", "width=700", "height=500");
   }
