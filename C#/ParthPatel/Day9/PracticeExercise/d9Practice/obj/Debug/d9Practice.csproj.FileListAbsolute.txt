@@ -1,0 +1,4 @@
+C:\Users\DELL\source\repos\d9Practice\d9Practice\obj\Debug\d9Practice.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\d9Practice\d9Practice\obj\Debug\d9Practice.csproj.CoreCompileInputs.cache
+C:\Users\DELL\Desktop\svnu\Training-Aug-21\New folder\Training-Aug-21\C#\ParthPatel\Day9\PracticeExercise\d9Practice\obj\Debug\d9Practice.csproj.AssemblyReference.cache
+C:\Users\DELL\Desktop\svnu\Training-Aug-21\New folder\Training-Aug-21\C#\ParthPatel\Day9\PracticeExercise\d9Practice\obj\Debug\d9Practice.csproj.CoreCompileInputs.cache
