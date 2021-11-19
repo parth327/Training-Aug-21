@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\bin\Debug\Day5Pra1.exe.config
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\bin\Debug\Day5Pra1.exe
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\bin\Debug\Day5Pra1.pdb
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\obj\Debug\Day5Pra1.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\obj\Debug\Day5Pra1.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\obj\Debug\Day5Pra1.exe
+C:\Users\DELL\source\repos\Day5Pra1\Day5Pra1\obj\Debug\Day5Pra1.pdb

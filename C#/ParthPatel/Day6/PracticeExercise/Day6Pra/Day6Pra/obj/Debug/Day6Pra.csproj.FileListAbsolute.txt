@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\bin\Debug\Day6Pra.exe.config
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\bin\Debug\Day6Pra.exe
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\bin\Debug\Day6Pra.pdb
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\obj\Debug\Day6Pra.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\obj\Debug\Day6Pra.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\obj\Debug\Day6Pra.exe
+C:\Users\DELL\source\repos\Day6Pra\Day6Pra\obj\Debug\Day6Pra.pdb

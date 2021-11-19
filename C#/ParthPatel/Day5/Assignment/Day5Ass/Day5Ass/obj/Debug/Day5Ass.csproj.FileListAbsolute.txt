@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\bin\Debug\Day5Ass.exe.config
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\bin\Debug\Day5Ass.exe
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\bin\Debug\Day5Ass.pdb
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\obj\Debug\Day5Ass.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\obj\Debug\Day5Ass.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\obj\Debug\Day5Ass.exe
+C:\Users\DELL\source\repos\Day5Ass\Day5Ass\obj\Debug\Day5Ass.pdb

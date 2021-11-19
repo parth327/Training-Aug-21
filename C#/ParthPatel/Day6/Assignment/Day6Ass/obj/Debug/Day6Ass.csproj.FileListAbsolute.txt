@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\bin\Debug\Day6Ass.exe.config
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\bin\Debug\Day6Ass.exe
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\bin\Debug\Day6Ass.pdb
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\obj\Debug\Day6Ass.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\obj\Debug\Day6Ass.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\obj\Debug\Day6Ass.exe
+C:\Users\DELL\source\repos\Day6Ass\Day6Ass\obj\Debug\Day6Ass.pdb

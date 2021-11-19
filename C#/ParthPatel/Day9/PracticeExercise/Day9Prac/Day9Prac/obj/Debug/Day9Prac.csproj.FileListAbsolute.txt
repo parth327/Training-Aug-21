@@ -1,0 +1,7 @@
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\bin\Debug\Day9Prac.exe.config
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\bin\Debug\Day9Prac.exe
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\bin\Debug\Day9Prac.pdb
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\obj\Debug\Day9Prac.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\obj\Debug\Day9Prac.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\obj\Debug\Day9Prac.exe
+C:\Users\DELL\source\repos\Day9Prac\Day9Prac\obj\Debug\Day9Prac.pdb
