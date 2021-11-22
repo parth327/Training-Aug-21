@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "d12Prac", "d12Prac\d12Prac.csproj", "{932E3DD6-7381-433F-B457-5299291F2910}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "d12Prac_Migration", "d12Prac_Migration\d12Prac_Migration.csproj", "{D1F7ACDA-7C50-4A98-AC4C-C4A55F7ED08B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{932E3DD6-7381-433F-B457-5299291F2910}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{932E3DD6-7381-433F-B457-5299291F2910}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{932E3DD6-7381-433F-B457-5299291F2910}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{932E3DD6-7381-433F-B457-5299291F2910}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1F7ACDA-7C50-4A98-AC4C-C4A55F7ED08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1F7ACDA-7C50-4A98-AC4C-C4A55F7ED08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1F7ACDA-7C50-4A98-AC4C-C4A55F7ED08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1F7ACDA-7C50-4A98-AC4C-C4A55F7ED08B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9819B94A-15A2-429F-B58D-3892B57F916B}
+	EndGlobalSection
+EndGlobal

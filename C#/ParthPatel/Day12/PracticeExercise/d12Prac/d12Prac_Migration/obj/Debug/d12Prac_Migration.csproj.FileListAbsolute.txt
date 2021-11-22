@@ -1,0 +1,13 @@
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\d12Prac_Migration.exe.config
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\d12Prac_Migration.exe
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\d12Prac_Migration.pdb
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\EntityFramework.dll
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\EntityFramework.xml
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\obj\Debug\d12Prac_Migration.csproj.AssemblyReference.cache
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\obj\Debug\d12Prac_Migration.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\obj\Debug\d12Prac_Migration.exe
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\obj\Debug\d12Prac_Migration.pdb
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\obj\Debug\d12Prac_Migration.Migrations.Initial.resources
+C:\Users\DELL\source\repos\d12Prac\d12Prac_Migration\obj\Debug\d12Prac_Migration.csproj.GenerateResource.cache

@@ -1,0 +1,11 @@
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\d12Prac.exe.config
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\d12Prac.exe
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\d12Prac.pdb
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\EntityFramework.dll
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\EntityFramework.xml
+C:\Users\DELL\source\repos\d12Prac\d12Prac\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\DELL\source\repos\d12Prac\d12Prac\obj\Debug\d12Prac.csproj.CoreCompileInputs.cache
+C:\Users\DELL\source\repos\d12Prac\d12Prac\obj\Debug\d12Prac.csproj.CopyComplete
+C:\Users\DELL\source\repos\d12Prac\d12Prac\obj\Debug\d12Prac.exe
+C:\Users\DELL\source\repos\d12Prac\d12Prac\obj\Debug\d12Prac.pdb
