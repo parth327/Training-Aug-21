@@ -68,7 +68,7 @@ namespace Day14Api
                             var products = context.Toys.Include(s => s.Type).ToList();
                             foreach (var product in products)
                             {
-                                Console.WriteLine($"Toy : {product.ToyName}, Price : {product.Price}");
+                                Console.WriteLine($"ToyId :{product.Id}, Toy Name : {product.ToyName}, Price : {product.Price}");
                             }
                             break;
                         case 5:
@@ -81,21 +81,28 @@ namespace Day14Api
                             Console.WriteLine("Enter your CustomerId");
                             int currentCustomerId = Convert.ToInt32(Console.ReadLine());
                             int myOrderId = context.OrderHeaders.Count() + 1;
-                            Console.WriteLine("Enter City:");
-                            string city = Console.ReadLine();
-                            Console.WriteLine("Enter State: ");
-                            string state = Console.ReadLine();
+                            
+                            var AddressCity = context.Addresses.ToList();
+                            foreach (var AddressCities in AddressCity)
+                            {
+                                Console.WriteLine($"Id :{AddressCities.Id}, City : {AddressCities.City}, State : {AddressCities.State}");
+                            }
+                            
+                            Console.WriteLine("Enter Your Address Id ,City and State");
+                            int GetId = Convert.ToInt32(Console.ReadLine());
+                            String GetCity = Console.ReadLine();
+                            string GetState = Console.ReadLine();
+
                             var order = new OrderHeader
                             {
                                 CustomerId = 1,
                                 OrderDate = DateTime.Now,
                                 TotalAmount = 0
                             };
-
                             var address = new Address
                             {
-                                City = city,
-                                State = state
+                                City = GetCity,
+                                State = GetState
                             };
                             context.Addresses.Add(address);
                             var shipping = new ShipmentAddress
@@ -114,29 +121,29 @@ namespace Day14Api
                                                   "2.Exit");
                                 orderChoice = Convert.ToInt32(Console.ReadLine());
                                 switch (orderChoice)
-                                {
-                                    case 1:
-                                        Console.WriteLine("Enter ToyId:");
-                                        int orderToyId = Convert.ToInt32(Console.ReadLine());
-                                        Console.WriteLine("Enter Quantity:");
-                                        int orderQuantity = Convert.ToInt32(Console.ReadLine());
-                                        var orderDetail = new OrderDetail
-                                        {
-                                            OrderID = myOrderId,
-                                            ToyId = orderToyId,
-                                            Quantity = orderQuantity
-                                        };
-                                        context.OrderDetails.Add(orderDetail);
-                                        context.SaveChanges();
-                                        double toyPrice = (double)context.Toys.Find(orderToyId).Price;
-                                        totalamount += toyPrice * orderQuantity;
-                                        break;
-                                    case 2:
-                                        innerLoop = false;
-                                        break;
-                                    default:
-                                        Console.WriteLine("Invalid Choice!");
-                                        break;
+                            {
+                                case 1:
+                                    Console.WriteLine("Enter ToyId:");
+                                    int orderToyId = Convert.ToInt32(Console.ReadLine());
+                                    Console.WriteLine("Enter Quantity:");
+                                    int orderQuantity = Convert.ToInt32(Console.ReadLine());
+                                    var orderDetail = new OrderDetail
+                                    {
+                                        OrderID = myOrderId,
+                                        ToyId = orderToyId,
+                                        Quantity = orderQuantity
+                                    };
+                                    context.OrderDetails.Add(orderDetail);
+                                    context.SaveChanges();
+                                    double toyPrice = (double)context.Toys.Find(orderToyId).Price;
+                                    totalamount += toyPrice * orderQuantity;
+                                    break;
+                                case 2:
+                                    innerLoop = false;
+                                    break;
+                                default:
+                                    Console.WriteLine("Invalid Choice!");
+                                    break;
                                 }
                             }
 
@@ -149,7 +156,7 @@ namespace Day14Api
                         case 7:
                             loop = false;
                             break;
-                        default:
+                            default:
                             Console.WriteLine("Invalid Choice!");
                             break;
                     }
