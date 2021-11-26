@@ -1,4 +1,6 @@
-﻿using System;
+﻿//3. Create a weekday enum and accept week day number and display week day.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

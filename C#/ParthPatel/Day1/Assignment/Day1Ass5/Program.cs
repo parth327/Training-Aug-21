@@ -1,4 +1,6 @@
-﻿using System;
+﻿//5. Accept Age from user, if age is more than 18 eligible for vote otherwise it should be displayed as not eligible.Do it with ternary operator
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +12,6 @@ namespace Day1Ass5
     {
         static void Main(string[] args)
         {
-            //5. Accept Age from user, if age is more than 18 eligible for vote otherwise it should be displayed as not eligible.Do it with ternary operator
             int age;
             string status;
             Console.WriteLine("Enter Your Age");

@@ -89,3 +89,5 @@ C:\Users\DELL\source\repos\HospitalTask\HospitalTask\obj\Debug\HospitalTask.cspr
 C:\Users\DELL\source\repos\HospitalTask\HospitalTask\obj\Debug\HospitalTask.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\HospitalTask\HospitalTask\obj\Debug\HospitalTask.exe
 C:\Users\DELL\source\repos\HospitalTask\HospitalTask\obj\Debug\HospitalTask.pdb
+C:\Users\DELL\Desktop\svnu\Training-Aug-21\New folder\Training-Aug-21\C#\ParthPatel\Day11\HospitalTask\obj\Debug\HospitalTask.exe
+C:\Users\DELL\Desktop\svnu\Training-Aug-21\New folder\Training-Aug-21\C#\ParthPatel\Day11\HospitalTask\obj\Debug\HospitalTask.pdb

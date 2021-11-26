@@ -1,4 +1,7 @@
-﻿using System;
+﻿//4. Accept 10 student Name, Address, Hindi, English, Maths Marks ,do the total and compute Grade.
+//Note do it with Array and display the result in grid format
+     
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,8 +10,7 @@ using System.Threading.Tasks;
 namespace Day1Ass4
 {
     class Student
-    {       //4. Accept 10 student Name, Address, Hindi, English, Maths Marks ,do the total and compute Grade.
-            //Note do it with Array and display the result in grid format
+    {       
             string Name, Address, Grade;
             float Percentage;
             int Hindi, English, Maths, Total;

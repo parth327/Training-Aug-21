@@ -12,50 +12,50 @@ namespace d5Prac
         static void Main(string[] args)
         {
             //1.Create a list which will store 5 student names and then display it search it index number
-            //var names = new List<string>();
-            //names.Add("Sonoo Jaiswal");
-            //names.Add("Ankit");
-            //names.Add("Peter");
-            //names.Add("Irfan");
-            //foreach (var name in names)
-            //{
-            //    Console.WriteLine(name);
-            //    Console.ReadLine();
-            //}
+            var names = new List<string>();
+            names.Add("Sonoo Jaiswal");
+            names.Add("Ankit");
+            names.Add("Peter");
+            names.Add("Irfan");
+            foreach (var name in names)
+            {
+               Console.WriteLine(name);
+               Console.ReadLine();
+            }
             //2.Create a stack which will store Age of person and display it last in first out order.
-            //Stack st = new Stack();
-            //st.Push(18);
-            //st.Push(21);
-            //st.Push(28);
-            //st.Push(35);
-            //Console.WriteLine("Click to Display Age Stack: ");
-            //Console.ReadLine();
-            //foreach (int c in st) 
-            //{
-            //    Console.WriteLine(c + " ");
-            //    Console.ReadLine();
+            Stack st = new Stack();
+            st.Push(18);
+            st.Push(21);
+            st.Push(28);
+            st.Push(35);
+            Console.WriteLine("Click to Display Age Stack: ");
+            Console.ReadLine();
+            foreach (int c in st) 
+            {
+               Console.WriteLine(c + " ");
+               Console.ReadLine();
 
-            //}
-            //Console.WriteLine();
-            //st.Push(45);
-            //st.Push(20);
-            //Console.WriteLine("New Entreis Added", st.Peek());
-            //Console.WriteLine("Now Age Stack: ");
-            //Console.ReadLine();
-            //foreach (int c in st)
-            //{
-            //    Console.WriteLine(c + " ");
-            //    Console.ReadLine();
-            //}  
-            //Console.WriteLine();
-            //Console.WriteLine("Remove age First in last out Order : ");
-            //st.Pop();
-            //Console.WriteLine("Current Age Stack: ");
-            //foreach (int c in st)
-            //{
-            //    Console.WriteLine(c + " ");
-            //    Console.ReadLine();
-            //}
+            }
+            Console.WriteLine();
+            st.Push(45);
+            st.Push(20);
+            Console.WriteLine("New Entreis Added", st.Peek());
+            Console.WriteLine("Now Age Stack: ");
+            Console.ReadLine();
+            foreach (int c in st)
+            {
+               Console.WriteLine(c + " ");
+               Console.ReadLine();
+            }  
+            Console.WriteLine();
+            Console.WriteLine("Remove age First in last out Order : ");
+            st.Pop();
+            Console.WriteLine("Current Age Stack: ");
+            foreach (int c in st)
+            {
+               Console.WriteLine(c + " ");
+               Console.ReadLine();
+            }
             //3.Store a product information in map object.Key will be a product item and value will be the price of that product. Search the product by product name.
 
             Dictionary<string, int> products = new Dictionary<string, int>();

@@ -57,58 +57,58 @@ namespace Day7Ass
             //Query 1
 
 
-            //var mquery1 = employees.Where(e => e.FirstName == "John");
+            var mquery1 = employees.Where(e => e.FirstName == "John");
 
-            //foreach (var e in mquery1)
-            //{
-            //    Console.WriteLine($"EmployeeId : {e.ID}, EmployeeName : {e.FirstName} {e.LastName}, Salary : {e.Salary}, Join Date : {e.JoiningDate}, Department : {e.Deparment}");
-            //}
+            foreach (var e in mquery1)
+            {
+               Console.WriteLine($"EmployeeId : {e.ID}, EmployeeName : {e.FirstName} {e.LastName}, Salary : {e.Salary}, Join Date : {e.JoiningDate}, Department : {e.Deparment}");
+            }
 
             //Query 2
 
-            //var mquery2 = employees.Select(e => new
-            //{
-            //    e.FirstName,
-            //    e.LastName
-            //});
+            var mquery2 = employees.Select(e => new
+            {
+               e.FirstName,
+               e.LastName
+            });
 
-            //foreach (var e in mquery2)
-            //{
-            //    Console.WriteLine($"Employee FirstName :{e.FirstName},Employee LastName:{e.LastName}");
-            //}
+            foreach (var e in mquery2)
+            {
+               Console.WriteLine($"Employee FirstName :{e.FirstName},Employee LastName:{e.LastName}");
+            }
 
             //Query 3
 
-            //var mquery3 = employees.Join(incentives, e => e.ID, i => i.ID, (e, i) => new
-            //{
-            //    EmpID = e.ID,
-            //    EmpName = e.FirstName + "" + e.LastName,
-            //    EmpSalary = e.Salary,
-            //    IncAmount = i.IncentiveAmount,
-            //    IncDate = i.IncentiveDate
-            //});
+            var mquery3 = employees.Join(incentives, e => e.ID, i => i.ID, (e, i) => new
+            {
+               EmpID = e.ID,
+               EmpName = e.FirstName + "" + e.LastName,
+               EmpSalary = e.Salary,
+               IncAmount = i.IncentiveAmount,
+               IncDate = i.IncentiveDate
+            });
 
-            //foreach (var e in mquery3)
-            //{
-            //    Console.WriteLine($"Employee id: { e.EmpID}, EmployeeName: { e.EmpName}, Salary: { e.EmpSalary}, IncentiveAmount: { e.IncAmount}, IncentiveDate: { e.IncDate}");
-            //}
+            foreach (var e in mquery3)
+            {
+               Console.WriteLine($"Employee id: { e.EmpID}, EmployeeName: { e.EmpName}, Salary: { e.EmpSalary}, IncentiveAmount: { e.IncAmount}, IncentiveDate: { e.IncDate}");
+            }
 
             //Query 4
 
-            //var mquery4 = from e in employees
-            //              group e by e.Deparment into eg
-            //              let maxSalary = (from e1 in eg select e1.Salary).Max()
-            //              orderby maxSalary
-            //              select new
-            //              {
-            //                  department = eg.Key,
-            //                  maxSalary
-            //              };
+            var mquery4 = from e in employees
+                         group e by e.Deparment into eg
+                         let maxSalary = (from e1 in eg select e1.Salary).Max()
+                         orderby maxSalary
+                         select new
+                         {
+                             department = eg.Key,
+                             maxSalary
+                         };
 
-            //foreach (var i in mquery4)
-            //{
-            //    Console.WriteLine($"Department : {i.department} , MaximunSalary : {i.maxSalary}");
-            //}
+            foreach (var i in mquery4)
+            {
+               Console.WriteLine($"Department : {i.department} , MaximunSalary : {i.maxSalary}");
+            }
 
             //Query 5
 

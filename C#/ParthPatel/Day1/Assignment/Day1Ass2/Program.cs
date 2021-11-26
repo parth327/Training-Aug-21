@@ -1,4 +1,6 @@
-﻿using System;
+﻿//2.Store your name in one string and find out how many vowel characters are there in your name.
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +10,6 @@ namespace Day1Ass2
 {
     class Program
     {
-        //2.Store your name in one string and find out how many vowel characters are there in your name.
         public static bool isVowel(char ch)        {
             ch = char.ToUpper(ch);
             return (ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U');
