@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d32d855e-33fd-4957-be50-9aef009dbe53": {
+      "ProjectGuid": "d32d855e-33fd-4957-be50-9aef009dbe53",
+      "DisplayName": "ToyCompanyApi",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
