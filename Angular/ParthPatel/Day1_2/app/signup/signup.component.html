@@ -1,0 +1,17 @@
+
+<div class="container">    
+    <form class="border border-dark 10px solid black p-3 bg-light">
+            <label for="name" class="form-label">Name</label>
+            <input name="name"[(ngModel)]="name" type="text" class ="form-control" id="name" 
+            placeholder="Enter Your name">
+            <label for="address" class="form-label">Address</label>
+            <input name="address" [(ngModel)]="address" type="text" class="form-control" 
+            placeholder="Enter your Address" id="address">
+            <label for="panNo" class="form-label">PAN No.</label>
+            <input name="panNo" [(ngModel)]="panNo" type="text" class="form-control" 
+            placeholder="Enter your PAN No." id="panNo">
+            <button (click)="register()" type="submit" class="btn btn-outline-success mt-3">SIGN UP</button>
+            <p>{{result}}</p>
+    </form>
+</div>
+    

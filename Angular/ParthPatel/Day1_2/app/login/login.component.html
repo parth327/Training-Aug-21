@@ -1,0 +1,16 @@
+
+<div class="container">    
+    <form class="border border-dark bg-light needs-validation p-3 " novalidate>
+        <label for="uname" class="form-label">Username</label>
+        <input name="uname"[(ngModel)]="uname" type="text" class ="form-control" id="uname" 
+        placeholder="Enter Username" required>
+        <label for="password" class="form-label">Password</label>
+        <input name="inputPassword" [(ngModel)]="password" type="password" class="form-control" 
+        placeholder="Enter Password" id="password" required>
+        <button (click)="signin()" type="submit" class="btn btn-outline-primary mt-3">SIGN IN</button><br>
+        <label name="result"  class="form-label mt-2">{{result}}</label>    
+    </form>
+</div>
+
+
+  

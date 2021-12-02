@@ -1,0 +1,43 @@
+<div class="container-fluid">
+  <div class="container-fluid">
+    <nav class="mb-5navbar fixed-top navbar-expand-lg navbar-light bg-primary w-100" style="opacity:0.9;z-index:5000;">
+      <a class="pl-5 pt-3 text-white navbar-brand text-uppercase font-weight-bold" href="#">Angular Day 1,2</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item ml-5">
+            <a (click)="click1()" class="nav-link text-light" href="#">PRACTICE <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item ml-5">
+            <a (click)="click2()" class="nav-link text-light" href="#">LOGIN</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="click3()" class="nav-link text-light" href="#">SIGNUP</a>
+          </li>
+          <li class="nav-item">
+            <a (click)="click4()" class="nav-link text-light" href="#">RECTANGLE</a> 
+          </li>
+          <li class="nav-item">
+            <a (click)="click5()" class="nav-link text-light" href="#">CIRCLE</a> 
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+  <div class="row content mt-5">
+      <div class="col-sm-3 sidenav mt-5">
+        <app-leftbar></app-leftbar>
+      </div>
+      <div class="col-sm-9 mt-5">
+        <app-hello *ngIf="practice"></app-hello>
+        <app-calc *ngIf="practice"></app-calc>
+        <app-login *ngIf="login"></app-login>
+        <app-signup *ngIf="signup"></app-signup>
+        <app-rectangle *ngIf="rectangle"></app-rectangle>
+        <app-circle *ngIf="circle"></app-circle>
+      </div>
+  </div>
+</div>
+
