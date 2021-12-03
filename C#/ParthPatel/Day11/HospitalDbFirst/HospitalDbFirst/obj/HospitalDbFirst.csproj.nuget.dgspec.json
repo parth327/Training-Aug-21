@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj": {}
+    "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day11\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj": {
+    "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day11\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj",
+        "projectUniqueName": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day11\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj",
         "projectName": "HospitalDbFirst",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj",
+        "projectPath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day11\\HospitalDbFirst\\HospitalDbFirst\\HospitalDbFirst.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\HospitalDbFirst\\HospitalDbFirst\\obj\\",
+        "outputPath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day11\\HospitalDbFirst\\HospitalDbFirst\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

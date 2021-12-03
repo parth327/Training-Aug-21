@@ -1,0 +1,54 @@
+<p>practice works!</p>
+
+<!-- Ngclass -->
+
+<div [ngClass]="isSpecial ? 'special' : ''">This div is special</div>
+
+<div [ngClass]="currentClasses">This div is initially saveable, unchanged, and special.</div>
+<!-- NgStyle -->
+        
+<div [ngStyle]="currentStyles">This div is initially italic,normal weight and extra large (24px)</div>
+
+<!-- *ngIf -->
+
+<ul *ngFor="let person of people">
+  <li *ngIf="person.age < 30"> (1)
+  {{ person.name }} ({{ person.age }})
+  </li>
+</ul>
+
+<!-- *ngFor -->
+<ul *ngFor="let person of people">
+  <li *ngIf="person.country ==='UK'"
+      class="text-success">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngIf="person.country === 'USA'"
+      class="text-primary">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngIf="person.country === 'HK'"
+      class="text-danger">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngIf="person.country !== 'HK' && person.country !== 'UK' && person.country !== 'USA'"
+      class="text-warning">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>
+
+<!-- ngswitch -->
+<!-- <ul *ngFor="let person of people"
+    [ngSwitch]="person.country"> (1)
+
+  <li *ngSwitchCase="'UK'" (2)
+      class="text-success">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'USA'"
+      class="text-primary">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchCase="'HK'"
+      class="text-danger">{{ person.name }} ({{ person.country }})
+  </li>
+  <li *ngSwitchDefault (3)
+      class="text-warning">{{ person.name }} ({{ person.country }})
+  </li>
+</ul>` -->
+
+

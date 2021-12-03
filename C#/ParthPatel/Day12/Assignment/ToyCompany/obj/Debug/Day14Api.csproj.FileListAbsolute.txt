@@ -85,3 +85,5 @@ C:\Users\DELL\source\repos\Day14Api\Day14Api\obj\Debug\Day14Api.csproj.AssemblyR
 C:\Users\DELL\source\repos\Day14Api\Day14Api\obj\Debug\Day14Api.csproj.CoreCompileInputs.cache
 C:\Users\DELL\source\repos\Day14Api\Day14Api\obj\Debug\Day14Api.exe
 C:\Users\DELL\source\repos\Day14Api\Day14Api\obj\Debug\Day14Api.pdb
+D:\Desktop\svnu\Training-Aug-21\New folder\Training-Aug-21\C#\ParthPatel\Day12\Assignment\ToyCompany\obj\Debug\Day14Api.exe
+D:\Desktop\svnu\Training-Aug-21\New folder\Training-Aug-21\C#\ParthPatel\Day12\Assignment\ToyCompany\obj\Debug\Day14Api.pdb
