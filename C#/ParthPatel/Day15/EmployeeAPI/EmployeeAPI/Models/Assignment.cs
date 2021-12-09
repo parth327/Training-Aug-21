@@ -8,69 +8,41 @@ namespace EmployeeAPI.Models
 {
     public class Assignment
     {
-        public Guid Id { get; set; }
-        public long AssignmentId { get; set; }
-
-        [MaxLength(30)]
         public string ActionCode { get; set; }
-
-        [MaxLength(30)]
         public string ActionReasonCode { get; set; }
-
-
-        public DateTime ActualTerminationDate { get; set; }
-
-        [MaxLength(30)]
+        public DateTime? ActualTerminationDate { get; set; }
         public string AssignmentCategory { get; set; }
+        public string assignmentDFF { get; set; }
+        public int? assignmentExtraInformation { get; set; }
 
-
-        [MaxLength(80)]
+        [Key]
+        public Int64 AssignmentId { get; set; }
         public string AssignmentName { get; set; }
-
-        [MaxLength(30)]
         public string AssignmentNumber { get; set; }
-
-        public DateTime AssignmentProjectEndDate { get; set; }
-
-        [MaxLength(30)]
+        public DateTime? AssignmentProjectedEndDate { get; set; }
         public string AssignmentStatus { get; set; }
-
-        public long AssignmentStatusTypeId { get; set; }
-
-        public long BuisnessUnitID { get; set; }
-
-        public DateTime CreationDate { get; set; }
-
-        public string DefualtExpenseAccount { get; set; }
-
-        public long DepartmentId { get; set; }
-
-        public DateTime EffectiveEndDate { get; set; }
-
-        public DateTime EffectiveStartDate { get; set; }
-
-        [MaxLength(5)]
+        public Int64? AssignmentStatusTypeId { get; set; }
+        public Int64? BusinessUnitId { get; set; }
+        public DateTime? CreationDate { get; set; }
+        public string DefaultExpenseAccount { get; set; }
+        public Int64? DepartmentId { get; set; }
+        public DateTime? EffectiveEndDate { get; set; }
+        public DateTime? EffectiveStartDate { get; set; }
+        public string empreps { get; set; }
         public string EndTime { get; set; }
-
-        [MaxLength(30)]
         public string Frequency { get; set; }
-
-        [MaxLength(30)]
         public string FullPartTime { get; set; }
-        public long GradeID { get; set; }
-        public long GradeLadderId { get; set; }
+        public Int64? GradeId { get; set; }
+        public Int64? GradeLadderId { get; set; }
+        public Int64? JobId { get; set; }
+        public DateTime? LastUpdateDate { get; set; }
+        public Int64? LegalEntityId { get; set; }
+        public string links { get; set; }
+        public Int64? LocationId { get; set; }
+        public Int64? ManagerAssignmentId { get; set; }
+        public Int64? ManagerId { get; set; }
 
-        public long JobId { get; set; }
-        public DateTime LastUpdateDate { get; set; }
-        public long LegalEntityID { get; set; }
-
-        public long LocationID { get; set; }
-
-        public long ManagerAssignmentId { get; set; }
-        public long ManagerID { get; set; }
-
-        public Guid EmployeeId { get; set; }
-        public Employee Employee { get; set; }
+        public ICollection<Employee_Assigment> Employee_Assignments { get; set; }
     }
 }
 

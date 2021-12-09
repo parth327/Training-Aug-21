@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj": {}
+    "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day17\\Assignment\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj": {
+    "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day17\\Assignment\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj",
+        "projectUniqueName": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day17\\Assignment\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj",
         "projectName": "HospitalAuth",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj",
+        "projectPath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day17\\Assignment\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\HospitalAuth\\HospitalAuth\\obj\\",
+        "outputPath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day17\\Assignment\\HospitalAuth\\HospitalAuth\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

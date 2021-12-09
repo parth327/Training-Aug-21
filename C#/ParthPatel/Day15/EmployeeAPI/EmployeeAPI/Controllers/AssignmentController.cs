@@ -1,77 +1,115 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using AutoMapper;
-using EmployeeAPI.Models;
 using EmployeeAPI.Repository;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+using EmployeeAPI.Model;
 
-namespace EmployeeAPI.Controllers
+namespace EmployeeAPI.Controller
 {
-    [Route("api/emps/{empID}/child/assignments")]
     [ApiController]
+    [Route("api/emps")]
+    [Produces("application/json")]
     public class AssignmentController : ControllerBase
     {
-        private readonly IEmployeeAPIRepostiory _employeeAPIRepository;
-        private readonly IMapper _mapper;
-
-        public AssignmentController(IEmployeeAPIRepostiory employeeAPIRepostiory, IMapper mapper)
+        private IAssignmentRepository _assignmentServices;
+        public AssignmentController(IAssignmentRepository assignmentServices)
         {
-            _employeeAPIRepository = employeeAPIRepostiory ??
-                throw new ArgumentNullException(nameof(employeeAPIRepostiory));
-            _mapper = mapper ??
-                throw new ArgumentNullException(nameof(mapper));
+            this._assignmentServices = assignmentServices;
         }
 
-        [HttpGet()]
-        public ActionResult<IEnumerable<Assignment>> GetAssignments(Guid empId)
+        //create new Assignment by employeeId
+        [Route("{employeeId}/child/assignments")]
+        [HttpPost]
+        public string CreateNewAssignment(Int64 employeeId, [FromBody] AssignModel assignmentModel)
         {
-            if (!_employeeAPIRepository.EmployeeExists(empId))
+            var response = "";
+            try
             {
-                return NotFound();
+                if (assignmentModel != null)
+                {
+                    response = _assignmentServices.createNewAssignment(employeeId, assignmentModel);
+                    if (response == null)
+                    {
+                        return NotFound().ToString();
+                    }
+                }
+                return response;
             }
-
-            var AssignmentFromRepo = _employeeAPIRepository.GetAssignments(empId);
-            return Ok(AssignmentFromRepo);
-        }
-
-        [HttpGet("{assignmentId}")]
-        public ActionResult<Assignment> GetAssignmentForEmployee(Guid empId, Guid assignmentId)
-        {
-            if (!_employeeAPIRepository.EmployeeExists(empId))
+            catch (Exception ex)
             {
-                return NotFound();
+                return ex.Message;
             }
-
-            var assignmentFromEmployeeRepo = _employeeAPIRepository.GetAssignment(empId, assignmentId);
-
-            return Ok(assignmentFromEmployeeRepo);
         }
 
+        //get all assignment 
+        [Route("{employeeId}/child/assignment")]
+        [HttpGet]
+        public List<AssignModel> GetAllAssignment(Int64 employeeId)
+        {
+            var response = new List<AssignModel>();
+            try
+            {
+                if (employeeId != 0 && employeeId > 0)
+                {
+                    response = _assignmentServices.getAllAssignment(employeeId);
+                    return response;
+                }
+                return response;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+
+        //get assignment by employeeId and assignmentId
+        [Route("{employeeId}/child/assignments/{assignmentId}")]
+        [HttpGet]
+        public AssignModel GetEmployeeAllAssignment(Int64 employeeId, Int64 assignmentId)
+        {
+            var response = new AssignModel();
+            try
+            {
+                if (assignmentId != 0 && employeeId != 0 && employeeId > 0 && assignmentId > 0)
+                {
+                    response = _assignmentServices.getAssignment(employeeId, assignmentId);
+                    return response;
+                }
+                return response;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        //update assignment by employeeId and assignmentId
+        [Route("{employeeId}/child/assignment/{assignmentId}")]
         [HttpPut]
-        public ActionResult UpdateAssignmentForEmployee(Guid empId, Guid assignmentId, AssignmentForUpdate assignment)
+        public string UpdateAssignment(Int64 employeeId, Int64 assignmentId, AssignModel assignmentModel)
         {
-            if (!_employeeAPIRepository.EmployeeExists(empId))
+            var response = "";
+            try
             {
-                return NotFound();
+                if (assignmentId != 0 && employeeId != 0 && employeeId > 0 && assignmentId > 0 && assignmentModel != null)
+                {
+                    response = _assignmentServices.updateAssignment(employeeId, assignmentId, assignmentModel);
+                    if (response == null)
+                    {
+                        return NotFound().ToString();
+                    }
+                    return response;
+                }
+                return response;
             }
-            var assignmentFromEmployeeRepo = _employeeAPIRepository.GetAssignment(empId, assignmentId);
-
-            if (assignmentFromEmployeeRepo == null)
+            catch (Exception ex)
             {
-                return NotFound();
+                return ex.Message;
             }
-
-            _mapper.Map(assignment, assignmentFromEmployeeRepo);
-
-            _employeeAPIRepository.Save();
-
-            return NoContent();
-
         }
     }
 }
-
 

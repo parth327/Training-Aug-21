@@ -1,0 +1,104 @@
+<p>profile-editor works!</p>
+
+<!-- <div class="container">
+<form [formGroup]="profileForm" ngSubmit="onSubmit()">
+
+    <label for="first-name">First Name: </label>
+    <input id="first-name" type="text" formControlName="firstName">
+  
+    <label for="last-name">Last Name: </label>
+    <input id="last-name" type="text" formControlName="lastName">
+
+  <div formGroupName="address">
+    <h2>Address</h2>
+  
+    <label for="street">Street: </label>
+    <input id="street" type="text" formControlName="street">
+  
+    <label for="city">City: </label>
+    <input id="city" type="text" formControlName="city">
+  
+    <label for="state">State: </label>
+    <input id="state" type="text" formControlName="state">
+  
+    <label for="zip">Zip Code: </label>
+    <input id="zip" type="text" formControlName="zip">
+  </div>
+  <div formArrayName="aliases">
+    <h2>Aliases</h2>
+    <button (click)="addAlias()" type="button">+ Add another alias</button>
+  
+    <div *ngFor="let alias of aliases.controls; let i=index">
+       The repeated alias template 
+      <label for="alias-{{ i }}">Alias:</label>
+      <input id="alias-{{ i }}" type="text" [formControlName]="i">
+    </div>
+  </div>
+
+    <p>Complete the form to enable button.</p>
+    <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+
+  <p>Form Status : {{profileForm1.status}}</p>
+  <button (click)="updateProfile()">Update Profile</button>
+
+  </form>
+</div> -->
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-10 col-sm-8 col-sm-offset-1 col-md-offset-2">
+      <form (ngSubmit)="onSubmit()" #f="ngForm">
+        <div id="user-data" ngModelGroup="userData" #userData="ngModelGroup">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" id="Username" class="form-control" ngModel name="username" required>
+          </div>
+          <button class="btn btn-default" type="button" (click)="suggestUsername()">Suggest UserName</button>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" class="form-control" ngModel name="email" required #email="ngModel"> 
+            <span class="help-block" *ngIf="!email.valid && email.touched" >Please Enter a Valid Email</span>
+          </div>
+          <p *ngIf="userData.valid && userData.touched">User Data is Invalid!</p>
+          <div class="form-group">
+            <label for="secret">Secret Questions</label>
+            <select id="secret" class="form-control"[ngModel]="defaultQuestion" name="secret">
+              <option value="pet">Your first Pet?</option>
+              <option value="teacher">Your first teacher?</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <textarea name="questionAnswer" id="" rows="3" [(ngModel)]="answer" class="form-control"></textarea>
+          </div>
+          <p>Your Reply: {{answer}}</p>
+          <div class="Radio" *ngFor="let gender of genders">
+            <label>
+              <input type="radio" name="gender" ngModel [value]="gender" required>
+              {{gender}}
+            </label>
+          </div>        
+          <button class="btn btn-primary" [disabled]="!f.valid" type="submit">SUBMIT</button>
+        </div>
+      </form>
+      <hr>
+    </div>
+  </div>
+  <div class="row" *ngIf="submitted">
+    <div class="col-xs-12">
+      <h3>Your Data</h3>
+      <p>Username : {{user.username}}</p>
+      <p>Mail : {{user.email}}</p>
+      <p>Secret Question : Your first : {{user.secretQuestion}}</p>
+      <p>Answer : {{user.answer}}</p>
+      <p>Gender:{{user.gender}}</p>
+    </div>
+  </div>
+</div>
+
+
+
+  
+      
+  
+  

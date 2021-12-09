@@ -30,15 +30,9 @@ namespace EmployeeAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-            services.AddScoped<IEmployeeAPIRepostiory, EmployeeRepository>();
-
-            services.AddDbContext<EmployeeDbContext>(option =>
-            {
-                option.UseSqlServer(Configuration.GetConnectionString("ConnStr"));
-            });
+            services.AddDbContext<EmployeeDBContext>(option => option.UseSqlServer(Configuration.GetConnectionString("EmployeeDBConnectionStrings")));
+            services.AddScoped<IEmployeeRepostiory, EmployeeRepository>();
+            services.AddScoped<IAssignmentRepository, AssignmentRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

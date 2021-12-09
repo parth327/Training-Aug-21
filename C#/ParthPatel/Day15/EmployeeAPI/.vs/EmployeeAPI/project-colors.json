@@ -5,6 +5,11 @@
       "ProjectGuid": "27e08f12-d0f7-4cf0-ae25-8a41422d62a0",
       "DisplayName": "EmployeeAPI",
       "ColorIndex": 0
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
     }
   },
   "NextColorIndex": 1

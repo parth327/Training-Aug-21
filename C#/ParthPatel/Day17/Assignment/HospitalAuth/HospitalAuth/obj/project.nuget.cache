@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "afMA6WmZzVUUAMYnUFh4QrMJZmyPfBB+MgXAgj+YGd3ma66kx2gDiWVCeqGunetlJBXf9OP/GuVlv+aHFeLaXQ==",
+  "dgSpecHash": "YOvGzXD2tcnrW/Wv4iurvapI+OjSwd3qThJFyaMoygSuHvuKUSxNgsxIqp9pDiApUoJkAYxAAVNM2f5q92u67A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\DELL\\source\\repos\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj",
+  "projectFilePath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day17\\Assignment\\HospitalAuth\\HospitalAuth\\HospitalAuth.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\automapper\\10.1.1\\automapper.10.1.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\8.1.1\\automapper.extensions.microsoft.dependencyinjection.8.1.1.nupkg.sha512",

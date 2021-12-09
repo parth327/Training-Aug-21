@@ -5795,11 +5795,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+      "projectUniqueName": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day15\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
       "projectName": "EmployeeAPI",
-      "projectPath": "C:\\Users\\DELL\\source\\repos\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
+      "projectPath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day15\\EmployeeAPI\\EmployeeAPI\\EmployeeAPI.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\DELL\\source\\repos\\EmployeeAPI\\EmployeeAPI\\obj\\",
+      "outputPath": "D:\\Desktop\\svnu\\Training-Aug-21\\New folder\\Training-Aug-21\\C#\\ParthPatel\\Day15\\EmployeeAPI\\EmployeeAPI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using EmployeeAPI.Models;
+using EmployeeAPI.Model;
 
 namespace EmployeeAPI.Repository
 {
-    public interface IEmployeeAPIRepostiory
-        {
-            bool EmployeeExists(Guid empId);
-            IEnumerable<Employee> GetEmployees();
-            IEnumerable<Assignment> GetAssignments(Guid empId);
-            void AddEmployee(Employee employee);
-            bool Save();
-            Assignment GetAssignment(Guid empId, Guid assignmentId);
+    public interface IEmployeeRepostiory
+    {
+        string addNewEmployee(EmpModel employeeModel);
+        List<EmpModel> getEmployeeList();
+        EmpModel getEmployeeById(Int64 employeeId);
+        string updateEmployeeDetail(EmpModel employeeModel);
+
     }
 }

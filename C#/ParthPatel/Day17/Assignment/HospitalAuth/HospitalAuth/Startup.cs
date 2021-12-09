@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using HospitalAuth.Authentication;
+using HospitalAuth.Entity;
+using HospitalAuth.Models;
 using HospitalAuth.Respository;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -17,7 +19,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
-using HospitalAuth.Models;
 
 namespace HospitalAuth
 {
@@ -38,13 +39,18 @@ namespace HospitalAuth
 
             services.AddScoped<IHospitalRepository, HospitalRepository>();
 
-            services.AddDbContext<HospitalDBContext>(option =>
+            services.AddDbContext<HospitalAuthDBContext>(option =>
+            {
+                option.UseSqlServer(Configuration.GetConnectionString("ConnStr"));
+            });
+            services.AddDbContext<ApplicationDbContext>(option =>
             {
                 option.UseSqlServer(Configuration.GetConnectionString("ConnStr"));
             });
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
-                .AddEntityFrameworkStores<HospitalDBContext>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddEntityFrameworkStores<HospitalAuthDBContext>()
                 .AddDefaultTokenProviders();
 
             services.AddAuthentication(option =>

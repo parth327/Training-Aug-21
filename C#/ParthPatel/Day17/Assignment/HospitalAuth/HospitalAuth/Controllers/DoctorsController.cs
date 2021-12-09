@@ -7,12 +7,12 @@ using HospitalAuth.Authentication;
 using HospitalAuth.Respository;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using HospitalAuth.Models;
+using HospitalAuth.Entity;
 
 namespace HospitalAuth.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/doctors")]
     public class DoctorsController : ControllerBase
     {
         private readonly IHospitalRepository _hospitalRepository;
@@ -48,10 +48,10 @@ namespace HospitalAuth.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = UserRoles.Admin)]
-        public ActionResult<Doctor> AddDoctor(DoctorForCreationDto doctor)
+        [Authorize(Roles =UserRoles.Admin)]
+        public ActionResult<Doctor> AddDoctor(Doctor doctor)
         {
-            var doctorEntity = _mapper.Map<Models.Doctor>(doctor);
+            var doctorEntity = _mapper.Map<Doctor>(doctor);
             _hospitalRepository.AddDoctor(doctorEntity);
             _hospitalRepository.Save();
 
@@ -59,7 +59,7 @@ namespace HospitalAuth.Controllers
         }
 
         [HttpDelete("{doctorId}")]
-        [Authorize(Roles = UserRoles.Admin)]
+        [Authorize(Roles =UserRoles.Admin)]
         public ActionResult DeleteDoctor(int doctorId)
         {
             if (!ModelState.IsValid)
@@ -69,12 +69,15 @@ namespace HospitalAuth.Controllers
 
             var DoctorToDelete = _hospitalRepository.GetDoctor(doctorId);
             _hospitalRepository.DeleteDoctor(DoctorToDelete);
-
+            _hospitalRepository.Save();
             return Ok(DoctorToDelete);
         }
 
     }
 }
+
+
+
 
 
 

@@ -2,78 +2,79 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using EmployeeAPI.Model;
 using EmployeeAPI.Models;
 
 namespace EmployeeAPI.Repository
 {
-    public class EmployeeRepository : IEmployeeAPIRepostiory
+    public class EmployeeRepository : IEmployeeRepostiory
     {
-        private readonly EmployeeDbContext _context;
-
-        public EmployeeRepository(EmployeeDbContext context)
+        public EmployeeDBContext dbContext { get; set; }
+        public EmployeeRepository(EmployeeDBContext employeeDBContext)
         {
-            _context = context ??
-                throw new ArgumentException(nameof(context));
+            this.dbContext = employeeDBContext;
         }
-
-        public void AddEmployee(Employee employee)
+        public string addNewEmployee(EmpModel employeeModel)
         {
-            if (employee == null)
+            var newEmployee = new Employee()
             {
-                throw new ArgumentException(nameof(employee));
-            }
+                FirstName = employeeModel.FirstName,
+                LastName = employeeModel.LastName,
+                AddressLine1 = employeeModel.AddressLine1,
+                City = employeeModel.City,
+                Country = employeeModel.Country
+            };
+            
+            dbContext.Employees.Add(newEmployee);
+            dbContext.SaveChanges();
+            return "Successfully add new employee";
+        }
 
-            employee.Id = Guid.NewGuid();
+        public List<EmpModel> getEmployeeList()
+        {
+            var employeesList = new List<EmpModel>();
 
-            foreach (var assignment in employee.Assignments)
+            employeesList = dbContext.Employees.Select(x => new EmpModel()
             {
-                assignment.Id = Guid.NewGuid();
-            }
-            _context.Employees.Add(employee);
+                EmployeeId = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                City = x.City,
+                Country = x.Country,
+                AddressLine1 = x.AddressLine1
+            }).ToList();
+            return employeesList;
         }
 
-        public bool EmployeeExists(Guid empId)
+        public EmpModel getEmployeeById(Int64 employeeId)
         {
-            if (empId == Guid.Empty)
+            var employeeDetail = new EmpModel();
+
+            employeeDetail = dbContext.Employees.Select(x => new EmpModel()
             {
-                throw new ArgumentNullException(nameof(empId));
-            }
-            return _context.Employees.Any(e => e.Id == empId);
+                EmployeeId = x.Id,
+                FirstName = x.FirstName,
+                LastName = x.LastName,
+                City = x.City,
+                Country = x.Country,
+                AddressLine1 = x.AddressLine1
+            }).Where(x => x.EmployeeId == employeeId).FirstOrDefault();
+
+            return employeeDetail;
         }
 
-        public IEnumerable<Assignment> GetAssignments(Guid empId)
+        public string updateEmployeeDetail(EmpModel employeeModel)
         {
-            if (empId == Guid.Empty)
-            {
-                throw new ArgumentNullException(nameof(empId));
-            }
-            return _context.Assignments
-                .Where(a => a.EmployeeId == empId)
-                .ToList<Assignment>();
-        }
-
-        public Assignment GetAssignment(Guid empId, Guid assignmentId)
-        {
-            if (empId == Guid.Empty)
-            {
-                throw new ArgumentNullException(nameof(empId));
-            }
-            if (assignmentId == Guid.Empty)            {
-                throw new ArgumentNullException(nameof(assignmentId));
-            }
-            return _context.Assignments
-                .Where(a => a.EmployeeId == empId)
-                .Where(a => a.Id == assignmentId)
-                .FirstOrDefault();
-        }
-
-        public IEnumerable<Employee> GetEmployees()
-        {
-            return _context.Employees.ToList<Employee>();
-        }
-        public bool Save()
-        {
-            return (_context.SaveChanges() >= 0);
+            var employeeDetail = dbContext.Employees.Where(x => x.Id == employeeModel.EmployeeId).FirstOrDefault();
+            employeeDetail.FirstName = employeeModel.FirstName;
+            employeeDetail.LastName = employeeModel.LastName;
+            employeeDetail.City = employeeModel.City;
+            employeeDetail.Country = employeeModel.Country;
+            employeeDetail.AddressLine1 = employeeModel.AddressLine1;
+            dbContext.SaveChanges();
+            return "Successfully update employee detail";
         }
     }
 }
+
+

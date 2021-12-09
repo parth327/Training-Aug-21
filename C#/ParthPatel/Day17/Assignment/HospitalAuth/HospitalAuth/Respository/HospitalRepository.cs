@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using HospitalAuth.Models;
+using HospitalAuth.Entity;
 
 namespace HospitalAuth.Respository
 {
     public class HospitalRepository : IHospitalRepository
     {
-        private readonly HospitalDBContext _context;
+        private readonly HospitalAuthDBContext _context;
 
-        public HospitalRepository(HospitalDBContext context)
+        public HospitalRepository(HospitalAuthDBContext context)
         {
             _context = context ??
                 throw new ArgumentNullException(nameof(context));
@@ -20,7 +20,7 @@ namespace HospitalAuth.Respository
         {
             if (doctor == null)
             {
-                throw new ArgumentNullException(nameof(doctor));
+                throw new ArgumentNullException(nameof(doctor));  
             }
             _context.Doctor.Add(doctor);
         }
@@ -30,9 +30,10 @@ namespace HospitalAuth.Respository
             _context.Doctor.Remove(doctorToDelete);
         }
 
+
         public Doctor GetDoctor(int doctorId)
         {
-            if (doctorId <= 0)
+            if (doctorId < 0)
             {
                 throw new ArgumentNullException(nameof(Doctor));
             }
@@ -48,5 +49,6 @@ namespace HospitalAuth.Respository
         {
             return (_context.SaveChanges() >= 0);
         }
+
     }
 }

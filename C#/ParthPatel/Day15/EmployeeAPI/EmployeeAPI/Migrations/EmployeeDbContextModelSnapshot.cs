@@ -8,8 +8,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EmployeeAPI.Migrations
 {
-    [DbContext(typeof(EmployeeDbContext))]
-    partial class EmployeeDbContextModelSnapshot : ModelSnapshot
+    [DbContext(typeof(EmployeeDBContext))]
+    partial class EmployeeDBContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
@@ -21,283 +21,288 @@ namespace EmployeeAPI.Migrations
 
             modelBuilder.Entity("EmployeeAPI.Models.Assignment", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("AssignmentId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("ActionCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ActionReasonCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("ActualTerminationDate")
+                    b.Property<DateTime?>("ActualTerminationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AssignmentCategory")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
-
-                    b.Property<long>("AssignmentId")
-                        .HasColumnType("bigint");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AssignmentName")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AssignmentNumber")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("AssignmentProjectEndDate")
+                    b.Property<DateTime?>("AssignmentProjectedEndDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("AssignmentStatus")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
-
-                    b.Property<long>("AssignmentStatusTypeId")
-                        .HasColumnType("bigint");
-
-                    b.Property<long>("BuisnessUnitID")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("CreationDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("DefualtExpenseAccount")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("DepartmentId")
+                    b.Property<long?>("AssignmentStatusTypeId")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("EffectiveEndDate")
+                    b.Property<long?>("BusinessUnitId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("EffectiveStartDate")
+                    b.Property<string>("DefaultExpenseAccount")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<long?>("DepartmentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime?>("EffectiveEndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<Guid>("EmployeeId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<DateTime?>("EffectiveStartDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("EndTime")
-                        .HasColumnType("nvarchar(5)")
-                        .HasMaxLength(5);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Frequency")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FullPartTime")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("GradeID")
+                    b.Property<long?>("GradeId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("GradeLadderId")
+                    b.Property<long?>("GradeLadderId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("JobId")
+                    b.Property<long?>("JobId")
                         .HasColumnType("bigint");
 
-                    b.Property<DateTime>("LastUpdateDate")
+                    b.Property<DateTime?>("LastUpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("LegalEntityID")
+                    b.Property<long?>("LegalEntityId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("LocationID")
+                    b.Property<long?>("LocationId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("ManagerAssignmentId")
+                    b.Property<long?>("ManagerAssignmentId")
                         .HasColumnType("bigint");
 
-                    b.Property<long>("ManagerID")
+                    b.Property<long?>("ManagerId")
                         .HasColumnType("bigint");
 
-                    b.HasKey("Id");
+                    b.Property<string>("assignmentDFF")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasIndex("EmployeeId");
+                    b.Property<int?>("assignmentExtraInformation")
+                        .HasColumnType("int");
+
+                    b.Property<string>("empreps")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("links")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("AssignmentId");
 
                     b.ToTable("Assignments");
                 });
 
             modelBuilder.Entity("EmployeeAPI.Models.Employee", b =>
                 {
-                    b.Property<Guid>("Id")
+                    b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("AddressLine1")
-                        .HasColumnType("nvarchar(240)")
-                        .HasMaxLength(240);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AddressLine2")
-                        .HasColumnType("nvarchar(240)")
-                        .HasMaxLength(240);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("AddressLine3")
-                        .HasColumnType("nvarchar(240)")
-                        .HasMaxLength(240);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<long>("CitizenShipId")
+                    b.Property<long?>("CitizenshipId")
                         .HasColumnType("bigint");
 
-                    b.Property<string>("CitizenShipLegislationCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                    b.Property<string>("CitizenshipLegislationCode")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CitizenShipStatus")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                    b.Property<string>("CitizenshipStatus")
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CitizenShipToDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("CitizenshipToDate")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("City")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CorrespondenceLangauge")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                    b.Property<string>("CorrespondenceLanguage")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("CreationDate")
+                    b.Property<DateTime?>("CreationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateOfBirth")
+                    b.Property<DateTime?>("DateOfBirth")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("DisplayName")
-                        .HasColumnType("nvarchar(240)")
-                        .HasMaxLength(240);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("DriversLicenseExpirationDate")
+                    b.Property<DateTime?>("DriversLicenseExpirationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("DriversLicenseId")
+                    b.Property<long?>("DriversLicenseId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("DriversLicenseIssuingCountry")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("EffectiveStartDate")
+                    b.Property<DateTime?>("EffectiveStartDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("Ethnicity")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("FirstName")
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Gender")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("HireDate")
+                    b.Property<DateTime?>("HireDate")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("HomeFaxAreaCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomeFaxCountryCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomeFaxExtension")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomeFaxLegislationCode")
-                        .HasColumnType("nvarchar(4)")
-                        .HasMaxLength(4);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomeFaxNumber")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomePhoneAreaCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomePhoneCountryCode")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomePhoneExtension")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomePhoneLegislationCode")
-                        .HasColumnType("nvarchar(4)")
-                        .HasMaxLength(4);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("HomePhoneNumber")
-                        .HasColumnType("nvarchar(60)")
-                        .HasMaxLength(60);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Honors")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("LastUpdateDate")
+                    b.Property<DateTime?>("LastUpdateDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<long>("LegalEntityId")
+                    b.Property<long?>("LegalEntityId")
                         .HasColumnType("bigint");
 
                     b.Property<string>("LicenseNumber")
-                        .HasColumnType("nvarchar(150)")
-                        .HasMaxLength(150);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MaritalStatus")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MiddleName")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("MilitaryVetStatus")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameSuffix")
-                        .HasColumnType("nvarchar(80)")
-                        .HasMaxLength(80);
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("NationalID")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                    b.Property<string>("NationalId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NationalIdCountry")
-                        .HasColumnType("nvarchar(30)")
-                        .HasMaxLength(30);
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("directReports")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("links")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("EmployeeAPI.Models.Assignment", b =>
+            modelBuilder.Entity("EmployeeAPI.Models.Employee_Assigment", b =>
                 {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint")
+                        .HasAnnotation("SqlServer:IdentityIncrement", 1)
+                        .HasAnnotation("SqlServer:IdentitySeed", 1)
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<long>("AssignmentId")
+                        .HasColumnType("bigint");
+
+                    b.Property<long>("EmployeeId")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("AssignmentId");
+
+                    b.HasIndex("EmployeeId");
+
+                    b.ToTable("Employee_Assignments");
+                });
+
+            modelBuilder.Entity("EmployeeAPI.Models.Employee_Assigment", b =>
+                {
+                    b.HasOne("EmployeeAPI.Models.Assignment", "Assignment")
+                        .WithMany("Employee_Assignments")
+                        .HasForeignKey("AssignmentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("EmployeeAPI.Models.Employee", "Employee")
-                        .WithMany("Assignments")
+                        .WithMany("Employee_Assignments")
                         .HasForeignKey("EmployeeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
