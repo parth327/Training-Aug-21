@@ -1,0 +1,57 @@
+<p>employee-form-td works!</p>
+
+<div class="container w-50 mx-auto">
+    <div [hidden]="submitted">
+        <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+            <div class="row">
+                <div class="col-12">
+                    <label for="empId" class="form-label">EmployeeId</label>
+                    <input type="text" name="id" id="empId" class="form-control" [(ngModel)]="model.id" #id="ngModel"
+                        required>
+                    <div [hidden]="id.valid || id.pristine" class="alert alert-danger">
+                        Id is required
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="empName" class="form-label">Name</label>
+                    <input type="text" name="name" id="empName" class="form-control" [(ngModel)]="model.name"
+                        #name="ngModel" required>
+                    <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                        Name is required
+                    </div>
+                </div>
+                <div class="col-12">
+                    <label for="empSkill" class="form-label">Skill</label>
+                    <select id="empSkill" name="skill" class="form-select" [(ngModel)]="model.skill" #skill="ngModel"
+                        required>
+                        <option *ngFor="let skill of skills" [value]="skill">{{skill}}</option>
+                    </select>
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button type="submit" class="btn btn-primary" [disabled]="!employeeForm.form.valid">Submit</button>
+                    <button type="button" class="btn btn-primary" (click)="addEmployee();employeeForm.reset()">Add
+                        Employee</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="d-flex justify-content-center">
+        <div [hidden]="!submitted">
+            <h2>Form submitted successfully!!</h2>
+            <h3>Submitted data: </h3>
+            <div class="row">
+                <div class="col-4">Id</div>
+                <div class="col-8">{{ model.id }}</div>
+
+                <div class="col-4">Name</div>
+                <div class="col-8">{{ model.name }}</div>
+
+                <div class="col-4">Skill</div>
+                <div class="col-8">{{ model.skill }}</div>
+            </div>
+            <br>
+            <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+        </div>
+    </div>
+</div>
+

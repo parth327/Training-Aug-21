@@ -1,0 +1,19 @@
+<p>dynamicform works!</p>
+<div class="container w-50">
+    <form (ngSubmit)="onSubmit()" [formGroup]="form">
+        <div class="row g-3 mb-3">
+        <div *ngFor="let question of questions">
+            <app-dynamicformquestion [question]="question" [form]="form" class="col-12"></app-dynamicformquestion> 
+        </div>
+
+        <div class="d-flex justify-content-center">
+            <button type="submit" class="btn btn-primary btn-sm" [disabled]="!form.valid">Save</button>
+        </div>
+    </div>
+    </form>
+
+    <div *ngIf="payLoad">
+        <strong>Saved the following values</strong><br>{{payLoad}}
+    </div>
+</div>
+

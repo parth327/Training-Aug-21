@@ -1,0 +1,20 @@
+<p>dynamicformquestion works!</p>
+
+<div [formGroup]="form">
+
+    <label [attr.for]="question.key" class="form-lable mb-1">{{question.label}}</label>
+
+    <div [ngSwitch]="question.controlType">
+
+        <input *ngSwitchCase="'textbox'" [formControlName]="question.key" [id]="question.key" [type]="question.type" class="form-control">
+
+        <select [id]="question.key" *ngSwitchCase="'dropdown'" [formControlName]="question.key" class="form-select">
+            <option value="">Please select your skill</option>
+            <option *ngFor="let opt of question.options" [value]="opt.key">{{opt.value}}</option>
+        </select>
+
+    </div>
+
+    <div class="text-danger" *ngIf="!isValid && isTouched">{{question.label}} is required</div>
+</div>
+
