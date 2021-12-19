@@ -1,0 +1,16 @@
+<!-- <app-child (newItemEvent)="addItem($event)" [item]="currentItem"></app-child>
+
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul> -->
+
+<app-student (newStudentEvent)="addNewStudent($event)" ></app-student>
+<app-student-list></app-student-list>
+
+
+<div class="container">
+<ul>
+  <li *ngFor="let student of students">{{student}}</li>
+</ul>
+</div>
+

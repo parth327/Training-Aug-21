@@ -1,0 +1,14 @@
+<p>student works!</p>
+
+<div class="container">
+<form>
+<div class="row">
+<label for="item-input">Add Student: </label>
+<input class="form-control" type="text" id="item-input" #newStudent>
+</div>
+<div class="row">
+<button class="btn btn-primary" (click)="addNewStudent(newStudent.value)">Add to student list</button>
+</div>
+</form>
+</div>
+
