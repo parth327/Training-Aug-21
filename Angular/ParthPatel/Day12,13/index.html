@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Routing</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <app-jsd2>
+    <script type="text/javascript">
+      function validate(dt) {
+          var arr = dt.split('-');
+          var day = parseInt(arr[1]);
+          var month = parseInt(arr[0]);
+          var year = parseInt(arr[2]);
+          var month31 = new Array(1, 3, 5, 7, 8, 10, 12)
+          var month30 = new Array(4, 6, 9, 11)
+          if (month == 2) {
+              if (year % 4 == 0) {
+                  if (year % 100 == 0) {
+                      if (year % 400 == 0) {
+                          if (day > 00 && day < 30) {
+                              alert("valid date...")
+                          }
+                          else {
+                              alert("Invalid date...")
+                          }
+                      }
+                      else if (day > 00 && day < 29) {
+                          alert("valid date")
+                      }
+                      else {
+                          alert("Invalid date...")
+                      }
+                  }
+                  else if (day > 00 && day < 30) {
+                      alert("valid date...")
+                  }
+                  else {
+                      alert("Invalid date...")
+                  }
+              }
+              else if (day > 00 && day < 29) {
+                  alert("valid date...")
+              }
+              else {
+                  alert("Invalid date...")
+              }
+          }
+          else if (month31.includes(month)) {
+              if (day > 00 && day < 32) {
+                  alert("valid date...")
+              }
+              else {
+                  alert("Invalid date...")
+              }
+          }
+          else if (month30.includes(month)) {
+              if (day > 00 && day < 31) {
+                  alert("valid date...")
+              }
+              else {
+                  alert("Invalid date...")
+              }
+          }
+          else {
+              alert("Invalid date...")
+          }
+      }
+  </script>  
+  </app-jsd2>
+  <app-jsd3>
+    <script>
+      document.getElementById("sub").addEventListener("click", function (event) {
+          event.preventDefault();  
+          var gen = document.getElementsByName("gender");
+          var gender;
+          for (var i of gen) {
+              if (i.checked) {
+                  gender = i.value;
+              }
+          }
+          var id = document.getElementById("empid").value;
+          var name = document.getElementById("empname").value;
+          var age = parseInt(document.getElementById("empage").value);
+          var designation = document.getElementById("designation").value;
+          var salary = document.getElementById("salary").value;
+          var location = document.getElementById("location").value;
+          var email = document.getElementById("email").value;
+          var joindate = document.getElementById("joindate").value;
+          var contact = document.getElementById("contactno").value;
+          var myform = document.getElementById("myForm");
+          var idpattern = /[A-z0-9]{5,}/gi;
+          var emailpattern = /[A-z0-9]{1,}[@][A-z]{1,}[.][A-z]{1,}/gi;
+          if (id == "" || name == "" || age == "" || designation == "" || salary == "" || location == "" || email == "" || joindate == "" || contact == "" || gender == undefined) {
+              alert("Please fill all the fields...");
+          }
+          else if (!id.match(idpattern)) {
+              alert("Length of EmployeeId should be greater than 5...");
+          }
+          else if (age < 18 || age > 60) {
+              alert("Age should between 18 and 60...");
+          }
+          else if (email.match(emailpattern) != 1) {
+              alert("Email should be in proper format...");
+          }
+          else {
+              myform.submit();
+              var newwin = window.open();
+              newwin.document.write(
+                  "<h3>Your data submitted successfully...</h3>"
+                  + "<br><label>Id:</label>" + id
+                  + "<br><label>Name:</label>" + name
+                  + "<br><label>Age:</label>" + age
+                  + "<br><label>Gender:</label>" + gender
+                  + "<br><label>Designation:</label>" + designation
+                  + "<br><label>Salary:</label>" + salary
+                  + "<br><label>Location:</label>" + location
+                  + "<br><label>EmailId:</label>" + email
+                  + "<br><label>Joining Date:</label>" + joindate
+                  + "<br><label>ContactNo:</label>" + contact
+              )
+          }
+      });
+    </script>
+  </app-jsd3>
+  <app-jsd4>
+    <script>
+
+      var x;
+  
+      function startexam(start, end, examform, timer) {
+          name = prompt("Enter your name!")
+          if (name == "") {
+              alert("Please enter your name!")
+              name = prompt("Enter your name!")
+          }
+          else {
+              start.style.display = "none";
+              examform.style.display = "block";
+              end.style.display = "block";
+  
+              var hr = 2;
+              var minute = 59;
+              var seconds = 60;
+  
+              timerinterval = setInterval(() => {
+                  if (hr >= 0) {
+  
+                      seconds -= 1;
+                      if (seconds == 0) {
+                          seconds = 60;
+                          minute -= 1;
+                      }
+                      if (minute == 0) {
+                          minute = 59;
+                          hr -= 1;
+                      }
+                      timer.innerHTML = "Remaining time : " + hr + ":" + minute + ":" + seconds;
+                  }
+                  else {
+                      clearInterval(timerinterval);
+                  }
+  
+              }, 1000);
+              x = setTimeout(submitexam, 10800000, 1);
+          }
+      }
+  
+      function endexam() {
+          var res = confirm("Sure?")
+          if (res) {
+              clearTimeout(x);
+              submitexam(1);
+          }
+      }
+  
+      function submitexam(flagvar) {
+          confirmsubmit(flagvar).then(
+              (success) => {
+                  alert(success);
+                  window.location.href = ""
+              },
+              (error) => {
+                  alert(error);
+              }
+          )
+      }
+  
+      function confirmsubmit(flagvar) {
+          let p = new Promise((resolve, reject) => {
+              let resolveMessage = "Exam submitted successfully!";
+              let rejectMessage = "Something went wrong!";
+              if (parseInt(flagvar) == 1) {
+                  resolve(resolveMessage);
+              }
+              else {
+                  reject(rejectMessage);
+              }
+          })
+          return p;
+      }  
+  </script>
+  </app-jsd4>
+  <app-jsd5>
+  </app-jsd5>
+</body>
+</html>

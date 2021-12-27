@@ -1,0 +1,10 @@
+<div class="container">
+    <h1>Calculator Application</h1>
+    <input id="tb1" type="number" name="num1" [(ngModel)]="num1" placeholder="Enter First Number" ><br><br>
+    <input id="tb2" type="number" name="num2" [(ngModel)]="num2" placeholder="Enter Second Number"><br><br>
+    <button (click)="add()" id="btnAdd">Addition</button>
+    <button (click)="sub()"id="btnSub">Subtraction</button>
+    <button (click)="mul()"id="btnMul">Multiplication</button><br><br>
+    <h3>Result : {{num3}}</h3>
+</div>
+    

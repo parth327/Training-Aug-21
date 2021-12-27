@@ -1,0 +1,11 @@
+<p>dashboard works!</p>
+
+<div class="card">
+    <div class="card-body">
+        <ng-container *ngFor="let product of products">
+        Product Name : <strong class="text-danger">{{product.name}}</strong> &nbsp; &nbsp; 
+        Product Id : <strong class="text-danger">{{product.id}}</strong><br>
+        </ng-container>
+    </div>
+    <button (click)="btnDash()" class="btn btn-success">Subscribe</button>
+  </div>

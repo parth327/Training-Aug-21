@@ -1,0 +1,86 @@
+
+<div class="container">
+<table border="1">
+	<tr>
+		<th colspan="2">
+	 Employee Details </th>
+	</tr>
+	<tr>
+		<td><label for="EmpN">Employee Name</label></td>
+		<td><input type="text" name="First Name" required/></td>
+	</tr>
+	<tr>
+		<td><label for="ag">Age</label></td>
+		<td><input type="number" name="Age" required /></td>
+	</tr>	
+	<tr>
+		<td><label for="g">Gender</label></td>
+		<td>
+			<input type="radio" name="Gmale" value="Male" />
+			<label for="ma">Male</label>
+			<input type="radio" name="Gmale" value="Female" />
+			<label for="fe">Female</label>
+		</td>
+	<tr>
+		<td><label for="des">Designation  </label></td>	
+		<td>
+			<select name="Designation">
+				<option value="jsd">Junior Developer</option>
+				<option value="ssd">Senior Developer</option>
+				<option value="m">Manager</option>
+				<option value="hr">HR</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="sal">Salary  </label>
+		</td>
+		<td>
+			<input type="number" min="10000" max="50000" step="10000" required>
+		</td>
+	</tr>	
+	<tr>
+		<td>
+			<label for="loc">Location </label>
+		</td>
+		<td>
+			<select name="Location">
+				<option value="ahm">Ahmedabad</option>
+				<option value="mum">Mumbai</option>
+				<option value="che">Chennai</option>
+				<option value="klk">Kolkatta</option>
+			</select>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<label for="email">Email ID  </label>
+		</td>
+		<td>
+			<input type="email" name="Email" required/>
+		</td>	
+	</tr>
+	<tr>
+		<td>
+			<label for="dateofjoin">Date Of Joining </label>
+		</td>
+		<td>
+			<input type="date" name="doj" required>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label for="Contact">Contact Number  </label>
+		</td>
+		<td>
+			<input type="tel" name="MobileNum" required/>
+		</td>
+	</tr>	
+	<tr>
+		<td colspan="2">
+			<button type="submit" value="Submit"> SUBMIT </button>
+		</td>
+	</tr>
+</table>
+</div>

@@ -1,0 +1,12 @@
+body {
+    background-image: linear-gradient(to right, rgba(0, 255, 0, 0.25), rgba(0, 0, 255, 0.95));
+}
+
+#maindiv {
+    background: rgba(0, 100, 0, 0.4);
+}
+
+* {
+    box-sizing: border-box;
+}
+
